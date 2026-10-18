@@ -7,6 +7,22 @@ from pathlib import Path
 from main import lap_time
 
 
+class CompoundTests(unittest.TestCase):
+    def test_offsets_against_hand_calculation(self):
+        for compound, expected in (("S", 90.0), ("M", 90.48), ("H", 91.0)):
+            with self.subTest(compound=compound):
+                self.assertAlmostEqual(lap_time(90, compound), expected)
+
+    def test_invalid_compounds(self):
+        for compound in ("X", "soft", "", "s", None, True, ["S"]):
+            with self.subTest(compound=compound), self.assertRaises(ValueError):
+                lap_time(90, compound)
+
+    def test_compound_does_not_relax_base_validation(self):
+        with self.assertRaises(ValueError):
+            lap_time(-1, "H")
+
+
 class LapTests(unittest.TestCase):
     def test_base_example(self):
         self.assertEqual(lap_time(90), 90)

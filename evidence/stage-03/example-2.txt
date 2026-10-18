@@ -1,0 +1,4 @@
+command: python main.py --compound M
+PITWALL / stage 3 / base and compound
+Compound: M; lap time: 90.480 s
+Wear, fuel and pit stops are not modelled in this version.
