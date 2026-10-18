@@ -1,0 +1,79 @@
+[
+  {
+    "id": "C02-01",
+    "date": "2026-10-31",
+    "stage": 2,
+    "requirement": "SC02 / SC03",
+    "input": "90",
+    "expected": 90,
+    "actual": 90,
+    "passed": true,
+    "correction": "none required"
+  },
+  {
+    "id": "C02-02-min",
+    "date": "2026-10-31",
+    "stage": 2,
+    "requirement": "SC02 / SC03",
+    "input": "30",
+    "expected": 30,
+    "actual": 30,
+    "passed": true,
+    "correction": "none required"
+  },
+  {
+    "id": "C02-02-max",
+    "date": "2026-10-31",
+    "stage": 2,
+    "requirement": "SC02 / SC03",
+    "input": "200",
+    "expected": 200,
+    "actual": 200,
+    "passed": true,
+    "correction": "none required"
+  },
+  {
+    "id": "C02-03-negative",
+    "date": "2026-10-31",
+    "stage": 2,
+    "requirement": "SC02 / SC03",
+    "input": "-1",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "passed": true,
+    "correction": "none required"
+  },
+  {
+    "id": "C02-03-nan",
+    "date": "2026-10-31",
+    "stage": 2,
+    "requirement": "SC02 / SC03",
+    "input": "nan",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "passed": true,
+    "correction": "none required"
+  },
+  {
+    "id": "C02-03-bool",
+    "date": "2026-10-31",
+    "stage": 2,
+    "requirement": "SC02 / SC03",
+    "input": "True",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "passed": true,
+    "correction": "none required"
+  },
+  {
+    "id": "C02-03-huge",
+    "date": "2026-10-31",
+    "stage": 2,
+    "requirement": "SC02 / SC03",
+    "input": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "expected": "ValueError",
+    "actual": "ValueError",
+    "passed": true,
+    "correction": "none required"
+  }
+]
