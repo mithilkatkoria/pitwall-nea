@@ -1,0 +1,64 @@
+[
+  {
+    "id": "S05-CLI01",
+    "date": "2026-10-31",
+    "stage": 5,
+    "requirements": [
+      "SC01",
+      "SC02",
+      "SC03",
+      "SC10"
+    ],
+    "args": [
+      "--laps",
+      "10"
+    ],
+    "expected_exit": 0,
+    "expected_text": "Race total: 904.275 s",
+    "actual_exit": 0,
+    "actual_output": "PITWALL / stage 5 / base, compound and degradation\nLAP  TYRE  AGE     LAP TIME     ELAPSED     TYRE LOSS\n  1  S       0       90.000      90.000         0.000\n  2  S       1       90.095     180.095         0.095\n  3  S       2       90.190     270.285         0.190\n  4  S       3       90.285     360.570         0.285\n  5  S       4       90.380     450.950         0.380\n  6  S       5       90.475     541.425         0.475\n  7  S       6       90.570     631.995         0.570\n  8  S       7       90.665     722.660         0.665\n  9  S       8       90.760     813.420         0.760\n 10  S       9       90.855     904.275         0.855\nRace total: 904.275 s\n",
+    "passed": true
+  },
+  {
+    "id": "S05-CLI02",
+    "date": "2026-10-31",
+    "stage": 5,
+    "requirements": [
+      "SC01",
+      "SC02",
+      "SC03",
+      "SC10"
+    ],
+    "args": [
+      "--laps",
+      "9"
+    ],
+    "expected_exit": 2,
+    "expected_text": "Race laps must",
+    "actual_exit": 2,
+    "actual_output": "usage: main.py [-h] [--base BASE] [--compound {S,M,H}] [--age AGE]\n               [--laps LAPS]\nmain.py: error: Race laps must be a whole number from 10 to 100.\n",
+    "passed": true
+  },
+  {
+    "id": "S05-CLI03",
+    "date": "2026-10-31",
+    "stage": 5,
+    "requirements": [
+      "SC01",
+      "SC02",
+      "SC03",
+      "SC10"
+    ],
+    "args": [
+      "--laps",
+      "10",
+      "--age",
+      "2"
+    ],
+    "expected_exit": 2,
+    "expected_text": "fresh tyres",
+    "actual_exit": 2,
+    "actual_output": "usage: main.py [-h] [--base BASE] [--compound {S,M,H}] [--age AGE]\n               [--laps LAPS]\nmain.py: error: A complete race starts on fresh tyres; use --age 0.\n",
+    "passed": true
+  }
+]

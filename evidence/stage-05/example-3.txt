@@ -1,0 +1,4 @@
+command: python main.py --laps 10 --age 2
+usage: main.py [-h] [--base BASE] [--compound {S,M,H}] [--age AGE]
+               [--laps LAPS]
+main.py: error: A complete race starts on fresh tyres; use --age 0.

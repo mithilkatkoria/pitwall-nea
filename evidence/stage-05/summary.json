@@ -1,0 +1,11 @@
+{
+  "stage": 5,
+  "unit_tests_passed": 22,
+  "cli_cases_passed": 3,
+  "parent_commit": "f980b24500a91be26ea9fd363cef900a699e5281",
+  "source_sha256": {
+    "main.py": "490dd5ced5dd009edef691438fb46bd946202e2a4efedc971844b1b3805997ad",
+    "model.py": "868cb2bf4fff23333e6427407ce40a3733402666592eb7abb823046bc7b82d31",
+    "tests\\test_model.py": "236a6ccaa454a1f0b1194cfb5e134a149b62f5f23e5c1556f89f1de3df0c93a3"
+  }
+}
