@@ -1,0 +1,83 @@
+[
+  {
+    "id": "S07-CLI01",
+    "date": "2026-10-31",
+    "stage": 7,
+    "requirements": [
+      "SC01",
+      "SC02",
+      "SC03",
+      "SC04"
+    ],
+    "args": [
+      "--laps",
+      "10",
+      "--compounds",
+      "S",
+      "M",
+      "H",
+      "--stops",
+      "3",
+      "6"
+    ],
+    "expected_exit": 0,
+    "expected_text": "951.127",
+    "actual_exit": 0,
+    "actual_output": "PITWALL / stage 7 / strategy\nLAP  TYRE  AGE     LAP TIME     ELAPSED     TYRE LOSS     PIT LOSS\n  1  S       0       90.000      90.000         0.000        0.000\n  2  S       1       90.095     180.095         0.095        0.000\n  3  S       2      112.690     292.785         0.190       22.500\n  4  M       0       90.480     383.265         0.000        0.000\n  5  M       1       90.540     473.805         0.060        0.000\n  6  M       2      113.100     586.905         0.120       22.500\n  7  H       0       91.000     677.905         0.000        0.000\n  8  H       1       91.037     768.942         0.037        0.000\n  9  H       2       91.074     860.016         0.074        0.000\n 10  H       3       91.111     951.127         0.111        0.000\nRace total: 951.127 s\n",
+    "passed": true
+  },
+  {
+    "id": "S07-CLI02",
+    "date": "2026-10-31",
+    "stage": 7,
+    "requirements": [
+      "SC01",
+      "SC02",
+      "SC03",
+      "SC04"
+    ],
+    "args": [
+      "--laps",
+      "10",
+      "--compounds",
+      "S",
+      "M",
+      "H",
+      "--stops",
+      "6",
+      "3"
+    ],
+    "expected_exit": 2,
+    "expected_text": "Pit laps must",
+    "actual_exit": 2,
+    "actual_output": "usage: main.py [-h] [--base BASE] [--compound {S,M,H}] [--age AGE]\n               [--laps LAPS] [--compounds {S,M,H} [{S,M,H} ...]]\n               [--stops [STOPS ...]] [--pit-loss PIT_LOSS]\nmain.py: error: Pit laps must increase uniquely from 1 to the penultimate lap.\n",
+    "passed": true
+  },
+  {
+    "id": "S07-CLI03",
+    "date": "2026-10-31",
+    "stage": 7,
+    "requirements": [
+      "SC01",
+      "SC02",
+      "SC03",
+      "SC04"
+    ],
+    "args": [
+      "--laps",
+      "10",
+      "--compounds",
+      "S",
+      "S",
+      "--stops",
+      "5",
+      "--pit-loss",
+      "0"
+    ],
+    "expected_exit": 0,
+    "expected_text": "901.900",
+    "actual_exit": 0,
+    "actual_output": "PITWALL / stage 7 / strategy\nLAP  TYRE  AGE     LAP TIME     ELAPSED     TYRE LOSS     PIT LOSS\n  1  S       0       90.000      90.000         0.000        0.000\n  2  S       1       90.095     180.095         0.095        0.000\n  3  S       2       90.190     270.285         0.190        0.000\n  4  S       3       90.285     360.570         0.285        0.000\n  5  S       4       90.380     450.950         0.380        0.000\n  6  S       0       90.000     540.950         0.000        0.000\n  7  S       1       90.095     631.045         0.095        0.000\n  8  S       2       90.190     721.235         0.190        0.000\n  9  S       3       90.285     811.520         0.285        0.000\n 10  S       4       90.380     901.900         0.380        0.000\nRace total: 901.900 s\n",
+    "passed": true
+  }
+]

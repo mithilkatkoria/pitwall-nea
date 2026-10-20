@@ -4,7 +4,7 @@ import sys
 import unittest
 from pathlib import Path
 
-from model import lap_time, tyre_loss, simulate
+from model import lap_time, tyre_loss, simulate, Strategy
 
 
 class RaceTests(unittest.TestCase):
@@ -30,10 +30,10 @@ class RaceTests(unittest.TestCase):
     def test_invalid_race_inputs(self):
         for base, compound in ((-1, "S"), (90, "X")):
             with self.subTest(base=base, compound=compound), self.assertRaises(ValueError):
-                simulate(base, 10, compound)
+                simulate(base, 10, Strategy((compound,)))
 
     def test_repeatable(self):
-        self.assertEqual(simulate(90, 10, "M"), simulate(90, 10, "M"))
+        self.assertEqual(simulate(90, 10, Strategy(("M",))), simulate(90, 10, Strategy(("M",))))
 
 
 class WearTests(unittest.TestCase):
@@ -124,7 +124,7 @@ class LapTests(unittest.TestCase):
 
 class PitTests(unittest.TestCase):
     def test_independent_total_and_transition(self):
-        race = simulate(90, 10, 'S', 4, 'H', 22.5)
+        race = simulate(90, 10, Strategy(('S', 'H'), (4,)), 22.5)
         self.assertAlmostEqual(race.total, 929.625)
         self.assertEqual((race.laps[3].compound, race.laps[3].age, race.laps[3].pit), ('S', 3, 22.5))
         self.assertEqual((race.laps[4].compound, race.laps[4].age), ('H', 0))
@@ -132,26 +132,48 @@ class PitTests(unittest.TestCase):
 
     def test_first_and_penultimate_stops(self):
         for stop in (1, 9):
-            race = simulate(90, 10, 'M', stop, 'S')
+            race = simulate(90, 10, Strategy(('M', 'S'), (stop,)))
             self.assertEqual(race.laps[stop].age, 0)
             self.assertEqual(sum(lap.pit for lap in race.laps), 22.5)
 
     def test_zero_cost_still_changes_and_resets(self):
-        race = simulate(90, 10, 'S', 4, 'H', 0)
+        race = simulate(90, 10, Strategy(('S', 'H'), (4,)), 0)
         self.assertEqual((race.laps[4].compound, race.laps[4].age), ('H', 0))
         self.assertAlmostEqual(race.total, 907.125)
 
     def test_invalid_stop_positions(self):
         for stop in (0, -1, 10, 11, True, 4.0, [4, 4]):
             with self.subTest(stop=stop), self.assertRaises(ValueError):
-                simulate(90, 10, 'S', stop, 'M')
+                simulate(90, 10, Strategy(('S', 'M'), (stop,)))
 
     def test_invalid_pit_loss(self):
         for loss in (-1, 61, float('nan'), float('inf'), True, '22'):
             with self.subTest(loss=loss), self.assertRaises(ValueError):
-                simulate(90, 10, 'S', 4, 'M', loss)
+                simulate(90, 10, Strategy(('S', 'M'), (4,)), loss)
 
     def test_missing_or_orphaned_compound(self):
         for stop, compound in ((4, None), (None, 'M'), (4, 'X')):
             with self.subTest(stop=stop), self.assertRaises(ValueError):
-                simulate(90, 10, 'S', stop, compound)
+                simulate(90, 10, Strategy(('S', compound), () if stop is None else (stop,)))
+
+
+class StrategyTests(unittest.TestCase):
+    def test_two_stops_independent_total(self):
+        # Base 900 + offsets 5.44 + wear .285+.18+.222 + two pits 45.
+        race = simulate(90, 10, Strategy(('S', 'M', 'H'), (3, 6)))
+        self.assertAlmostEqual(race.total, 951.127)
+        self.assertEqual([race.laps[i].age for i in (0, 3, 6)], [0, 0, 0])
+        self.assertEqual([race.laps[i].compound for i in (0, 3, 6)], ['S', 'M', 'H'])
+
+    def test_invalid_plan_combinations(self):
+        plans = [Strategy((), ()), Strategy(('S','H'), (4,4)),
+                 Strategy(('S','M','H'), (6,3)), Strategy(('S','M','H'), (3,3)),
+                 Strategy(('S',)*4, (2,4,6)), Strategy(('S','X'), (4,)),
+                 Strategy(['S'], ()), Strategy(('S',), []), None]
+        for plan in plans:
+            with self.subTest(plan=plan), self.assertRaises(ValueError):
+                simulate(90, 10, plan)
+
+    def test_same_compound_replacement_is_allowed(self):
+        race = simulate(90, 10, Strategy(('S','S'), (5,)), 0)
+        self.assertAlmostEqual(race.total, 901.9)

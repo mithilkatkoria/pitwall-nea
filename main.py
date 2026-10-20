@@ -1,7 +1,7 @@
-"""Stage 6: a complete race with an optional pit stop."""
+"""Stage 7: configurable zero-, one- and two-stop strategies."""
 import argparse
 
-from model import COMPOUND_PACE, lap_time, tyre_loss, simulate
+from model import COMPOUND_PACE, lap_time, tyre_loss, simulate, Strategy
 
 def main():
     parser = argparse.ArgumentParser(description="Pitwall: compound lap calculation")
@@ -9,18 +9,19 @@ def main():
     parser.add_argument("--compound", default="S", choices=COMPOUND_PACE, help="S=Soft, M=Medium, H=Hard")
     parser.add_argument("--age", type=int, default=0, help="Completed laps on these tyres (0-1000)")
     parser.add_argument("--laps", type=int, help="Simulate a full race of 10-100 laps")
-    parser.add_argument("--stop", type=int, help="Stop after this lap")
-    parser.add_argument("--next-compound", choices=COMPOUND_PACE)
+    parser.add_argument("--compounds", nargs="+", choices=COMPOUND_PACE, help="One compound per stint")
+    parser.add_argument("--stops", nargs="*", type=int, default=[], help="Increasing pit laps, at most two")
     parser.add_argument("--pit-loss", type=float, default=22.5, help="Pit lane loss in seconds (0-60)")
     args = parser.parse_args()
     try:
-        if args.laps is None and (args.stop is not None or args.next_compound is not None or args.pit_loss != 22.5):
+        if args.laps is None and (args.compounds is not None or args.stops or args.pit_loss != 22.5):
             raise ValueError("Pit settings need --laps.")
         if args.laps is not None:
             if args.age != 0:
                 raise ValueError("A complete race starts on fresh tyres; use --age 0.")
-            result = simulate(args.base, args.laps, args.compound, args.stop, args.next_compound, args.pit_loss)
-            print("PITWALL / stage 6 / pit stops")
+            plan = Strategy(tuple(args.compounds or [args.compound]), tuple(args.stops))
+            result = simulate(args.base, args.laps, plan, args.pit_loss)
+            print("PITWALL / stage 7 / strategy")
             print("LAP  TYRE  AGE     LAP TIME     ELAPSED     TYRE LOSS     PIT LOSS")
             for lap in result.laps:
                 print(f"{lap.number:3}  {lap.compound:4}  {lap.age:3}  {lap.time:11.3f}  {lap.elapsed:10.3f}  {lap.degradation:12.3f}  {lap.pit:11.3f}")
