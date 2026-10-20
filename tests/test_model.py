@@ -120,3 +120,38 @@ class LapTests(unittest.TestCase):
                 self.assertEqual(run.returncode, 2)
                 self.assertIn("error:", run.stderr)
                 self.assertNotIn("Traceback", run.stderr)
+
+
+class PitTests(unittest.TestCase):
+    def test_independent_total_and_transition(self):
+        race = simulate(90, 10, 'S', 4, 'H', 22.5)
+        self.assertAlmostEqual(race.total, 929.625)
+        self.assertEqual((race.laps[3].compound, race.laps[3].age, race.laps[3].pit), ('S', 3, 22.5))
+        self.assertEqual((race.laps[4].compound, race.laps[4].age), ('H', 0))
+        self.assertAlmostEqual(race.laps[3].time, 112.785)
+
+    def test_first_and_penultimate_stops(self):
+        for stop in (1, 9):
+            race = simulate(90, 10, 'M', stop, 'S')
+            self.assertEqual(race.laps[stop].age, 0)
+            self.assertEqual(sum(lap.pit for lap in race.laps), 22.5)
+
+    def test_zero_cost_still_changes_and_resets(self):
+        race = simulate(90, 10, 'S', 4, 'H', 0)
+        self.assertEqual((race.laps[4].compound, race.laps[4].age), ('H', 0))
+        self.assertAlmostEqual(race.total, 907.125)
+
+    def test_invalid_stop_positions(self):
+        for stop in (0, -1, 10, 11, True, 4.0, [4, 4]):
+            with self.subTest(stop=stop), self.assertRaises(ValueError):
+                simulate(90, 10, 'S', stop, 'M')
+
+    def test_invalid_pit_loss(self):
+        for loss in (-1, 61, float('nan'), float('inf'), True, '22'):
+            with self.subTest(loss=loss), self.assertRaises(ValueError):
+                simulate(90, 10, 'S', 4, 'M', loss)
+
+    def test_missing_or_orphaned_compound(self):
+        for stop, compound in ((4, None), (None, 'M'), (4, 'X')):
+            with self.subTest(stop=stop), self.assertRaises(ValueError):
+                simulate(90, 10, 'S', stop, compound)

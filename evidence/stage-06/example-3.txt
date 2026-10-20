@@ -1,0 +1,5 @@
+command: python main.py --stop 4
+usage: main.py [-h] [--base BASE] [--compound {S,M,H}] [--age AGE]
+               [--laps LAPS] [--stop STOP] [--next-compound {S,M,H}]
+               [--pit-loss PIT_LOSS]
+main.py: error: Pit settings need --laps.

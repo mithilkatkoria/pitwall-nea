@@ -1,0 +1,5 @@
+command: python main.py --laps 10 --stop 10 --next-compound H
+usage: main.py [-h] [--base BASE] [--compound {S,M,H}] [--age AGE]
+               [--laps LAPS] [--stop STOP] [--next-compound {S,M,H}]
+               [--pit-loss PIT_LOSS]
+main.py: error: Pit lap must be a whole number from 1 to the penultimate lap.
