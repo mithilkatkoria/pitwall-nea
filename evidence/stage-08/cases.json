@@ -1,0 +1,80 @@
+[
+  {
+    "id": "S08-CLI01",
+    "date": "2026-10-31",
+    "stage": 8,
+    "requirements": [
+      "SC02",
+      "SC03",
+      "SC06",
+      "SC10"
+    ],
+    "args": [
+      "--laps",
+      "10",
+      "--compare",
+      "--compounds",
+      "S",
+      "--compounds-b",
+      "H"
+    ],
+    "expected_exit": 0,
+    "expected_text": "+7.390 s; faster: A",
+    "actual_exit": 0,
+    "actual_output": "PITWALL / stage 8 / comparison\nA: 904.275 s; B: 911.665 s\nB minus A: +7.390 s; faster: A\nPositive gap favours A; negative gap favours B. Same race settings.\nLAP     A TIME      B TIME     CUMULATIVE B-A\n  1     90.000      91.000             +1.000\n  2     90.095      91.037             +1.942\n  3     90.190      91.074             +2.826\n  4     90.285      91.111             +3.652\n  5     90.380      91.148             +4.420\n  6     90.475      91.185             +5.130\n  7     90.570      91.222             +5.782\n  8     90.665      91.259             +6.376\n  9     90.760      91.296             +6.912\n 10     90.855      91.333             +7.390\n",
+    "passed": true
+  },
+  {
+    "id": "S08-CLI02",
+    "date": "2026-10-31",
+    "stage": 8,
+    "requirements": [
+      "SC02",
+      "SC03",
+      "SC06",
+      "SC10"
+    ],
+    "args": [
+      "--laps",
+      "10",
+      "--compare",
+      "--compounds",
+      "S",
+      "H",
+      "--stops",
+      "4",
+      "--compounds-b",
+      "S",
+      "M",
+      "H",
+      "--stops-b",
+      "3",
+      "6"
+    ],
+    "expected_exit": 0,
+    "expected_text": "+21.502 s; faster: A",
+    "actual_exit": 0,
+    "actual_output": "PITWALL / stage 8 / comparison\nA: 929.625 s; B: 951.127 s\nB minus A: +21.502 s; faster: A\nPositive gap favours A; negative gap favours B. Same race settings.\nLAP     A TIME      B TIME     CUMULATIVE B-A\n  1     90.000      90.000             +0.000\n  2     90.095      90.095             +0.000\n  3     90.190     112.690            +22.500\n  4    112.785      90.480             +0.195\n  5     91.000      90.540             -0.265\n  6     91.037     113.100            +21.798\n  7     91.074      91.000            +21.724\n  8     91.111      91.037            +21.650\n  9     91.148      91.074            +21.576\n 10     91.185      91.111            +21.502\n",
+    "passed": true
+  },
+  {
+    "id": "S08-CLI03",
+    "date": "2026-10-31",
+    "stage": 8,
+    "requirements": [
+      "SC02",
+      "SC03",
+      "SC06",
+      "SC10"
+    ],
+    "args": [
+      "--compounds-b",
+      "H"
+    ],
+    "expected_exit": 2,
+    "expected_text": "Plan B needs",
+    "actual_exit": 2,
+    "actual_output": "usage: main.py [-h] [--base BASE] [--compound {S,M,H}] [--age AGE]\n               [--laps LAPS] [--compounds {S,M,H} [{S,M,H} ...]]\n               [--stops [STOPS ...]] [--pit-loss PIT_LOSS] [--compare]\n               [--compounds-b {S,M,H} [{S,M,H} ...]] [--stops-b [STOPS_B ...]]\nmain.py: error: Plan B needs --compare.\n",
+    "passed": true
+  }
+]

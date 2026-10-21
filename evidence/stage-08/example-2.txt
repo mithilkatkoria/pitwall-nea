@@ -1,0 +1,16 @@
+command: python main.py --laps 10 --compare --compounds S H --stops 4 --compounds-b S M H --stops-b 3 6
+PITWALL / stage 8 / comparison
+A: 929.625 s; B: 951.127 s
+B minus A: +21.502 s; faster: A
+Positive gap favours A; negative gap favours B. Same race settings.
+LAP     A TIME      B TIME     CUMULATIVE B-A
+  1     90.000      90.000             +0.000
+  2     90.095      90.095             +0.000
+  3     90.190     112.690            +22.500
+  4    112.785      90.480             +0.195
+  5     91.000      90.540             -0.265
+  6     91.037     113.100            +21.798
+  7     91.074      91.000            +21.724
+  8     91.111      91.037            +21.650
+  9     91.148      91.074            +21.576
+ 10     91.185      91.111            +21.502

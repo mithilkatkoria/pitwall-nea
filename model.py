@@ -105,3 +105,29 @@ def simulate(base_time, laps, plan=Strategy(), pit_loss=22.5):
         else:
             age += 1
     return Result(tuple(records))
+
+
+@dataclass(frozen=True)
+class Comparison:
+    a: Result
+    b: Result
+
+    @property
+    def gap(self):
+        return self.b.total - self.a.total
+
+    @property
+    def winner(self):
+        if abs(self.gap) <= 1e-8:
+            return "Tie"
+        return "A" if self.gap > 0 else "B"
+
+    @property
+    def gaps(self):
+        return tuple(b.elapsed - a.elapsed for a, b in zip(self.a.laps, self.b.laps))
+
+
+def compare(base_time, laps, plan_a, plan_b, pit_loss=22.5):
+    """Both simulations receive the same race settings."""
+    return Comparison(simulate(base_time, laps, plan_a, pit_loss),
+                      simulate(base_time, laps, plan_b, pit_loss))
