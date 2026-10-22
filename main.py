@@ -1,7 +1,7 @@
 """Stage 8: compare two strategies under shared race settings."""
 import argparse
 
-from model import COMPOUND_PACE, lap_time, tyre_loss, simulate, Strategy, compare
+from model import COMPOUND_PACE, lap_time, tyre_loss, simulate, Strategy, compare, optimise
 
 def main():
     parser = argparse.ArgumentParser(description="Pitwall: compound lap calculation")
@@ -15,8 +15,21 @@ def main():
     parser.add_argument("--compare", action="store_true", help="Compare with plan B under shared settings")
     parser.add_argument("--compounds-b", nargs="+", choices=COMPOUND_PACE)
     parser.add_argument("--stops-b", nargs="*", type=int, default=[])
+    parser.add_argument("--optimise", action="store_true", help="Search every different-compound one-stop plan")
     args = parser.parse_args()
     try:
+        if args.optimise:
+            if args.compare or args.compounds is not None or args.stops or args.compounds_b is not None or args.stops_b or args.age:
+                raise ValueError("Search chooses the strategy; do not combine it with plan or age settings.")
+            if args.laps is None:
+                raise ValueError("Search needs --laps.")
+            search = optimise(args.base, args.laps, args.pit_loss)
+            best = search.best
+            print("PITWALL / stage 9 / one-stop search")
+            print(f"Checked {len(search.candidates)} candidates: 6 x (laps - 1).")
+            print(f"Best: {' > '.join(best.plan.compounds)}, stop {best.plan.stops[0]}; {best.total:.3f} s")
+            print("One stop, two different compounds only. Ties within 1e-8 s keep the first enumerated plan.")
+            return
         if (args.compounds_b is not None or args.stops_b) and not args.compare:
             raise ValueError("Plan B needs --compare.")
         if args.compare and args.laps is None:

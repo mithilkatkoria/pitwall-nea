@@ -1,0 +1,9374 @@
+[
+  {
+    "laps": 10,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 1,
+    "expected": 928.98,
+    "actual": 928.9800000000001,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 2,
+    "expected": 928.115,
+    "actual": 928.115,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 3,
+    "expected": 927.405,
+    "actual": 927.405,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 4,
+    "expected": 926.85,
+    "actual": 926.8499999999999,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 5,
+    "expected": 926.45,
+    "actual": 926.4499999999999,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 6,
+    "expected": 926.205,
+    "actual": 926.2049999999999,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 7,
+    "expected": 926.115,
+    "actual": 926.1149999999999,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 8,
+    "expected": 926.18,
+    "actual": 926.1799999999998,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 9,
+    "expected": 926.4,
+    "actual": 926.3999999999999,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 1,
+    "expected": 932.832,
+    "actual": 932.8320000000001,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 2,
+    "expected": 931.631,
+    "actual": 931.6310000000001,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 3,
+    "expected": 930.562,
+    "actual": 930.5619999999999,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 4,
+    "expected": 929.625,
+    "actual": 929.625,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 5,
+    "expected": 928.82,
+    "actual": 928.8199999999999,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 6,
+    "expected": 928.147,
+    "actual": 928.1469999999999,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 7,
+    "expected": 927.606,
+    "actual": 927.6059999999999,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 8,
+    "expected": 927.197,
+    "actual": 927.1969999999999,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 9,
+    "expected": 926.92,
+    "actual": 926.9199999999998,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 1,
+    "expected": 926.4,
+    "actual": 926.4000000000001,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 2,
+    "expected": 926.18,
+    "actual": 926.1800000000001,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 3,
+    "expected": 926.115,
+    "actual": 926.115,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 4,
+    "expected": 926.205,
+    "actual": 926.205,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 5,
+    "expected": 926.45,
+    "actual": 926.45,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 6,
+    "expected": 926.85,
+    "actual": 926.85,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 7,
+    "expected": 927.405,
+    "actual": 927.405,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 8,
+    "expected": 928.115,
+    "actual": 928.115,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 9,
+    "expected": 928.98,
+    "actual": 928.98,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 1,
+    "expected": 933.312,
+    "actual": 933.3120000000001,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 2,
+    "expected": 932.556,
+    "actual": 932.556,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 3,
+    "expected": 931.897,
+    "actual": 931.8969999999999,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 4,
+    "expected": 931.335,
+    "actual": 931.335,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 5,
+    "expected": 930.87,
+    "actual": 930.87,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 6,
+    "expected": 930.502,
+    "actual": 930.502,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 7,
+    "expected": 930.231,
+    "actual": 930.231,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 8,
+    "expected": 930.057,
+    "actual": 930.057,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 9,
+    "expected": 929.98,
+    "actual": 929.98,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 1,
+    "expected": 926.92,
+    "actual": 926.9200000000001,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 2,
+    "expected": 927.197,
+    "actual": 927.1970000000001,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 3,
+    "expected": 927.606,
+    "actual": 927.606,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 4,
+    "expected": 928.147,
+    "actual": 928.147,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 5,
+    "expected": 928.82,
+    "actual": 928.8199999999999,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 6,
+    "expected": 929.625,
+    "actual": 929.6250000000001,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 7,
+    "expected": 930.562,
+    "actual": 930.5620000000001,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 8,
+    "expected": 931.631,
+    "actual": 931.6310000000001,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 9,
+    "expected": 932.832,
+    "actual": 932.8320000000001,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 1,
+    "expected": 929.98,
+    "actual": 929.9800000000001,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 2,
+    "expected": 930.057,
+    "actual": 930.057,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 3,
+    "expected": 930.231,
+    "actual": 930.231,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 4,
+    "expected": 930.502,
+    "actual": 930.502,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 5,
+    "expected": 930.87,
+    "actual": 930.87,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 6,
+    "expected": 931.335,
+    "actual": 931.335,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 7,
+    "expected": 931.897,
+    "actual": 931.897,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 8,
+    "expected": 932.556,
+    "actual": 932.556,
+    "passed": true
+  },
+  {
+    "laps": 10,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 9,
+    "expected": 933.312,
+    "actual": 933.3120000000001,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 1,
+    "expected": 3223.47,
+    "actual": 3223.4700000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 2,
+    "expected": 3220.655,
+    "actual": 3220.655,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 3,
+    "expected": 3218.157,
+    "actual": 3218.1569999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 4,
+    "expected": 3215.94,
+    "actual": 3215.9399999999996,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 5,
+    "expected": 3213.968,
+    "actual": 3213.968,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 6,
+    "expected": 3212.205,
+    "actual": 3212.2049999999995,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 7,
+    "expected": 3210.615,
+    "actual": 3210.6150000000002,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 8,
+    "expected": 3209.18,
+    "actual": 3209.1800000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 9,
+    "expected": 3207.9,
+    "actual": 3207.9000000000005,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 10,
+    "expected": 3206.775,
+    "actual": 3206.775,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 11,
+    "expected": 3205.805,
+    "actual": 3205.805,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 12,
+    "expected": 3204.99,
+    "actual": 3204.99,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 13,
+    "expected": 3204.33,
+    "actual": 3204.33,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 14,
+    "expected": 3203.825,
+    "actual": 3203.825,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 15,
+    "expected": 3203.475,
+    "actual": 3203.475,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 16,
+    "expected": 3203.28,
+    "actual": 3203.28,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 17,
+    "expected": 3203.24,
+    "actual": 3203.2400000000002,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 18,
+    "expected": 3203.355,
+    "actual": 3203.3550000000005,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 19,
+    "expected": 3203.625,
+    "actual": 3203.625,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 20,
+    "expected": 3204.068,
+    "actual": 3204.068,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 21,
+    "expected": 3204.72,
+    "actual": 3204.72,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 22,
+    "expected": 3205.617,
+    "actual": 3205.6169999999993,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 23,
+    "expected": 3206.795,
+    "actual": 3206.7949999999996,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 24,
+    "expected": 3208.29,
+    "actual": 3208.29,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 25,
+    "expected": 3210.138,
+    "actual": 3210.138,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 26,
+    "expected": 3212.375,
+    "actual": 3212.375,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 27,
+    "expected": 3215.037,
+    "actual": 3215.037,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 28,
+    "expected": 3218.16,
+    "actual": 3218.16,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 29,
+    "expected": 3221.78,
+    "actual": 3221.7799999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 30,
+    "expected": 3225.933,
+    "actual": 3225.9329999999995,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 31,
+    "expected": 3230.655,
+    "actual": 3230.6549999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 32,
+    "expected": 3235.982,
+    "actual": 3235.982,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 33,
+    "expected": 3241.95,
+    "actual": 3241.9500000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 34,
+    "expected": 3248.595,
+    "actual": 3248.5950000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 1,
+    "expected": 3227.257,
+    "actual": 3227.257,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 2,
+    "expected": 3225.131,
+    "actual": 3225.131,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 3,
+    "expected": 3223.137,
+    "actual": 3223.1369999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 4,
+    "expected": 3221.275,
+    "actual": 3221.2749999999996,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 5,
+    "expected": 3219.545,
+    "actual": 3219.545,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 6,
+    "expected": 3217.947,
+    "actual": 3217.9469999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 7,
+    "expected": 3216.481,
+    "actual": 3216.4809999999993,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 8,
+    "expected": 3215.147,
+    "actual": 3215.1469999999995,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 9,
+    "expected": 3213.945,
+    "actual": 3213.9449999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 10,
+    "expected": 3212.875,
+    "actual": 3212.8749999999995,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 11,
+    "expected": 3211.937,
+    "actual": 3211.9370000000004,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 12,
+    "expected": 3211.131,
+    "actual": 3211.1310000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 13,
+    "expected": 3210.457,
+    "actual": 3210.457,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 14,
+    "expected": 3209.915,
+    "actual": 3209.9149999999995,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 15,
+    "expected": 3209.505,
+    "actual": 3209.5049999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 16,
+    "expected": 3209.227,
+    "actual": 3209.227,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 17,
+    "expected": 3209.081,
+    "actual": 3209.081,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 18,
+    "expected": 3209.067,
+    "actual": 3209.067,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 19,
+    "expected": 3209.185,
+    "actual": 3209.185,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 20,
+    "expected": 3209.453,
+    "actual": 3209.4530000000004,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 21,
+    "expected": 3209.907,
+    "actual": 3209.907,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 22,
+    "expected": 3210.583,
+    "actual": 3210.583,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 23,
+    "expected": 3211.517,
+    "actual": 3211.517,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 24,
+    "expected": 3212.745,
+    "actual": 3212.745,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 25,
+    "expected": 3214.303,
+    "actual": 3214.303,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 26,
+    "expected": 3216.227,
+    "actual": 3216.227,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 27,
+    "expected": 3218.553,
+    "actual": 3218.553,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 28,
+    "expected": 3221.317,
+    "actual": 3221.317,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 29,
+    "expected": 3224.555,
+    "actual": 3224.555,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 30,
+    "expected": 3228.303,
+    "actual": 3228.303,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 31,
+    "expected": 3232.597,
+    "actual": 3232.5969999999998,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 32,
+    "expected": 3237.473,
+    "actual": 3237.473,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 33,
+    "expected": 3242.967,
+    "actual": 3242.967,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 34,
+    "expected": 3249.115,
+    "actual": 3249.1150000000002,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 1,
+    "expected": 3248.595,
+    "actual": 3248.5950000000007,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 2,
+    "expected": 3241.95,
+    "actual": 3241.950000000001,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 3,
+    "expected": 3235.982,
+    "actual": 3235.982000000001,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 4,
+    "expected": 3230.655,
+    "actual": 3230.6550000000007,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 5,
+    "expected": 3225.933,
+    "actual": 3225.9330000000004,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 6,
+    "expected": 3221.78,
+    "actual": 3221.78,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 7,
+    "expected": 3218.16,
+    "actual": 3218.1600000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 8,
+    "expected": 3215.037,
+    "actual": 3215.0370000000007,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 9,
+    "expected": 3212.375,
+    "actual": 3212.375000000001,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 10,
+    "expected": 3210.138,
+    "actual": 3210.138000000001,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 11,
+    "expected": 3208.29,
+    "actual": 3208.2900000000004,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 12,
+    "expected": 3206.795,
+    "actual": 3206.795,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 13,
+    "expected": 3205.617,
+    "actual": 3205.617,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 14,
+    "expected": 3204.72,
+    "actual": 3204.72,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 15,
+    "expected": 3204.068,
+    "actual": 3204.068,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 16,
+    "expected": 3203.625,
+    "actual": 3203.6250000000005,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 17,
+    "expected": 3203.355,
+    "actual": 3203.3550000000005,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 18,
+    "expected": 3203.24,
+    "actual": 3203.2400000000007,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 19,
+    "expected": 3203.28,
+    "actual": 3203.2800000000007,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 20,
+    "expected": 3203.475,
+    "actual": 3203.475,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 21,
+    "expected": 3203.825,
+    "actual": 3203.8250000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 22,
+    "expected": 3204.33,
+    "actual": 3204.33,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 23,
+    "expected": 3204.99,
+    "actual": 3204.9900000000002,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 24,
+    "expected": 3205.805,
+    "actual": 3205.8050000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 25,
+    "expected": 3206.775,
+    "actual": 3206.7750000000005,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 26,
+    "expected": 3207.9,
+    "actual": 3207.9000000000005,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 27,
+    "expected": 3209.18,
+    "actual": 3209.1800000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 28,
+    "expected": 3210.615,
+    "actual": 3210.6150000000002,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 29,
+    "expected": 3212.205,
+    "actual": 3212.205,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 30,
+    "expected": 3213.968,
+    "actual": 3213.968,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 31,
+    "expected": 3215.94,
+    "actual": 3215.9399999999996,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 32,
+    "expected": 3218.157,
+    "actual": 3218.1569999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 33,
+    "expected": 3220.655,
+    "actual": 3220.6549999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 34,
+    "expected": 3223.47,
+    "actual": 3223.47,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 1,
+    "expected": 3227.737,
+    "actual": 3227.737,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 2,
+    "expected": 3226.056,
+    "actual": 3226.056,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 3,
+    "expected": 3224.472,
+    "actual": 3224.4719999999998,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 4,
+    "expected": 3222.985,
+    "actual": 3222.9849999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 5,
+    "expected": 3221.595,
+    "actual": 3221.5950000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 6,
+    "expected": 3220.302,
+    "actual": 3220.3019999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 7,
+    "expected": 3219.106,
+    "actual": 3219.1059999999998,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 8,
+    "expected": 3218.007,
+    "actual": 3218.0069999999996,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 9,
+    "expected": 3217.005,
+    "actual": 3217.005,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 10,
+    "expected": 3216.1,
+    "actual": 3216.1,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 11,
+    "expected": 3215.292,
+    "actual": 3215.292,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 12,
+    "expected": 3214.581,
+    "actual": 3214.581,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 13,
+    "expected": 3213.967,
+    "actual": 3213.967,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 14,
+    "expected": 3213.45,
+    "actual": 3213.4500000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 15,
+    "expected": 3213.03,
+    "actual": 3213.03,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 16,
+    "expected": 3212.707,
+    "actual": 3212.7070000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 17,
+    "expected": 3212.481,
+    "actual": 3212.4810000000007,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 18,
+    "expected": 3212.352,
+    "actual": 3212.3520000000008,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 19,
+    "expected": 3212.32,
+    "actual": 3212.32,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 20,
+    "expected": 3212.385,
+    "actual": 3212.385,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 21,
+    "expected": 3212.547,
+    "actual": 3212.5470000000005,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 22,
+    "expected": 3212.806,
+    "actual": 3212.806,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 23,
+    "expected": 3213.162,
+    "actual": 3213.1620000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 24,
+    "expected": 3213.615,
+    "actual": 3213.6150000000002,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 25,
+    "expected": 3214.165,
+    "actual": 3214.1650000000004,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 26,
+    "expected": 3214.812,
+    "actual": 3214.8120000000004,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 27,
+    "expected": 3215.556,
+    "actual": 3215.5560000000005,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 28,
+    "expected": 3216.397,
+    "actual": 3216.3970000000004,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 29,
+    "expected": 3217.335,
+    "actual": 3217.335,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 30,
+    "expected": 3218.388,
+    "actual": 3218.388,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 31,
+    "expected": 3219.592,
+    "actual": 3219.5919999999996,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 32,
+    "expected": 3220.983,
+    "actual": 3220.9829999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 33,
+    "expected": 3222.597,
+    "actual": 3222.5969999999998,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 34,
+    "expected": 3224.47,
+    "actual": 3224.47,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 1,
+    "expected": 3249.115,
+    "actual": 3249.1150000000007,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 2,
+    "expected": 3242.967,
+    "actual": 3242.967000000001,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 3,
+    "expected": 3237.473,
+    "actual": 3237.473000000001,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 4,
+    "expected": 3232.597,
+    "actual": 3232.5970000000007,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 5,
+    "expected": 3228.303,
+    "actual": 3228.3030000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 6,
+    "expected": 3224.555,
+    "actual": 3224.5550000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 7,
+    "expected": 3221.317,
+    "actual": 3221.3170000000005,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 8,
+    "expected": 3218.553,
+    "actual": 3218.553000000001,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 9,
+    "expected": 3216.227,
+    "actual": 3216.2270000000008,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 10,
+    "expected": 3214.303,
+    "actual": 3214.303000000001,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 11,
+    "expected": 3212.745,
+    "actual": 3212.7450000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 12,
+    "expected": 3211.517,
+    "actual": 3211.5170000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 13,
+    "expected": 3210.583,
+    "actual": 3210.583,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 14,
+    "expected": 3209.907,
+    "actual": 3209.9069999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 15,
+    "expected": 3209.453,
+    "actual": 3209.453,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 16,
+    "expected": 3209.185,
+    "actual": 3209.1850000000004,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 17,
+    "expected": 3209.067,
+    "actual": 3209.0670000000005,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 18,
+    "expected": 3209.081,
+    "actual": 3209.0810000000006,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 19,
+    "expected": 3209.227,
+    "actual": 3209.2270000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 20,
+    "expected": 3209.505,
+    "actual": 3209.505,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 21,
+    "expected": 3209.915,
+    "actual": 3209.915,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 22,
+    "expected": 3210.457,
+    "actual": 3210.457,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 23,
+    "expected": 3211.131,
+    "actual": 3211.131,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 24,
+    "expected": 3211.937,
+    "actual": 3211.937,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 25,
+    "expected": 3212.875,
+    "actual": 3212.875,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 26,
+    "expected": 3213.945,
+    "actual": 3213.945,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 27,
+    "expected": 3215.147,
+    "actual": 3215.147,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 28,
+    "expected": 3216.481,
+    "actual": 3216.4809999999998,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 29,
+    "expected": 3217.947,
+    "actual": 3217.9469999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 30,
+    "expected": 3219.545,
+    "actual": 3219.5449999999996,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 31,
+    "expected": 3221.275,
+    "actual": 3221.2749999999996,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 32,
+    "expected": 3223.137,
+    "actual": 3223.1369999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 33,
+    "expected": 3225.131,
+    "actual": 3225.131,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 34,
+    "expected": 3227.257,
+    "actual": 3227.257,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 1,
+    "expected": 3224.47,
+    "actual": 3224.4700000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 2,
+    "expected": 3222.597,
+    "actual": 3222.597,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 3,
+    "expected": 3220.983,
+    "actual": 3220.9829999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 4,
+    "expected": 3219.592,
+    "actual": 3219.5919999999996,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 5,
+    "expected": 3218.388,
+    "actual": 3218.388,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 6,
+    "expected": 3217.335,
+    "actual": 3217.3349999999996,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 7,
+    "expected": 3216.397,
+    "actual": 3216.3970000000004,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 8,
+    "expected": 3215.556,
+    "actual": 3215.5560000000005,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 9,
+    "expected": 3214.812,
+    "actual": 3214.812000000001,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 10,
+    "expected": 3214.165,
+    "actual": 3214.1650000000004,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 11,
+    "expected": 3213.615,
+    "actual": 3213.6150000000002,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 12,
+    "expected": 3213.162,
+    "actual": 3213.1620000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 13,
+    "expected": 3212.806,
+    "actual": 3212.8059999999996,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 14,
+    "expected": 3212.547,
+    "actual": 3212.5469999999996,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 15,
+    "expected": 3212.385,
+    "actual": 3212.3849999999998,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 16,
+    "expected": 3212.32,
+    "actual": 3212.32,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 17,
+    "expected": 3212.352,
+    "actual": 3212.3520000000008,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 18,
+    "expected": 3212.481,
+    "actual": 3212.4810000000007,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 19,
+    "expected": 3212.707,
+    "actual": 3212.7070000000003,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 20,
+    "expected": 3213.03,
+    "actual": 3213.03,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 21,
+    "expected": 3213.45,
+    "actual": 3213.45,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 22,
+    "expected": 3213.967,
+    "actual": 3213.9669999999996,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 23,
+    "expected": 3214.581,
+    "actual": 3214.5809999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 24,
+    "expected": 3215.292,
+    "actual": 3215.292,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 25,
+    "expected": 3216.1,
+    "actual": 3216.1,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 26,
+    "expected": 3217.005,
+    "actual": 3217.005,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 27,
+    "expected": 3218.007,
+    "actual": 3218.007,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 28,
+    "expected": 3219.106,
+    "actual": 3219.1059999999998,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 29,
+    "expected": 3220.302,
+    "actual": 3220.3019999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 30,
+    "expected": 3221.595,
+    "actual": 3221.5949999999993,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 31,
+    "expected": 3222.985,
+    "actual": 3222.9849999999997,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 32,
+    "expected": 3224.472,
+    "actual": 3224.4719999999998,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 33,
+    "expected": 3226.056,
+    "actual": 3226.056,
+    "passed": true
+  },
+  {
+    "laps": 35,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 34,
+    "expected": 3227.737,
+    "actual": 3227.737,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 1,
+    "expected": 11463.39,
+    "actual": 11463.39,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 2,
+    "expected": 11368.925,
+    "actual": 11368.925000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 3,
+    "expected": 11277.117,
+    "actual": 11277.117,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 4,
+    "expected": 11187.93,
+    "actual": 11187.93,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 5,
+    "expected": 11101.328,
+    "actual": 11101.327999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 6,
+    "expected": 11017.275,
+    "actual": 11017.274999999996,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 7,
+    "expected": 10935.735,
+    "actual": 10935.734999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 8,
+    "expected": 10856.672,
+    "actual": 10856.672,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 9,
+    "expected": 10780.05,
+    "actual": 10780.05,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 10,
+    "expected": 10705.833,
+    "actual": 10705.832999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 11,
+    "expected": 10633.985,
+    "actual": 10633.984999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 12,
+    "expected": 10564.47,
+    "actual": 10564.469999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 13,
+    "expected": 10497.252,
+    "actual": 10497.252,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 14,
+    "expected": 10432.295,
+    "actual": 10432.295000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 15,
+    "expected": 10369.563,
+    "actual": 10369.563000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 16,
+    "expected": 10309.02,
+    "actual": 10309.020000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 17,
+    "expected": 10250.63,
+    "actual": 10250.630000000005,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 18,
+    "expected": 10194.357,
+    "actual": 10194.357000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 19,
+    "expected": 10140.165,
+    "actual": 10140.165000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 20,
+    "expected": 10088.036,
+    "actual": 10088.036000000006,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 21,
+    "expected": 10037.97,
+    "actual": 10037.970000000005,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 22,
+    "expected": 9989.967,
+    "actual": 9989.967000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 23,
+    "expected": 9944.027,
+    "actual": 9944.027000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 24,
+    "expected": 9900.15,
+    "actual": 9900.150000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 25,
+    "expected": 9858.336,
+    "actual": 9858.336000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 26,
+    "expected": 9818.585,
+    "actual": 9818.585000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 27,
+    "expected": 9780.897,
+    "actual": 9780.897000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 28,
+    "expected": 9745.272,
+    "actual": 9745.272000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 29,
+    "expected": 9711.71,
+    "actual": 9711.710000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 30,
+    "expected": 9680.211,
+    "actual": 9680.211000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 31,
+    "expected": 9650.775,
+    "actual": 9650.775000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 32,
+    "expected": 9623.402,
+    "actual": 9623.402,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 33,
+    "expected": 9598.092,
+    "actual": 9598.092,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 34,
+    "expected": 9574.845,
+    "actual": 9574.845000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 35,
+    "expected": 9553.661,
+    "actual": 9553.661,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 36,
+    "expected": 9534.54,
+    "actual": 9534.540000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 37,
+    "expected": 9517.482,
+    "actual": 9517.482000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 38,
+    "expected": 9502.487,
+    "actual": 9502.487000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 39,
+    "expected": 9489.555,
+    "actual": 9489.555000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 40,
+    "expected": 9478.686,
+    "actual": 9478.686000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 41,
+    "expected": 9469.88,
+    "actual": 9469.880000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 42,
+    "expected": 9463.137,
+    "actual": 9463.137000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 43,
+    "expected": 9458.457,
+    "actual": 9458.457000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 44,
+    "expected": 9455.84,
+    "actual": 9455.840000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 45,
+    "expected": 9455.286,
+    "actual": 9455.286000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 46,
+    "expected": 9456.795,
+    "actual": 9456.795000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 47,
+    "expected": 9460.367,
+    "actual": 9460.367000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 48,
+    "expected": 9466.002,
+    "actual": 9466.002000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 49,
+    "expected": 9473.7,
+    "actual": 9473.7,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 50,
+    "expected": 9483.461,
+    "actual": 9483.461,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 51,
+    "expected": 9495.285,
+    "actual": 9495.284999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 52,
+    "expected": 9509.172,
+    "actual": 9509.171999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 53,
+    "expected": 9525.122,
+    "actual": 9525.121999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 54,
+    "expected": 9543.135,
+    "actual": 9543.134999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 55,
+    "expected": 9563.211,
+    "actual": 9563.210999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 56,
+    "expected": 9585.35,
+    "actual": 9585.349999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 57,
+    "expected": 9609.552,
+    "actual": 9609.551999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 58,
+    "expected": 9635.817,
+    "actual": 9635.816999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 59,
+    "expected": 9664.145,
+    "actual": 9664.144999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 60,
+    "expected": 9694.536,
+    "actual": 9694.536,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 61,
+    "expected": 9726.99,
+    "actual": 9726.99,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 62,
+    "expected": 9761.507,
+    "actual": 9761.507000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 63,
+    "expected": 9798.087,
+    "actual": 9798.087000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 64,
+    "expected": 9836.73,
+    "actual": 9836.730000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 65,
+    "expected": 9877.436,
+    "actual": 9877.436000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 66,
+    "expected": 9920.205,
+    "actual": 9920.205000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 67,
+    "expected": 9965.037,
+    "actual": 9965.037000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 68,
+    "expected": 10011.932,
+    "actual": 10011.932000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 69,
+    "expected": 10060.89,
+    "actual": 10060.890000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 70,
+    "expected": 10111.911,
+    "actual": 10111.911,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 71,
+    "expected": 10164.995,
+    "actual": 10164.995,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 72,
+    "expected": 10220.142,
+    "actual": 10220.142000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 73,
+    "expected": 10277.37,
+    "actual": 10277.37,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 74,
+    "expected": 10336.715,
+    "actual": 10336.715,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 75,
+    "expected": 10398.213,
+    "actual": 10398.213000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 76,
+    "expected": 10461.9,
+    "actual": 10461.900000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 77,
+    "expected": 10527.812,
+    "actual": 10527.812000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 78,
+    "expected": 10595.985,
+    "actual": 10595.985000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 79,
+    "expected": 10666.455,
+    "actual": 10666.455000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 80,
+    "expected": 10739.258,
+    "actual": 10739.258000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 81,
+    "expected": 10814.43,
+    "actual": 10814.43,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 82,
+    "expected": 10892.007,
+    "actual": 10892.007000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 83,
+    "expected": 10972.025,
+    "actual": 10972.025000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 84,
+    "expected": 11054.52,
+    "actual": 11054.52,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 85,
+    "expected": 11139.528,
+    "actual": 11139.528000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 86,
+    "expected": 11227.085,
+    "actual": 11227.085000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 87,
+    "expected": 11317.227,
+    "actual": 11317.227000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 88,
+    "expected": 11409.99,
+    "actual": 11409.990000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 89,
+    "expected": 11505.41,
+    "actual": 11505.410000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 90,
+    "expected": 11603.523,
+    "actual": 11603.523000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 91,
+    "expected": 11704.365,
+    "actual": 11704.365,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 92,
+    "expected": 11807.972,
+    "actual": 11807.972000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 93,
+    "expected": 11914.38,
+    "actual": 11914.380000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 94,
+    "expected": 12023.625,
+    "actual": 12023.625000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 95,
+    "expected": 12135.743,
+    "actual": 12135.743,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 96,
+    "expected": 12250.77,
+    "actual": 12250.77,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 97,
+    "expected": 12368.742,
+    "actual": 12368.742,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 98,
+    "expected": 12489.695,
+    "actual": 12489.695,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "M"
+    ],
+    "stop": 99,
+    "expected": 12613.665,
+    "actual": 12613.664999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 1,
+    "expected": 10629.567,
+    "actual": 10629.567,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 2,
+    "expected": 10560.236,
+    "actual": 10560.235999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 3,
+    "expected": 10493.179,
+    "actual": 10493.178999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 4,
+    "expected": 10428.36,
+    "actual": 10428.359999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 5,
+    "expected": 10365.743,
+    "actual": 10365.743,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 6,
+    "expected": 10305.292,
+    "actual": 10305.292000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 7,
+    "expected": 10246.971,
+    "actual": 10246.971000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 8,
+    "expected": 10190.744,
+    "actual": 10190.744,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 9,
+    "expected": 10136.575,
+    "actual": 10136.575,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 10,
+    "expected": 10084.428,
+    "actual": 10084.428000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 11,
+    "expected": 10034.267,
+    "actual": 10034.267,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 12,
+    "expected": 9986.056,
+    "actual": 9986.056,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 13,
+    "expected": 9939.759,
+    "actual": 9939.759,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 14,
+    "expected": 9895.34,
+    "actual": 9895.340000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 15,
+    "expected": 9852.763,
+    "actual": 9852.763,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 16,
+    "expected": 9811.992,
+    "actual": 9811.992,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 17,
+    "expected": 9772.991,
+    "actual": 9772.991000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 18,
+    "expected": 9735.724,
+    "actual": 9735.724000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 19,
+    "expected": 9700.155,
+    "actual": 9700.155000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 20,
+    "expected": 9666.266,
+    "actual": 9666.266000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 21,
+    "expected": 9634.057,
+    "actual": 9634.057000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 22,
+    "expected": 9603.528,
+    "actual": 9603.528000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 23,
+    "expected": 9574.679,
+    "actual": 9574.679000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 24,
+    "expected": 9547.51,
+    "actual": 9547.510000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 25,
+    "expected": 9522.021,
+    "actual": 9522.021000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 26,
+    "expected": 9498.212,
+    "actual": 9498.212000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 27,
+    "expected": 9476.083,
+    "actual": 9476.083000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 28,
+    "expected": 9455.634,
+    "actual": 9455.634000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 29,
+    "expected": 9436.865,
+    "actual": 9436.865000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 30,
+    "expected": 9419.776,
+    "actual": 9419.776000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 31,
+    "expected": 9404.367,
+    "actual": 9404.367000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 32,
+    "expected": 9390.638,
+    "actual": 9390.638,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 33,
+    "expected": 9378.589,
+    "actual": 9378.589000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 34,
+    "expected": 9368.22,
+    "actual": 9368.220000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 35,
+    "expected": 9359.531,
+    "actual": 9359.531,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 36,
+    "expected": 9352.522,
+    "actual": 9352.522,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 37,
+    "expected": 9347.193,
+    "actual": 9347.193,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 38,
+    "expected": 9343.544,
+    "actual": 9343.543999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 39,
+    "expected": 9341.575,
+    "actual": 9341.574999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 40,
+    "expected": 9341.286,
+    "actual": 9341.285999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 41,
+    "expected": 9342.677,
+    "actual": 9342.676999999996,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 42,
+    "expected": 9345.748,
+    "actual": 9345.747999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 43,
+    "expected": 9350.499,
+    "actual": 9350.499,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 44,
+    "expected": 9356.93,
+    "actual": 9356.929999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 45,
+    "expected": 9365.041,
+    "actual": 9365.040999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 46,
+    "expected": 9374.832,
+    "actual": 9374.831999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 47,
+    "expected": 9386.303,
+    "actual": 9386.303,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 48,
+    "expected": 9399.454,
+    "actual": 9399.453999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 49,
+    "expected": 9414.285,
+    "actual": 9414.285,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 50,
+    "expected": 9430.796,
+    "actual": 9430.796000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 51,
+    "expected": 9448.987,
+    "actual": 9448.987000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 52,
+    "expected": 9468.858,
+    "actual": 9468.858000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 53,
+    "expected": 9490.409,
+    "actual": 9490.409000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 54,
+    "expected": 9513.64,
+    "actual": 9513.640000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 55,
+    "expected": 9538.551,
+    "actual": 9538.551000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 56,
+    "expected": 9565.142,
+    "actual": 9565.142000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 57,
+    "expected": 9593.413,
+    "actual": 9593.413000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 58,
+    "expected": 9623.364,
+    "actual": 9623.364000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 59,
+    "expected": 9654.995,
+    "actual": 9654.995,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 60,
+    "expected": 9688.306,
+    "actual": 9688.306000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 61,
+    "expected": 9723.297,
+    "actual": 9723.297000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 62,
+    "expected": 9759.968,
+    "actual": 9759.968000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 63,
+    "expected": 9798.337,
+    "actual": 9798.337000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 64,
+    "expected": 9838.44,
+    "actual": 9838.440000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 65,
+    "expected": 9880.313,
+    "actual": 9880.313000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 66,
+    "expected": 9923.992,
+    "actual": 9923.992000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 67,
+    "expected": 9969.513,
+    "actual": 9969.513000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 68,
+    "expected": 10016.912,
+    "actual": 10016.912000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 69,
+    "expected": 10066.225,
+    "actual": 10066.225000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 70,
+    "expected": 10117.488,
+    "actual": 10117.488000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 71,
+    "expected": 10170.737,
+    "actual": 10170.737000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 72,
+    "expected": 10226.008,
+    "actual": 10226.008000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 73,
+    "expected": 10283.337,
+    "actual": 10283.337000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 74,
+    "expected": 10342.76,
+    "actual": 10342.760000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 75,
+    "expected": 10404.313,
+    "actual": 10404.313000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 76,
+    "expected": 10468.032,
+    "actual": 10468.032000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 77,
+    "expected": 10533.953,
+    "actual": 10533.953000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 78,
+    "expected": 10602.112,
+    "actual": 10602.112000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 79,
+    "expected": 10672.545,
+    "actual": 10672.545000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 80,
+    "expected": 10745.288,
+    "actual": 10745.288000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 81,
+    "expected": 10820.377,
+    "actual": 10820.377000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 82,
+    "expected": 10897.848,
+    "actual": 10897.848000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 83,
+    "expected": 10977.737,
+    "actual": 10977.737000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 84,
+    "expected": 11060.08,
+    "actual": 11060.080000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 85,
+    "expected": 11144.913,
+    "actual": 11144.913000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 86,
+    "expected": 11232.272,
+    "actual": 11232.272000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 87,
+    "expected": 11322.193,
+    "actual": 11322.193000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 88,
+    "expected": 11414.712,
+    "actual": 11414.712000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 89,
+    "expected": 11509.865,
+    "actual": 11509.865000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 90,
+    "expected": 11607.688,
+    "actual": 11607.688000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 91,
+    "expected": 11708.217,
+    "actual": 11708.217,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 92,
+    "expected": 11811.488,
+    "actual": 11811.488000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 93,
+    "expected": 11917.537,
+    "actual": 11917.537000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 94,
+    "expected": 12026.4,
+    "actual": 12026.400000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 95,
+    "expected": 12138.113,
+    "actual": 12138.113000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 96,
+    "expected": 12252.712,
+    "actual": 12252.712000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 97,
+    "expected": 12370.233,
+    "actual": 12370.233,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 98,
+    "expected": 12490.712,
+    "actual": 12490.712,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "S",
+      "H"
+    ],
+    "stop": 99,
+    "expected": 12614.185,
+    "actual": 12614.185,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 1,
+    "expected": 12613.665,
+    "actual": 12613.664999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 2,
+    "expected": 12489.695,
+    "actual": 12489.695,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 3,
+    "expected": 12368.742,
+    "actual": 12368.741999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 4,
+    "expected": 12250.77,
+    "actual": 12250.769999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 5,
+    "expected": 12135.743,
+    "actual": 12135.743,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 6,
+    "expected": 12023.625,
+    "actual": 12023.625,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 7,
+    "expected": 11914.38,
+    "actual": 11914.380000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 8,
+    "expected": 11807.972,
+    "actual": 11807.972000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 9,
+    "expected": 11704.365,
+    "actual": 11704.365,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 10,
+    "expected": 11603.523,
+    "actual": 11603.523000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 11,
+    "expected": 11505.41,
+    "actual": 11505.410000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 12,
+    "expected": 11409.99,
+    "actual": 11409.990000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 13,
+    "expected": 11317.227,
+    "actual": 11317.227000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 14,
+    "expected": 11227.085,
+    "actual": 11227.085000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 15,
+    "expected": 11139.528,
+    "actual": 11139.528000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 16,
+    "expected": 11054.52,
+    "actual": 11054.520000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 17,
+    "expected": 10972.025,
+    "actual": 10972.025000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 18,
+    "expected": 10892.007,
+    "actual": 10892.007000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 19,
+    "expected": 10814.43,
+    "actual": 10814.430000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 20,
+    "expected": 10739.258,
+    "actual": 10739.258000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 21,
+    "expected": 10666.455,
+    "actual": 10666.455,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 22,
+    "expected": 10595.985,
+    "actual": 10595.985,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 23,
+    "expected": 10527.812,
+    "actual": 10527.812,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 24,
+    "expected": 10461.9,
+    "actual": 10461.899999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 25,
+    "expected": 10398.213,
+    "actual": 10398.212999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 26,
+    "expected": 10336.715,
+    "actual": 10336.714999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 27,
+    "expected": 10277.37,
+    "actual": 10277.369999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 28,
+    "expected": 10220.142,
+    "actual": 10220.141999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 29,
+    "expected": 10164.995,
+    "actual": 10164.994999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 30,
+    "expected": 10111.911,
+    "actual": 10111.910999999996,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 31,
+    "expected": 10060.89,
+    "actual": 10060.889999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 32,
+    "expected": 10011.932,
+    "actual": 10011.931999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 33,
+    "expected": 9965.037,
+    "actual": 9965.036999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 34,
+    "expected": 9920.205,
+    "actual": 9920.204999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 35,
+    "expected": 9877.436,
+    "actual": 9877.435999999996,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 36,
+    "expected": 9836.73,
+    "actual": 9836.729999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 37,
+    "expected": 9798.087,
+    "actual": 9798.086999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 38,
+    "expected": 9761.507,
+    "actual": 9761.506999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 39,
+    "expected": 9726.99,
+    "actual": 9726.989999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 40,
+    "expected": 9694.536,
+    "actual": 9694.535999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 41,
+    "expected": 9664.145,
+    "actual": 9664.145,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 42,
+    "expected": 9635.817,
+    "actual": 9635.817000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 43,
+    "expected": 9609.552,
+    "actual": 9609.552000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 44,
+    "expected": 9585.35,
+    "actual": 9585.35,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 45,
+    "expected": 9563.211,
+    "actual": 9563.211,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 46,
+    "expected": 9543.135,
+    "actual": 9543.134999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 47,
+    "expected": 9525.122,
+    "actual": 9525.122,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 48,
+    "expected": 9509.172,
+    "actual": 9509.172,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 49,
+    "expected": 9495.285,
+    "actual": 9495.285,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 50,
+    "expected": 9483.461,
+    "actual": 9483.461,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 51,
+    "expected": 9473.7,
+    "actual": 9473.7,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 52,
+    "expected": 9466.002,
+    "actual": 9466.002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 53,
+    "expected": 9460.367,
+    "actual": 9460.367000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 54,
+    "expected": 9456.795,
+    "actual": 9456.795,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 55,
+    "expected": 9455.286,
+    "actual": 9455.285999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 56,
+    "expected": 9455.84,
+    "actual": 9455.839999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 57,
+    "expected": 9458.457,
+    "actual": 9458.456999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 58,
+    "expected": 9463.137,
+    "actual": 9463.136999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 59,
+    "expected": 9469.88,
+    "actual": 9469.879999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 60,
+    "expected": 9478.686,
+    "actual": 9478.685999999996,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 61,
+    "expected": 9489.555,
+    "actual": 9489.554999999995,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 62,
+    "expected": 9502.487,
+    "actual": 9502.486999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 63,
+    "expected": 9517.482,
+    "actual": 9517.481999999995,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 64,
+    "expected": 9534.54,
+    "actual": 9534.539999999995,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 65,
+    "expected": 9553.661,
+    "actual": 9553.660999999996,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 66,
+    "expected": 9574.845,
+    "actual": 9574.844999999994,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 67,
+    "expected": 9598.092,
+    "actual": 9598.091999999995,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 68,
+    "expected": 9623.402,
+    "actual": 9623.401999999993,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 69,
+    "expected": 9650.775,
+    "actual": 9650.774999999994,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 70,
+    "expected": 9680.211,
+    "actual": 9680.210999999996,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 71,
+    "expected": 9711.71,
+    "actual": 9711.709999999995,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 72,
+    "expected": 9745.272,
+    "actual": 9745.271999999995,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 73,
+    "expected": 9780.897,
+    "actual": 9780.896999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 74,
+    "expected": 9818.585,
+    "actual": 9818.584999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 75,
+    "expected": 9858.336,
+    "actual": 9858.336,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 76,
+    "expected": 9900.15,
+    "actual": 9900.15,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 77,
+    "expected": 9944.027,
+    "actual": 9944.026999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 78,
+    "expected": 9989.967,
+    "actual": 9989.966999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 79,
+    "expected": 10037.97,
+    "actual": 10037.97,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 80,
+    "expected": 10088.036,
+    "actual": 10088.035999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 81,
+    "expected": 10140.165,
+    "actual": 10140.164999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 82,
+    "expected": 10194.357,
+    "actual": 10194.356999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 83,
+    "expected": 10250.63,
+    "actual": 10250.63,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 84,
+    "expected": 10309.02,
+    "actual": 10309.019999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 85,
+    "expected": 10369.563,
+    "actual": 10369.563,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 86,
+    "expected": 10432.295,
+    "actual": 10432.295,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 87,
+    "expected": 10497.252,
+    "actual": 10497.252,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 88,
+    "expected": 10564.47,
+    "actual": 10564.470000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 89,
+    "expected": 10633.985,
+    "actual": 10633.985,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 90,
+    "expected": 10705.833,
+    "actual": 10705.833,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 91,
+    "expected": 10780.05,
+    "actual": 10780.050000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 92,
+    "expected": 10856.672,
+    "actual": 10856.672,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 93,
+    "expected": 10935.735,
+    "actual": 10935.734999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 94,
+    "expected": 11017.275,
+    "actual": 11017.275,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 95,
+    "expected": 11101.328,
+    "actual": 11101.328,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 96,
+    "expected": 11187.93,
+    "actual": 11187.93,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 97,
+    "expected": 11277.117,
+    "actual": 11277.117,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 98,
+    "expected": 11368.925,
+    "actual": 11368.925,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "S"
+    ],
+    "stop": 99,
+    "expected": 11463.39,
+    "actual": 11463.39,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 1,
+    "expected": 10630.047,
+    "actual": 10630.046999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 2,
+    "expected": 10561.161,
+    "actual": 10561.160999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 3,
+    "expected": 10494.514,
+    "actual": 10494.514,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 4,
+    "expected": 10430.07,
+    "actual": 10430.07,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 5,
+    "expected": 10367.793,
+    "actual": 10367.793000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 6,
+    "expected": 10307.647,
+    "actual": 10307.647,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 7,
+    "expected": 10249.596,
+    "actual": 10249.596000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 8,
+    "expected": 10193.604,
+    "actual": 10193.604000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 9,
+    "expected": 10139.635,
+    "actual": 10139.635000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 10,
+    "expected": 10087.653,
+    "actual": 10087.653000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 11,
+    "expected": 10037.622,
+    "actual": 10037.622,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 12,
+    "expected": 9989.506,
+    "actual": 9989.506000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 13,
+    "expected": 9943.269,
+    "actual": 9943.269,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 14,
+    "expected": 9898.875,
+    "actual": 9898.875000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 15,
+    "expected": 9856.288,
+    "actual": 9856.288,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 16,
+    "expected": 9815.472,
+    "actual": 9815.472000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 17,
+    "expected": 9776.391,
+    "actual": 9776.391000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 18,
+    "expected": 9739.009,
+    "actual": 9739.009000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 19,
+    "expected": 9703.29,
+    "actual": 9703.290000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 20,
+    "expected": 9669.198,
+    "actual": 9669.198000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 21,
+    "expected": 9636.697,
+    "actual": 9636.697000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 22,
+    "expected": 9605.751,
+    "actual": 9605.751000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 23,
+    "expected": 9576.324,
+    "actual": 9576.324000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 24,
+    "expected": 9548.38,
+    "actual": 9548.380000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 25,
+    "expected": 9521.883,
+    "actual": 9521.883000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 26,
+    "expected": 9496.797,
+    "actual": 9496.797000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 27,
+    "expected": 9473.086,
+    "actual": 9473.086000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 28,
+    "expected": 9450.714,
+    "actual": 9450.714000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 29,
+    "expected": 9429.645,
+    "actual": 9429.645000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 30,
+    "expected": 9409.861,
+    "actual": 9409.861000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 31,
+    "expected": 9391.362,
+    "actual": 9391.362000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 32,
+    "expected": 9374.148,
+    "actual": 9374.148000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 33,
+    "expected": 9358.219,
+    "actual": 9358.219000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 34,
+    "expected": 9343.575,
+    "actual": 9343.575,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 35,
+    "expected": 9330.216,
+    "actual": 9330.216,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 36,
+    "expected": 9318.142,
+    "actual": 9318.142,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 37,
+    "expected": 9307.353,
+    "actual": 9307.353,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 38,
+    "expected": 9297.849,
+    "actual": 9297.848999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 39,
+    "expected": 9289.63,
+    "actual": 9289.629999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 40,
+    "expected": 9282.696,
+    "actual": 9282.695999999996,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 41,
+    "expected": 9277.047,
+    "actual": 9277.046999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 42,
+    "expected": 9272.683,
+    "actual": 9272.682999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 43,
+    "expected": 9269.604,
+    "actual": 9269.603999999996,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 44,
+    "expected": 9267.81,
+    "actual": 9267.809999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 45,
+    "expected": 9267.301,
+    "actual": 9267.300999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 46,
+    "expected": 9268.077,
+    "actual": 9268.076999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 47,
+    "expected": 9270.138,
+    "actual": 9270.137999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 48,
+    "expected": 9273.484,
+    "actual": 9273.483999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 49,
+    "expected": 9278.115,
+    "actual": 9278.114999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 50,
+    "expected": 9284.031,
+    "actual": 9284.030999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 51,
+    "expected": 9291.232,
+    "actual": 9291.232,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 52,
+    "expected": 9299.718,
+    "actual": 9299.718,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 53,
+    "expected": 9309.489,
+    "actual": 9309.489000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 54,
+    "expected": 9320.545,
+    "actual": 9320.545000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 55,
+    "expected": 9332.886,
+    "actual": 9332.886,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 56,
+    "expected": 9346.512,
+    "actual": 9346.512,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 57,
+    "expected": 9361.423,
+    "actual": 9361.423000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 58,
+    "expected": 9377.619,
+    "actual": 9377.619000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 59,
+    "expected": 9395.1,
+    "actual": 9395.100000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 60,
+    "expected": 9413.866,
+    "actual": 9413.866000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 61,
+    "expected": 9433.917,
+    "actual": 9433.917000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 62,
+    "expected": 9455.253,
+    "actual": 9455.253,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 63,
+    "expected": 9477.892,
+    "actual": 9477.892000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 64,
+    "expected": 9501.87,
+    "actual": 9501.87,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 65,
+    "expected": 9527.223,
+    "actual": 9527.223000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 66,
+    "expected": 9553.987,
+    "actual": 9553.987000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 67,
+    "expected": 9582.198,
+    "actual": 9582.198,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 68,
+    "expected": 9611.892,
+    "actual": 9611.892000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 69,
+    "expected": 9643.105,
+    "actual": 9643.105000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 70,
+    "expected": 9675.873,
+    "actual": 9675.873000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 71,
+    "expected": 9710.232,
+    "actual": 9710.232,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 72,
+    "expected": 9746.218,
+    "actual": 9746.217999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 73,
+    "expected": 9783.867,
+    "actual": 9783.867,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 74,
+    "expected": 9823.215,
+    "actual": 9823.215,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 75,
+    "expected": 9864.298,
+    "actual": 9864.298000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 76,
+    "expected": 9907.152,
+    "actual": 9907.152,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 77,
+    "expected": 9951.813,
+    "actual": 9951.812999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 78,
+    "expected": 9998.317,
+    "actual": 9998.317,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 79,
+    "expected": 10046.7,
+    "actual": 10046.7,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 80,
+    "expected": 10096.998,
+    "actual": 10096.998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 81,
+    "expected": 10149.247,
+    "actual": 10149.247,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 82,
+    "expected": 10203.483,
+    "actual": 10203.483,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 83,
+    "expected": 10259.742,
+    "actual": 10259.742,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 84,
+    "expected": 10318.06,
+    "actual": 10318.06,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 85,
+    "expected": 10378.473,
+    "actual": 10378.473,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 86,
+    "expected": 10441.017,
+    "actual": 10441.017,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 87,
+    "expected": 10505.728,
+    "actual": 10505.728000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 88,
+    "expected": 10572.642,
+    "actual": 10572.642000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 89,
+    "expected": 10641.795,
+    "actual": 10641.795000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 90,
+    "expected": 10713.223,
+    "actual": 10713.223000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 91,
+    "expected": 10786.962,
+    "actual": 10786.962000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 92,
+    "expected": 10863.048,
+    "actual": 10863.048,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 93,
+    "expected": 10941.517,
+    "actual": 10941.517,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 94,
+    "expected": 11022.405,
+    "actual": 11022.405,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 95,
+    "expected": 11105.748,
+    "actual": 11105.748000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 96,
+    "expected": 11191.582,
+    "actual": 11191.582000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 97,
+    "expected": 11279.943,
+    "actual": 11279.943000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 98,
+    "expected": 11370.867,
+    "actual": 11370.867,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "M",
+      "H"
+    ],
+    "stop": 99,
+    "expected": 11464.39,
+    "actual": 11464.39,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 1,
+    "expected": 12614.185,
+    "actual": 12614.185,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 2,
+    "expected": 12490.712,
+    "actual": 12490.712,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 3,
+    "expected": 12370.233,
+    "actual": 12370.232999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 4,
+    "expected": 12252.712,
+    "actual": 12252.711999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 5,
+    "expected": 12138.113,
+    "actual": 12138.113,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 6,
+    "expected": 12026.4,
+    "actual": 12026.400000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 7,
+    "expected": 11917.537,
+    "actual": 11917.537,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 8,
+    "expected": 11811.488,
+    "actual": 11811.488000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 9,
+    "expected": 11708.217,
+    "actual": 11708.217,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 10,
+    "expected": 11607.688,
+    "actual": 11607.688000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 11,
+    "expected": 11509.865,
+    "actual": 11509.865000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 12,
+    "expected": 11414.712,
+    "actual": 11414.712000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 13,
+    "expected": 11322.193,
+    "actual": 11322.193000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 14,
+    "expected": 11232.272,
+    "actual": 11232.272000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 15,
+    "expected": 11144.913,
+    "actual": 11144.913000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 16,
+    "expected": 11060.08,
+    "actual": 11060.080000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 17,
+    "expected": 10977.737,
+    "actual": 10977.737000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 18,
+    "expected": 10897.848,
+    "actual": 10897.848000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 19,
+    "expected": 10820.377,
+    "actual": 10820.377000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 20,
+    "expected": 10745.288,
+    "actual": 10745.288,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 21,
+    "expected": 10672.545,
+    "actual": 10672.545,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 22,
+    "expected": 10602.112,
+    "actual": 10602.112000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 23,
+    "expected": 10533.953,
+    "actual": 10533.953,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 24,
+    "expected": 10468.032,
+    "actual": 10468.031999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 25,
+    "expected": 10404.313,
+    "actual": 10404.312999999996,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 26,
+    "expected": 10342.76,
+    "actual": 10342.759999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 27,
+    "expected": 10283.337,
+    "actual": 10283.336999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 28,
+    "expected": 10226.008,
+    "actual": 10226.007999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 29,
+    "expected": 10170.737,
+    "actual": 10170.736999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 30,
+    "expected": 10117.488,
+    "actual": 10117.487999999996,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 31,
+    "expected": 10066.225,
+    "actual": 10066.224999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 32,
+    "expected": 10016.912,
+    "actual": 10016.911999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 33,
+    "expected": 9969.513,
+    "actual": 9969.512999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 34,
+    "expected": 9923.992,
+    "actual": 9923.991999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 35,
+    "expected": 9880.313,
+    "actual": 9880.312999999996,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 36,
+    "expected": 9838.44,
+    "actual": 9838.439999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 37,
+    "expected": 9798.337,
+    "actual": 9798.336999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 38,
+    "expected": 9759.968,
+    "actual": 9759.967999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 39,
+    "expected": 9723.297,
+    "actual": 9723.296999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 40,
+    "expected": 9688.306,
+    "actual": 9688.305999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 41,
+    "expected": 9654.995,
+    "actual": 9654.995,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 42,
+    "expected": 9623.364,
+    "actual": 9623.364,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 43,
+    "expected": 9593.413,
+    "actual": 9593.413000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 44,
+    "expected": 9565.142,
+    "actual": 9565.142000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 45,
+    "expected": 9538.551,
+    "actual": 9538.551,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 46,
+    "expected": 9513.64,
+    "actual": 9513.64,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 47,
+    "expected": 9490.409,
+    "actual": 9490.409,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 48,
+    "expected": 9468.858,
+    "actual": 9468.858,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 49,
+    "expected": 9448.987,
+    "actual": 9448.987000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 50,
+    "expected": 9430.796,
+    "actual": 9430.796,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 51,
+    "expected": 9414.285,
+    "actual": 9414.285,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 52,
+    "expected": 9399.454,
+    "actual": 9399.454,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 53,
+    "expected": 9386.303,
+    "actual": 9386.303000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 54,
+    "expected": 9374.832,
+    "actual": 9374.832000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 55,
+    "expected": 9365.041,
+    "actual": 9365.041000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 56,
+    "expected": 9356.93,
+    "actual": 9356.93,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 57,
+    "expected": 9350.499,
+    "actual": 9350.499,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 58,
+    "expected": 9345.748,
+    "actual": 9345.748,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 59,
+    "expected": 9342.677,
+    "actual": 9342.677,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 60,
+    "expected": 9341.286,
+    "actual": 9341.285999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 61,
+    "expected": 9341.575,
+    "actual": 9341.574999999995,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 62,
+    "expected": 9343.544,
+    "actual": 9343.543999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 63,
+    "expected": 9347.193,
+    "actual": 9347.192999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 64,
+    "expected": 9352.522,
+    "actual": 9352.521999999995,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 65,
+    "expected": 9359.531,
+    "actual": 9359.530999999995,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 66,
+    "expected": 9368.22,
+    "actual": 9368.219999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 67,
+    "expected": 9378.589,
+    "actual": 9378.588999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 68,
+    "expected": 9390.638,
+    "actual": 9390.637999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 69,
+    "expected": 9404.367,
+    "actual": 9404.366999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 70,
+    "expected": 9419.776,
+    "actual": 9419.775999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 71,
+    "expected": 9436.865,
+    "actual": 9436.864999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 72,
+    "expected": 9455.634,
+    "actual": 9455.633999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 73,
+    "expected": 9476.083,
+    "actual": 9476.082999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 74,
+    "expected": 9498.212,
+    "actual": 9498.212,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 75,
+    "expected": 9522.021,
+    "actual": 9522.021,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 76,
+    "expected": 9547.51,
+    "actual": 9547.510000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 77,
+    "expected": 9574.679,
+    "actual": 9574.679000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 78,
+    "expected": 9603.528,
+    "actual": 9603.528000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 79,
+    "expected": 9634.057,
+    "actual": 9634.057,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 80,
+    "expected": 9666.266,
+    "actual": 9666.266000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 81,
+    "expected": 9700.155,
+    "actual": 9700.155,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 82,
+    "expected": 9735.724,
+    "actual": 9735.724000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 83,
+    "expected": 9772.991,
+    "actual": 9772.991000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 84,
+    "expected": 9811.992,
+    "actual": 9811.992000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 85,
+    "expected": 9852.763,
+    "actual": 9852.763000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 86,
+    "expected": 9895.34,
+    "actual": 9895.340000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 87,
+    "expected": 9939.759,
+    "actual": 9939.759000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 88,
+    "expected": 9986.056,
+    "actual": 9986.056000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 89,
+    "expected": 10034.267,
+    "actual": 10034.267000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 90,
+    "expected": 10084.428,
+    "actual": 10084.428000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 91,
+    "expected": 10136.575,
+    "actual": 10136.575000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 92,
+    "expected": 10190.744,
+    "actual": 10190.744000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 93,
+    "expected": 10246.971,
+    "actual": 10246.971000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 94,
+    "expected": 10305.292,
+    "actual": 10305.292000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 95,
+    "expected": 10365.743,
+    "actual": 10365.743,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 96,
+    "expected": 10428.36,
+    "actual": 10428.36,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 97,
+    "expected": 10493.179,
+    "actual": 10493.179,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 98,
+    "expected": 10560.236,
+    "actual": 10560.235999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "S"
+    ],
+    "stop": 99,
+    "expected": 10629.567,
+    "actual": 10629.567,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 1,
+    "expected": 11464.39,
+    "actual": 11464.39,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 2,
+    "expected": 11370.867,
+    "actual": 11370.867,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 3,
+    "expected": 11279.943,
+    "actual": 11279.942999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 4,
+    "expected": 11191.582,
+    "actual": 11191.581999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 5,
+    "expected": 11105.748,
+    "actual": 11105.748,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 6,
+    "expected": 11022.405,
+    "actual": 11022.404999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 7,
+    "expected": 10941.517,
+    "actual": 10941.517000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 8,
+    "expected": 10863.048,
+    "actual": 10863.048,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 9,
+    "expected": 10786.962,
+    "actual": 10786.962,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 10,
+    "expected": 10713.223,
+    "actual": 10713.223000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 11,
+    "expected": 10641.795,
+    "actual": 10641.795,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 12,
+    "expected": 10572.642,
+    "actual": 10572.642,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 13,
+    "expected": 10505.728,
+    "actual": 10505.728,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 14,
+    "expected": 10441.017,
+    "actual": 10441.017000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 15,
+    "expected": 10378.473,
+    "actual": 10378.473000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 16,
+    "expected": 10318.06,
+    "actual": 10318.060000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 17,
+    "expected": 10259.742,
+    "actual": 10259.742000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 18,
+    "expected": 10203.483,
+    "actual": 10203.483000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 19,
+    "expected": 10149.247,
+    "actual": 10149.247000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 20,
+    "expected": 10096.998,
+    "actual": 10096.998000000005,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 21,
+    "expected": 10046.7,
+    "actual": 10046.700000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 22,
+    "expected": 9998.317,
+    "actual": 9998.317000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 23,
+    "expected": 9951.813,
+    "actual": 9951.813000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 24,
+    "expected": 9907.152,
+    "actual": 9907.152000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 25,
+    "expected": 9864.298,
+    "actual": 9864.298000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 26,
+    "expected": 9823.215,
+    "actual": 9823.215000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 27,
+    "expected": 9783.867,
+    "actual": 9783.867000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 28,
+    "expected": 9746.218,
+    "actual": 9746.218000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 29,
+    "expected": 9710.232,
+    "actual": 9710.232000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 30,
+    "expected": 9675.873,
+    "actual": 9675.873000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 31,
+    "expected": 9643.105,
+    "actual": 9643.105000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 32,
+    "expected": 9611.892,
+    "actual": 9611.892,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 33,
+    "expected": 9582.198,
+    "actual": 9582.198,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 34,
+    "expected": 9553.987,
+    "actual": 9553.987000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 35,
+    "expected": 9527.223,
+    "actual": 9527.223,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 36,
+    "expected": 9501.87,
+    "actual": 9501.87,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 37,
+    "expected": 9477.892,
+    "actual": 9477.892000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 38,
+    "expected": 9455.253,
+    "actual": 9455.253,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 39,
+    "expected": 9433.917,
+    "actual": 9433.917,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 40,
+    "expected": 9413.866,
+    "actual": 9413.866000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 41,
+    "expected": 9395.1,
+    "actual": 9395.100000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 42,
+    "expected": 9377.619,
+    "actual": 9377.619000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 43,
+    "expected": 9361.423,
+    "actual": 9361.423000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 44,
+    "expected": 9346.512,
+    "actual": 9346.512,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 45,
+    "expected": 9332.886,
+    "actual": 9332.886000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 46,
+    "expected": 9320.545,
+    "actual": 9320.545,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 47,
+    "expected": 9309.489,
+    "actual": 9309.489000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 48,
+    "expected": 9299.718,
+    "actual": 9299.718000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 49,
+    "expected": 9291.232,
+    "actual": 9291.232,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 50,
+    "expected": 9284.031,
+    "actual": 9284.031,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 51,
+    "expected": 9278.115,
+    "actual": 9278.115,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 52,
+    "expected": 9273.484,
+    "actual": 9273.483999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 53,
+    "expected": 9270.138,
+    "actual": 9270.137999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 54,
+    "expected": 9268.077,
+    "actual": 9268.076999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 55,
+    "expected": 9267.301,
+    "actual": 9267.300999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 56,
+    "expected": 9267.81,
+    "actual": 9267.809999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 57,
+    "expected": 9269.604,
+    "actual": 9269.603999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 58,
+    "expected": 9272.683,
+    "actual": 9272.682999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 59,
+    "expected": 9277.047,
+    "actual": 9277.046999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 60,
+    "expected": 9282.696,
+    "actual": 9282.695999999998,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 61,
+    "expected": 9289.63,
+    "actual": 9289.629999999997,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 62,
+    "expected": 9297.849,
+    "actual": 9297.849,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 63,
+    "expected": 9307.353,
+    "actual": 9307.353000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 64,
+    "expected": 9318.142,
+    "actual": 9318.142000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 65,
+    "expected": 9330.216,
+    "actual": 9330.216000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 66,
+    "expected": 9343.575,
+    "actual": 9343.575000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 67,
+    "expected": 9358.219,
+    "actual": 9358.219000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 68,
+    "expected": 9374.148,
+    "actual": 9374.148000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 69,
+    "expected": 9391.362,
+    "actual": 9391.362000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 70,
+    "expected": 9409.861,
+    "actual": 9409.861000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 71,
+    "expected": 9429.645,
+    "actual": 9429.645000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 72,
+    "expected": 9450.714,
+    "actual": 9450.714000000004,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 73,
+    "expected": 9473.086,
+    "actual": 9473.086000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 74,
+    "expected": 9496.797,
+    "actual": 9496.797000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 75,
+    "expected": 9521.883,
+    "actual": 9521.883000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 76,
+    "expected": 9548.38,
+    "actual": 9548.380000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 77,
+    "expected": 9576.324,
+    "actual": 9576.324,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 78,
+    "expected": 9605.751,
+    "actual": 9605.751,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 79,
+    "expected": 9636.697,
+    "actual": 9636.697000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 80,
+    "expected": 9669.198,
+    "actual": 9669.198,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 81,
+    "expected": 9703.29,
+    "actual": 9703.289999999999,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 82,
+    "expected": 9739.009,
+    "actual": 9739.009000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 83,
+    "expected": 9776.391,
+    "actual": 9776.391000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 84,
+    "expected": 9815.472,
+    "actual": 9815.472000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 85,
+    "expected": 9856.288,
+    "actual": 9856.288000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 86,
+    "expected": 9898.875,
+    "actual": 9898.875000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 87,
+    "expected": 9943.269,
+    "actual": 9943.269000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 88,
+    "expected": 9989.506,
+    "actual": 9989.506000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 89,
+    "expected": 10037.622,
+    "actual": 10037.622000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 90,
+    "expected": 10087.653,
+    "actual": 10087.653000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 91,
+    "expected": 10139.635,
+    "actual": 10139.635000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 92,
+    "expected": 10193.604,
+    "actual": 10193.604000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 93,
+    "expected": 10249.596,
+    "actual": 10249.596000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 94,
+    "expected": 10307.647,
+    "actual": 10307.647000000003,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 95,
+    "expected": 10367.793,
+    "actual": 10367.793000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 96,
+    "expected": 10430.07,
+    "actual": 10430.070000000002,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 97,
+    "expected": 10494.514,
+    "actual": 10494.514000000001,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 98,
+    "expected": 10561.161,
+    "actual": 10561.161,
+    "passed": true
+  },
+  {
+    "laps": 100,
+    "compounds": [
+      "H",
+      "M"
+    ],
+    "stop": 99,
+    "expected": 10630.047,
+    "actual": 10630.046999999999,
+    "passed": true
+  }
+]

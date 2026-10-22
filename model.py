@@ -131,3 +131,35 @@ def compare(base_time, laps, plan_a, plan_b, pit_loss=22.5):
     """Both simulations receive the same race settings."""
     return Comparison(simulate(base_time, laps, plan_a, pit_loss),
                       simulate(base_time, laps, plan_b, pit_loss))
+
+
+@dataclass(frozen=True)
+class Candidate:
+    plan: Strategy
+    total: float
+
+
+@dataclass(frozen=True)
+class Search:
+    best: Candidate
+    candidates: tuple[Candidate, ...]
+
+
+def optimise(base_time, laps, pit_loss=22.5):
+    """Exhaustively search only one stop and two different compounds."""
+    number_in_range(base_time, "Base lap time", 30, 200)
+    validate_laps(laps)
+    number_in_range(pit_loss, "Pit loss", 0, 60)
+    candidates = []
+    best = None
+    for first in COMPOUND_PACE:
+        for second in COMPOUND_PACE:
+            if first == second:
+                continue
+            for stop in range(1, laps):
+                plan = Strategy((first, second), (stop,))
+                candidate = Candidate(plan, simulate(base_time, laps, plan, pit_loss).total)
+                candidates.append(candidate)
+                if best is None or candidate.total < best.total - 1e-8:
+                    best = candidate
+    return Search(best, tuple(candidates))
