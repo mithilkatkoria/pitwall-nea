@@ -8,7 +8,7 @@ def oracle(base, laps, compounds, stop, pit):
     pace = {'S': D('0'), 'M': D('.48'), 'H': D('1')}
     rate = {'S': D('.095'), 'M': D('.060'), 'H': D('.037')}
     life = {'S': 18, 'M': 28, 'H': 38}
-    total = D(str(pit))
+    total = D(str(pit)) + D('.048')*laps*(laps-1)/2 + D('1.10')
     for compound, length in zip(compounds, (stop, laps-stop)):
         k = max(0, length-1-life[compound])
         total += length*(D(str(base))+pace[compound])
@@ -34,7 +34,7 @@ class SearchTests(unittest.TestCase):
     def test_known_small_winner_and_tie_order(self):
         result = optimise(90, 10)
         self.assertEqual(result.best.plan, Strategy(('S','M'), (7,)))
-        self.assertAlmostEqual(result.best.total, 926.115)
+        self.assertAlmostEqual(result.best.total, 929.375)
         reverse = next(c for c in result.candidates if c.plan == Strategy(('M','S'), (3,)))
         self.assertAlmostEqual(reverse.total, result.best.total)
 
