@@ -1,0 +1,5 @@
+command: python main.py --circuit bahrain --optimise
+PITWALL / stage 10 / one-stop search
+Checked 336 candidates: 6 x (laps - 1).
+Best: M > H, stop 26; 5435.170 s
+One stop, two different compounds only. Ties within 1e-8 s keep the first enumerated plan.
