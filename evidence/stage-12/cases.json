@@ -1,0 +1,48 @@
+[
+  {
+    "id": "S12-CLI01",
+    "date": "2026-10-31",
+    "stage": 12,
+    "requirements": [
+      "SC01",
+      "SC02",
+      "SC06",
+      "SC09",
+      "SC12"
+    ],
+    "args": [
+      "--gui",
+      "--frames",
+      "3",
+      "--screenshot",
+      "evidence/stage-12/first-window.png"
+    ],
+    "expected_exit": 0,
+    "expected_text": "",
+    "actual_exit": 0,
+    "actual_output": "pygame-ce 2.5.7 (SDL 2.32.10, Python 3.14.0)\n",
+    "passed": true
+  },
+  {
+    "id": "S12-CLI02",
+    "date": "2026-10-31",
+    "stage": 12,
+    "requirements": [
+      "SC01",
+      "SC02",
+      "SC06",
+      "SC09",
+      "SC12"
+    ],
+    "args": [
+      "--laps",
+      "10",
+      "--optimise"
+    ],
+    "expected_exit": 0,
+    "expected_text": "929.375",
+    "actual_exit": 0,
+    "actual_output": "PITWALL / stage 10 / one-stop search\nChecked 54 candidates: 6 x (laps - 1).\nBest: S > M, stop 7; 929.375 s\nOne stop, two different compounds only. Ties within 1e-8 s keep the first enumerated plan.\n",
+    "passed": true
+  }
+]
