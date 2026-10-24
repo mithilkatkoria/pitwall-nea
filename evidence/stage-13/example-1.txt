@@ -1,0 +1,2 @@
+command: python main.py --gui --frames 3 --screenshot evidence/stage-13/circuit.png
+pygame-ce 2.5.7 (SDL 2.32.10, Python 3.14.0)
