@@ -1,7 +1,8 @@
 """First usable Pygame interface. Calculations remain in model.py."""
 import pygame
 from circuits import load_circuits
-from track import fit_points
+from track import fit_points, point_at
+from replay import Replay, progress
 from model import Strategy, Conditions, compare, optimise
 
 BG = (24, 27, 30)
@@ -29,6 +30,8 @@ class App:
         self.controls = {}
         self.advanced = False
         self.result = None
+        self.replay = Replay()
+        self.dragging = False
         self.status = "Choose tyres and stops, then simulate. Stops occur after the numbered lap."
         self.error = False
         self.running = True
@@ -48,6 +51,7 @@ class App:
             self.fields[f'stop{i}_0'] = str(c.laps//2)
             self.fields[f'stop{i}_1'] = str(2*c.laps//3)
         self.result = None
+        self.replay = Replay()
         self.focus = None
         self.status = f"{c.name} defaults loaded. Simulate to update the results."
 
@@ -72,6 +76,7 @@ class App:
             self.status, self.error = str(error), True
             return False
         self.result = result
+        self.replay = Replay(max(result.a.total,result.b.total))
         self.status, self.error = "Results updated. Positive B-A means A is faster. Illustrative model, not telemetry.", False
         return True
 
@@ -98,7 +103,10 @@ class App:
             self.focus = key
         else:
             self.focus = None
-            if key == 'simulate': self.calculate()
+            if key == 'play': self.replay.toggle()
+            elif key == 'restart': self.replay.restart()
+            elif key == 'speed': self.replay.cycle_speed()
+            elif key == 'simulate': self.calculate()
             elif key == 'optimise': self.search()
             elif key == 'profile': self.set_profile((self.profile_index+1) % len(self.profiles))
             elif key == 'advanced': self.advanced = not self.advanced
@@ -115,11 +123,19 @@ class App:
     def handle(self, event):
         if event.type == pygame.QUIT:
             self.running = False
+        elif event.type == pygame.MOUSEBUTTONUP and event.button == 1:
+            self.dragging = False
+        elif event.type == pygame.MOUSEMOTION and self.dragging:
+            self.scrub(event.pos[0])
         elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             self.focus = None
             for key, rect in self.controls.items():
                 if rect.collidepoint(event.pos):
-                    self.activate(key)
+                    if key == 'timeline':
+                        self.dragging = True
+                        self.scrub(event.pos[0])
+                    else:
+                        self.activate(key)
                     break
         elif event.type == pygame.TEXTINPUT and self.focus:
             if len(self.fields[self.focus])+len(event.text) <= 16:
@@ -135,6 +151,13 @@ class App:
                 self.fields[self.focus] = self.fields[self.focus][:-1]; self.dirty()
             elif self.focus and event.key == pygame.K_a and event.mod & pygame.KMOD_CTRL:
                 self.fields[self.focus] = ''; self.dirty()
+
+    def scrub(self, x):
+        rect=self.controls['timeline']
+        self.replay.scrub((x-rect.x)/rect.width)
+
+    def update(self, seconds):
+        self.replay.advance(seconds)
 
     def text(self, value, x, y, color=TEXT, small=False):
         self.screen.blit((self.small if small else self.font).render(str(value), True, color), (x,y))
@@ -185,6 +208,14 @@ class App:
         self.text('S Soft: quicker, wears faster. M Medium: balance. H Hard: slower, lasts longer.',30,580,MUTED,True)
         self.text(self.status[:115],30,615,RED if self.error else TEXT,True)
         self.draw_track()
+        self.button('play','Pause' if self.replay.playing else 'Play',(30,660,100,38))
+        self.button('restart','Restart',(145,660,110,38))
+        self.button('speed',f'{self.replay.speed}x',(270,660,100,38))
+        self.text(f'{self.replay.elapsed:.1f} / {self.replay.duration:.1f} s',400,670,MUTED)
+        self.controls['timeline']=pygame.Rect(30,710,940,20)
+        pygame.draw.rect(self.screen,PANEL,self.controls['timeline'])
+        fraction=self.replay.elapsed/self.replay.duration if self.replay.duration else 0
+        pygame.draw.rect(self.screen,RED,(30,710,940*fraction,20))
         pygame.display.flip()
 
     def draw_track(self):
@@ -196,7 +227,16 @@ class App:
         pygame.draw.lines(self.screen,(105,113,121),True,points,13)
         pygame.draw.lines(self.screen,(185,192,199),True,points,2)
         pygame.draw.circle(self.screen,RED,points[0],7)
-        self.text('Start / finish',1020,625,MUTED,True)
+        self.text('Start / finish. Shared race clock.',1020,625,MUTED,True)
+        if self.result:
+            for i,result in enumerate((self.result.a,self.result.b)):
+                distance,index=progress(result,self.replay.elapsed)
+                point=point_at(points,distance)
+                color=RED if i==0 else TEXT
+                pygame.draw.circle(self.screen,color,point,9 if i==0 else 6)
+                self.text('AB'[i],point[0]+12,point[1]-10,color,True)
+                label='FINISHED' if distance>=len(result.laps) else f'L{index+1:02} {result.laps[index].compound}'
+                self.text(f'{"AB"[i]}  {label}',1020+i*180,675,color,True)
 
 
 def run(frames=None, screenshot=None):
@@ -205,10 +245,10 @@ def run(frames=None, screenshot=None):
     count=0
     while app.running:
         for event in pygame.event.get(): app.handle(event)
+        app.update(min(clock.tick(60)/1000,60))
         app.draw()
         count+=1
         if frames is not None and count >= frames:
             if screenshot: pygame.image.save(app.screen,screenshot)
             break
-        clock.tick(60)
     pygame.quit()

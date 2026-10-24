@@ -50,3 +50,14 @@ class InterfaceTests(unittest.TestCase):
         self.assertEqual(self.app.counts[0],1)
         self.assertIn('optimised',self.app.status)
         self.assertFalse(self.app.error)
+
+    def test_replay_controls_and_timeline(self):
+        total=self.app.result.a.total
+        self.click('play');self.app.update(1)
+        self.assertEqual(self.app.replay.elapsed,120)
+        self.click('play');self.app.update(1)
+        self.assertEqual(self.app.replay.elapsed,120)
+        self.click('timeline')
+        self.assertAlmostEqual(self.app.replay.elapsed,self.app.replay.duration/2)
+        self.click('restart');self.assertEqual(self.app.replay.elapsed,0)
+        self.assertEqual(self.app.result.a.total,total)
