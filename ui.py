@@ -1,5 +1,6 @@
 """First usable Pygame interface. Calculations remain in model.py."""
 import pygame
+import charts
 from circuits import load_circuits
 from track import fit_points, point_at
 from replay import Replay, progress
@@ -17,7 +18,7 @@ TYRES = {'S': (235, 79, 85), 'M': (235, 202, 76), 'H': (225, 229, 232)}
 class App:
     def __init__(self):
         pygame.init()
-        self.screen = pygame.display.set_mode((1400, 760))
+        self.screen = pygame.display.set_mode((1400, 900))
         pygame.display.set_caption("PITWALL | circuit workbench")
         self.font = pygame.font.Font(None, 25)
         self.small = pygame.font.Font(None, 21)
@@ -30,6 +31,8 @@ class App:
         self.focus = None
         self.controls = {}
         self.advanced = False
+        self.metric = "lap"
+        self.mouse = (0,0)
         self.result = None
         self.replay = Replay()
         self.dragging = False
@@ -146,7 +149,8 @@ class App:
             self.focus = key
         else:
             self.focus = None
-            if key in ('save','load','export'): self.file_action(key)
+            if key.startswith('metric_'): self.metric=key[7:]
+            elif key in ('save','load','export'): self.file_action(key)
             elif key == 'play': self.replay.toggle()
             elif key == 'restart': self.replay.restart()
             elif key == 'speed': self.replay.cycle_speed()
@@ -165,6 +169,7 @@ class App:
                 self.compounds[i][j] = choices[(choices.index(self.compounds[i][j])+1)%3]; self.dirty()
 
     def handle(self, event):
+        if event.type == pygame.MOUSEMOTION: self.mouse = event.pos
         if event.type == pygame.QUIT:
             self.running = False
         elif event.type == pygame.MOUSEBUTTONUP and event.button == 1:
@@ -251,18 +256,50 @@ class App:
             verdict='Equal predicted totals' if r.winner=='Tie' else f'{r.winner} faster by {abs(r.gap):.3f} s'
             self.text(verdict,545,y,TYRES['M'])
             self.text(f'B minus A: {r.gap:+.3f} s. Lower total wins.',30,y+36,MUTED)
-        self.text('S Soft: quicker, wears faster. M Medium: balance. H Hard: slower, lasts longer.',30,580,MUTED,True)
-        self.text(self.status[:115],30,615,RED if self.error else TEXT,True)
+        self.text('S Soft: quicker, wears faster. M Medium: balance. H Hard: slower, lasts longer.',30,760,MUTED,True)
+        self.text(self.status[:115],30,875,RED if self.error else TEXT,True)
+        if not self.advanced and self.result: self.draw_chart()
         self.draw_track()
-        self.button('play','Pause' if self.replay.playing else 'Play',(30,660,100,38))
-        self.button('restart','Restart',(145,660,110,38))
-        self.button('speed',f'{self.replay.speed}x',(270,660,100,38))
-        self.text(f'{self.replay.elapsed:.1f} / {self.replay.duration:.1f} s',400,670,MUTED)
-        self.controls['timeline']=pygame.Rect(30,710,940,20)
+        self.button('play','Pause' if self.replay.playing else 'Play',(30,790,100,38))
+        self.button('restart','Restart',(145,790,110,38))
+        self.button('speed',f'{self.replay.speed}x',(270,790,100,38))
+        self.text(f'{self.replay.elapsed:.1f} / {self.replay.duration:.1f} s',400,800,MUTED)
+        self.controls['timeline']=pygame.Rect(30,840,940,20)
         pygame.draw.rect(self.screen,PANEL,self.controls['timeline'])
         fraction=self.replay.elapsed/self.replay.duration if self.replay.duration else 0
-        pygame.draw.rect(self.screen,RED,(30,710,940*fraction,20))
+        pygame.draw.rect(self.screen,RED,(30,840,940*fraction,20))
         pygame.display.flip()
+
+    def chart_readout(self,index):
+        values=charts.series(self.result,self.metric)
+        label='B-A' if self.metric=='gap' else 'A'
+        text=f'Lap {index+1}: {label} {values[0][index]:.3f} s'
+        if len(values)==2: text+=f' / B {values[1][index]:.3f} s'
+        return text
+
+    def draw_chart(self):
+        labels={'lap':'Lap time incl. pits','gap':'Cumulative B-A','tyre':'Degradation only'}
+        for i,(metric,label) in enumerate(labels.items()):
+            self.button('metric_'+metric,label,(30+i*235,520,220,36),RED if metric==self.metric else None)
+        values=charts.series(self.result,self.metric)
+        bounds=pygame.Rect(80,595,880,135)
+        low,high=charts.limits(values)
+        self.text(f'{high:.2f}',30,590,MUTED,True)
+        self.text(f'{low:.2f}',30,715,MUTED,True)
+        for fraction in (0,.5,1):
+            y=bounds.y+fraction*bounds.height
+            pygame.draw.line(self.screen,PANEL,(bounds.x,y),(bounds.right,y))
+        for i,group in enumerate(values):
+            pygame.draw.lines(self.screen,RED if i==0 else TEXT,False,charts.points(group,bounds,(low,high)),2)
+        self.text('L1',80,735,MUTED,True)
+        self.text(f'L{len(values[0])}',920,735,MUTED,True)
+        if bounds.collidepoint(self.mouse):
+            index=charts.hover_index(self.mouse[0],len(values[0]),bounds)
+            x=charts.points(values[0],bounds,(low,high))[index][0]
+            pygame.draw.line(self.screen,MUTED,(x,bounds.y),(x,bounds.bottom))
+            self.text(self.chart_readout(index),30,567,TEXT,True)
+        else:
+            self.text('Hover for recorded values. Red: A / White: B. Gap: B minus A.',30,567,MUTED,True)
 
     def draw_track(self):
         panel = pygame.Rect(1000,90,380,570)
