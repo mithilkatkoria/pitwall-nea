@@ -61,3 +61,18 @@ class InterfaceTests(unittest.TestCase):
         self.assertAlmostEqual(self.app.replay.elapsed,self.app.replay.duration/2)
         self.click('restart');self.assertEqual(self.app.replay.elapsed,0)
         self.assertEqual(self.app.result.a.total,total)
+
+    def test_load_failure_keeps_settings_and_result(self):
+        import tempfile
+        from pathlib import Path
+        from storage import save_session
+        before=self.app.session();result=self.app.result
+        with tempfile.TemporaryDirectory() as temp:
+            path=Path(temp)/'test.json';path.write_text('{')
+            self.assertFalse(self.app.load_from(path))
+            self.assertEqual(self.app.session(),before)
+            self.assertIs(self.app.result,result)
+            save_session(path,before)
+            self.app.fields['base']='99'
+            self.assertTrue(self.app.load_from(path))
+            self.assertEqual(self.app.session(),before)

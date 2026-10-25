@@ -1,0 +1,19 @@
+test_csv_row_count_and_every_component (test_storage.StorageTests.test_csv_row_count_and_every_component) ... FAIL
+test_failed_replace_preserves_original_and_unrelated_temp (test_storage.StorageTests.test_failed_replace_preserves_original_and_unrelated_temp) ... ok
+test_invalid_session_never_overwrites (test_storage.StorageTests.test_invalid_session_never_overwrites) ... ok
+test_missing_malformed_wrong_types_and_cardinality (test_storage.StorageTests.test_missing_malformed_wrong_types_and_cardinality) ... ok
+test_roundtrip (test_storage.StorageTests.test_roundtrip) ... ok
+
+======================================================================
+FAIL: test_csv_row_count_and_every_component (test_storage.StorageTests.test_csv_row_count_and_every_component)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>\pitwall-nea\tests\test_storage.py", line 42, in test_csv_row_count_and_every_component
+    self.assertRegex(row[name], r'^-?\d+\.\d{3}$')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Regex didn't match: '^-?\\d+\\.\\d{3}$' not found in '90'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.088s
+
+FAILED (failures=1)
