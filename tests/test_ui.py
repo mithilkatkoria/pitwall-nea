@@ -83,3 +83,12 @@ class InterfaceTests(unittest.TestCase):
         self.assertIn('0.000 s',self.app.chart_readout(0))
         self.click('metric_gap')
         self.assertIn(f'{self.app.result.gap:.3f}',self.app.chart_readout(51))
+
+    def test_driver_navigation_filter_and_failed_import(self):
+        self.click('driver_view')
+        self.assertEqual(self.app.view,'drivers')
+        self.click('filter');self.assertFalse(self.app.exclude_pits)
+        before=self.app.driver_rows
+        self.assertFalse(self.app.import_from('missing-driver-data.csv'))
+        self.assertIs(self.app.driver_rows,before)
+        self.click('strategy_view');self.assertEqual(self.app.view,'strategy')
