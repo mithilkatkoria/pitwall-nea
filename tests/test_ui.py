@@ -92,3 +92,16 @@ class InterfaceTests(unittest.TestCase):
         self.assertFalse(self.app.import_from('missing-driver-data.csv'))
         self.assertIs(self.app.driver_rows,before)
         self.click('strategy_view');self.assertEqual(self.app.view,'strategy')
+
+    def test_keyboard_views_and_visible_control_focus(self):
+        for key,view in ((pygame.K_F3,'notes'),(pygame.K_F2,'drivers'),(pygame.K_F1,'strategy')):
+            self.app.handle(pygame.event.Event(pygame.KEYDOWN,key=key,mod=0));self.app.draw()
+            self.assertEqual(self.app.view,view)
+            self.app.handle(pygame.event.Event(pygame.KEYDOWN,key=pygame.K_TAB,mod=0))
+            self.assertIn(self.app.focus,self.app.controls)
+            self.app.handle(pygame.event.Event(pygame.TEXTINPUT,text='x')) # buttons must not act as text fields
+        self.app.focus=None
+        self.app.handle(pygame.event.Event(pygame.KEYDOWN,key=pygame.K_SPACE,mod=0))
+        self.assertTrue(self.app.replay.playing)
+        self.app.handle(pygame.event.Event(pygame.KEYDOWN,key=pygame.K_r,mod=0))
+        self.assertFalse(self.app.replay.playing)

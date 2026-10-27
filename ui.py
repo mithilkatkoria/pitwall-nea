@@ -172,8 +172,8 @@ class App:
             self.focus = key
         else:
             self.focus = None
-            if key == 'driver_view': self.view='drivers'
-            elif key == 'strategy_view': self.view='strategy'
+            if key in ('driver_view','strategy_view','notes_view'):
+                self.view={'driver_view':'drivers','strategy_view':'strategy','notes_view':'notes'}[key]
             elif key == 'filter': self.exclude_pits=not self.exclude_pits
             elif key == 'sample': self.import_from(SAMPLE_PATH, sample=True)
             elif key == 'import': self.file_action('import')
@@ -217,20 +217,36 @@ class App:
                     else:
                         self.activate(key)
                     break
-        elif event.type == pygame.TEXTINPUT and self.focus:
+        elif event.type == pygame.TEXTINPUT and self.focus in self.fields and self.focus != 'weather':
             if len(self.fields[self.focus])+len(event.text) <= 16:
                 self.fields[self.focus] += event.text
                 self.dirty()
         elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_ESCAPE: self.focus = None
-            elif event.key == pygame.K_RETURN: self.calculate()
+            editing=self.focus in self.fields and self.focus!='weather'
+            if event.key in (pygame.K_F1,pygame.K_F2,pygame.K_F3):
+                self.view={pygame.K_F1:'strategy',pygame.K_F2:'drivers',pygame.K_F3:'notes'}[event.key]
+                self.focus=None
+            elif event.key == pygame.K_ESCAPE: self.focus = None
             elif event.key == pygame.K_TAB:
-                keys = [key for key in self.controls if key in self.fields and key != 'weather']
-                self.focus = keys[(keys.index(self.focus)+1)%len(keys)] if self.focus in keys else keys[0]
-            elif self.focus and event.key == pygame.K_BACKSPACE:
-                self.fields[self.focus] = self.fields[self.focus][:-1]; self.dirty()
-            elif self.focus and event.key == pygame.K_a and event.mod & pygame.KMOD_CTRL:
-                self.fields[self.focus] = ''; self.dirty()
+                keys=list(self.controls)
+                direction=-1 if event.mod & pygame.KMOD_SHIFT else 1
+                if keys: self.focus=keys[(keys.index(self.focus)+direction)%len(keys)] if self.focus in keys else keys[0]
+            elif event.key == pygame.K_RETURN:
+                if self.focus in self.controls and not editing: self.activate(self.focus)
+                elif self.view=='strategy': self.calculate()
+            elif editing and event.key == pygame.K_BACKSPACE:
+                self.fields[self.focus]=self.fields[self.focus][:-1];self.dirty()
+            elif editing and event.key == pygame.K_a and event.mod & pygame.KMOD_CTRL:
+                self.fields[self.focus]='';self.dirty()
+            elif event.mod & pygame.KMOD_CTRL:
+                actions={pygame.K_s:'save',pygame.K_l:'load',pygame.K_e:'export',pygame.K_i:'import'}
+                if event.key in actions: self.file_action(actions[event.key])
+            elif not editing and self.view=='strategy':
+                if event.key==pygame.K_SPACE: self.replay.toggle()
+                elif event.key==pygame.K_r: self.replay.restart()
+                elif event.key==pygame.K_o: self.search()
+                elif event.key==pygame.K_c:
+                    metrics=('lap','gap','tyre');self.metric=metrics[(metrics.index(self.metric)+1)%3]
 
     def scrub(self, x):
         rect=self.controls['timeline']
@@ -254,6 +270,9 @@ class App:
         self.button(key,self.fields[key],(x,y+23,width,38))
 
     def draw(self):
+        if self.view=='notes':
+            self.draw_notes()
+            return
         if self.view=='drivers':
             driver_view.draw(self)
             return
@@ -262,7 +281,7 @@ class App:
         self.screen.blit(self.title.render('PITWALL',True,TEXT),(30,22))
         self.text('STRATEGY WORKBENCH / FIRST INTERFACE',220,34,MUTED,True)
         self.button('profile',self.profile.name,(700,20,270,42))
-        self.button('driver_view','Driver analysis',(1030,20,340,42))
+        self.navigation()
         for key,label,x in [('laps','Race laps',30),('base','Base seconds',150),('pit','Pit loss seconds',290)]:
             self.field(key,label,x,100,120 if key != 'laps' else 100)
         self.button('advanced','Conditions +',(700,110,270,40))
@@ -303,6 +322,39 @@ class App:
         pygame.draw.rect(self.screen,PANEL,self.controls['timeline'])
         fraction=self.replay.elapsed/self.replay.duration if self.replay.duration else 0
         pygame.draw.rect(self.screen,RED,(30,840,940*fraction,20))
+        pygame.display.flip()
+
+    def navigation(self):
+        for i,(key,label) in enumerate((('strategy_view','Strategy F1'),('driver_view','Drivers F2'),('notes_view','Model F3'))):
+            self.button(key,label,(1000+i*130,20,120,40))
+
+    def draw_notes(self):
+        self.screen.fill(BG);self.controls={}
+        self.text('MODEL NOTES / assumptions and controls',30,30)
+        self.navigation()
+        lines=[
+            'Purpose: compare educational tyre strategies under the same simplified assumptions.',
+            'Ordinary lap = base + compound pace + degradation + fuel + warmup + driver + weather + pit.',
+            'Compound pace: Soft 0.00 s / Medium 0.48 s / Hard 1.00 s.',
+            'Degradation = (rate x age + 0.018 x max(0, age - life)^2) x wear x (1 + (temperature - 30) x 0.018).',
+            'Rates: 0.095 / 0.060 / 0.037. Model lives: 18 / 28 / 38 laps. Age counts completed laps before this lap.',
+            'Fuel = (race laps - current lap) x 1.6 x 0.03 seconds. Fresh-tyre warmup = 0.55 seconds.',
+            'Weather penalty: Dry 0 / Damp 5 / Wet 14 seconds. Driver pace: -2 to +2 seconds per racing lap.',
+            'A pit stop happens after its numbered lap. Next lap starts at age zero, even if pit loss is zero.',
+            'Safety car replaces racing terms: base x 1.4 + fuel x 0.25. Tyre age still advances.',
+            'SC pit loss = service + 0.6 x transit. Service = min(2.5, configured pit loss).',
+            f'Current SC input: start {self.fields["sc_start"]} (0 disables), duration {self.fields["sc_duration"]} laps. Simulate validates the interval.',
+            'Optimisation checks 6 x (laps - 1) one-stop plans with two different compounds. It does not optimise two stops.',
+            'Ties within 0.00000001 seconds keep the first enumerated plan. Positive B-minus-A means A is faster.',
+            'Charts: lap time includes pit loss; tyre chart shows applied degradation only, excluding warmup.',
+            'Replay shares elapsed seconds between cars. Schematic movement includes pit time, not a separate pit-lane path.',
+            'Driver statistics use population deviation and a least-squares trend against actual lap numbers.',
+            'Limits: no traffic, overtaking, random events, physical tyre temperature or real telemetry calibration.',
+            'F1/F2/F3 views. Tab/Shift+Tab controls. Enter activate/simulate. Escape clears focus.',
+            'When not editing: Space play/pause, R restart, O optimise A, C chart. Ctrl+S/L/E/I save/load/export/import.',
+            'Data and formulas are illustrative. Model details are in docs/model.md and data/README.md.'
+        ]
+        for index,line in enumerate(lines): self.text(line,30,105+index*34,TEXT if index<17 else MUTED,True)
         pygame.display.flip()
 
     def chart_readout(self,index):
