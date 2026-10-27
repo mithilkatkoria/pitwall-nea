@@ -1,0 +1,62 @@
+[
+  {
+    "id": "S19-CLI01",
+    "date": "2026-10-31",
+    "stage": 19,
+    "requirements": [
+      "SC02",
+      "SC03",
+      "SC05",
+      "SC07",
+      "SC08",
+      "SC11",
+      "SC12",
+      "SC13"
+    ],
+    "args": [
+      "--laps",
+      "10",
+      "--sc-start",
+      "1",
+      "--sc-duration",
+      "10",
+      "--compare"
+    ],
+    "expected_exit": 0,
+    "expected_text": "faster: Tie",
+    "actual_exit": 0,
+    "actual_output": "PITWALL / stage 10 / comparison\nA: 1260.540 s; B: 1260.540 s\nB minus A: +0.000 s; faster: Tie\nPositive gap favours A; negative gap favours B. Same race settings.\nLAP     A TIME      B TIME     CUMULATIVE B-A\n  1    126.108     126.108             +0.000\n  2    126.096     126.096             +0.000\n  3    126.084     126.084             +0.000\n  4    126.072     126.072             +0.000\n  5    126.060     126.060             +0.000\n  6    126.048     126.048             +0.000\n  7    126.036     126.036             +0.000\n  8    126.024     126.024             +0.000\n  9    126.012     126.012             +0.000\n 10    126.000     126.000             +0.000\n",
+    "passed": true
+  },
+  {
+    "id": "S19-CLI02",
+    "date": "2026-10-31",
+    "stage": 19,
+    "requirements": [
+      "SC02",
+      "SC03",
+      "SC05",
+      "SC07",
+      "SC08",
+      "SC11",
+      "SC12",
+      "SC13"
+    ],
+    "args": [
+      "--laps",
+      "100",
+      "--optimise",
+      "--weather",
+      "Wet",
+      "--temperature",
+      "50",
+      "--wear",
+      "3"
+    ],
+    "expected_exit": 0,
+    "expected_text": "Checked 594 candidates",
+    "actual_exit": 0,
+    "actual_output": "PITWALL / stage 10 / one-stop search\nChecked 594 candidates: 6 x (laps - 1).\nBest: M > H, stop 45; 11424.060 s\nOne stop, two different compounds only. Ties within 1e-8 s keep the first enumerated plan.\n",
+    "passed": true
+  }
+]

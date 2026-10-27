@@ -7,6 +7,15 @@ from model import number_in_range, validate_laps
 DATA_PATH = Path(__file__).resolve().parent / "data" / "circuits.json"
 
 
+def unique_fields(pairs):
+    row = {}
+    for key, value in pairs:
+        if key in row:
+            raise ValueError(f"Duplicate circuit field: {key}")
+        row[key] = value
+    return row
+
+
 @dataclass(frozen=True)
 class Circuit:
     key: str
@@ -42,6 +51,9 @@ def parse_circuit(row):
         raise ValueError("Circuit points must define distinct consecutive vertices.")
     if max(p[0] for p in checked) == min(p[0] for p in checked) or max(p[1] for p in checked) == min(p[1] for p in checked):
         raise ValueError("Circuit must have width and height.")
+    twice_area = sum(a[0]*b[1] - b[0]*a[1] for a,b in zip(checked, checked[1:]+checked[:1]))
+    if abs(twice_area) < 1e-10:
+        raise ValueError("Circuit vertices must enclose a non-zero area.")
     return Circuit(**{**row, "points": tuple(checked)})
 
 
@@ -50,8 +62,8 @@ def load_circuits(path=DATA_PATH):
         path = Path(path)
         if path.stat().st_size > 200_000:
             raise ValueError("Circuit file is too large.")
-        data = json.loads(path.read_text(encoding="utf-8"))
-    except (OSError, UnicodeError, json.JSONDecodeError) as error:
+        data = json.loads(path.read_text(encoding="utf-8"), object_pairs_hook=unique_fields)
+    except (OSError, UnicodeError, json.JSONDecodeError, RecursionError) as error:
         raise ValueError(f"Cannot read circuit data: {error}") from error
     if not isinstance(data, list) or not 1 <= len(data) <= 20:
         raise ValueError("Circuit data must contain 1-20 profiles.")

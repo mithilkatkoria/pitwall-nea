@@ -1,2 +1,3 @@
 # Raw saved patches contain meaningful blank-context lines.
 evidence/**/*.diff -whitespace
+evidence/**/*.txt -whitespace
