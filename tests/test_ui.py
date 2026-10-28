@@ -15,7 +15,7 @@ class InterfaceTests(unittest.TestCase):
         pygame.quit()
 
     def click(self,key):
-        self.app.handle(pygame.event.Event(pygame.MOUSEBUTTONDOWN,button=1,pos=self.app.controls[key].center))
+        self.app.handle(pygame.event.Event(pygame.MOUSEBUTTONDOWN,button=1,pos=self.app.to_window(self.app.controls[key].center)))
         self.app.draw()
 
     def test_compound_stop_count_and_simulation(self):
@@ -58,7 +58,7 @@ class InterfaceTests(unittest.TestCase):
         self.click('play');self.app.update(1)
         self.assertEqual(self.app.replay.elapsed,120)
         self.click('timeline')
-        self.assertAlmostEqual(self.app.replay.elapsed,self.app.replay.duration/2)
+        self.assertAlmostEqual(self.app.replay.elapsed,self.app.replay.duration/2,delta=15) # one display-pixel scrub tolerance
         self.click('restart');self.assertEqual(self.app.replay.elapsed,0)
         self.assertEqual(self.app.result.a.total,total)
 
@@ -123,3 +123,15 @@ class InterfaceTests(unittest.TestCase):
         self.app.tooltips=[]
         self.app.button('long',text,(30,30,290,40))
         self.assertEqual(self.app.tooltips[0][1],text)
+
+    def test_resize_pointer_mapping_and_graph_conditions_coexist(self):
+        for width,height in ((1440,900),(1152,720),(1000,650),(864,540)):
+            self.app.handle(pygame.event.Event(pygame.VIDEORESIZE,w=width,h=height));self.app.draw()
+            point=self.app.controls['simulate'].center
+            mapped=self.app.to_logical(self.app.to_window(point))
+            self.assertAlmostEqual(mapped[0],point[0],delta=1)
+            self.assertAlmostEqual(mapped[1],point[1],delta=1)
+            self.click('simulate');self.assertFalse(self.app.error)
+        self.click('advanced')
+        self.assertIn('temperature',self.app.controls)
+        self.assertIn('metric_gap',self.app.controls)

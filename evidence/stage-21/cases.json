@@ -1,0 +1,27 @@
+[
+  {
+    "id": "S21-CLI01",
+    "date": "2026-10-31",
+    "stage": 21,
+    "requirements": [
+      "SC02",
+      "SC07",
+      "SC09",
+      "SC12",
+      "SC15",
+      "SC16"
+    ],
+    "args": [
+      "--gui",
+      "--frames",
+      "3",
+      "--screenshot",
+      "evidence/stage-21/strategy.png"
+    ],
+    "expected_exit": 0,
+    "expected_text": "",
+    "actual_exit": 0,
+    "actual_output": "pygame-ce 2.5.7 (SDL 2.32.10, Python 3.14.0)\n",
+    "passed": true
+  }
+]

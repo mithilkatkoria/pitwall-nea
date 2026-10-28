@@ -1,0 +1,31 @@
+{
+  "stage": 21,
+  "unit_tests_passed": 87,
+  "cli_cases_passed": 1,
+  "parent_commit": "7dcdc9b42e9e0c3ea9f5d6e7208bcbd49089fe62",
+  "source_sha256": {
+    "analysis.py": "8bb9635b131d87fdadfb7e26ac1aa9b18a8cfec303e4e13516169f26fdf9dab6",
+    "charts.py": "3f890ab5e28e65499bc2f6acd0419ae8e8e8b189a6010915a87f7b8fc899af0c",
+    "circuits.py": "5ab319d85a48fe5354fb41327dc42472eabee48b014bbc742859f96b9a3889dd",
+    "driver_view.py": "6b95919db5c82c00474c1638e15aca0e014bd7f0b7d1d627c1817873f0bf7bf4",
+    "main.py": "fea915ccc4e5a95399fa50c859441f8d0a4de3c8d6571315d3463b45bef71060",
+    "model.py": "b962454fdf6f3d94b3abe2ddead8e3ace4245d2486dfea39aa3cfe600b4e5767",
+    "replay.py": "00d3010dbf01ceb77bc391343eed2b13917dce1ea7ffccc35ffa3e7865142442",
+    "storage.py": "8426a547b45951b0015fd50cd761ae0ced88aa6945a86a4cb0c9ddd3272273a0",
+    "strategy_view.py": "d60f8f09ec456ffa7add27a32d44b9ba92da68681d5262398b508e0b38f1842c",
+    "track.py": "32c15985eeb42f63a9958e98199563792cf83cc1a033815569d4b93ff647f8f7",
+    "ui.py": "8b6ddfaddd846333d8505e563043c4c46b908a1f0e1fba792172c81a1ba31389",
+    "widgets.py": "90386f810e0d5dfb57e4f6f5a3c1363c81fad0477ed27850a674e0b1e6ab8751",
+    "tests\\test_analysis.py": "267106914f72a8d10598bffb72257b718449a3712b7cb57076bd5a05864b5ff3",
+    "tests\\test_charts.py": "3e7c2781d08f2847fbacb75224f71a6c1dafe2f49b3d561108d0f177a3106a76",
+    "tests\\test_circuits.py": "b9554f7370534366b36529d9d23c4f19485c0b41c3fd0d04abb79ef983428228",
+    "tests\\test_conditions.py": "edb3a29a5f5fa51f7c2602e449159a9365e3548cf04be7bf05d62157c3b60abd",
+    "tests\\test_model.py": "1972272d8d3da6236836de596a030f95b0e83d4c54d171d2e68b660ec88f9384",
+    "tests\\test_replay.py": "cb68e3c7d56396736b66a007e18239742a36bfc21555546d4cd9f09f8ba44437",
+    "tests\\test_robustness.py": "27039a192ce6b1e125cd662962df18c7b67d6ab27a7b669d4af0507120f18bc6",
+    "tests\\test_search.py": "bdf9dd528b1d4157e6c9b466f72762192f4cc7147ef504b188abbf696bd03125",
+    "tests\\test_storage.py": "60d5e47c5adb6ef044024bbfd1c8c0e71dac862ffd8d9521e4cbc4284e18756f",
+    "tests\\test_track.py": "4e495fdfec5e98b9e077da775d758658c87cfbb35cefe66637a47735a1b4d8ac",
+    "tests\\test_ui.py": "c77d5102839982c1f3b847b1af51e0f0cc923c259e9d383ae860f309166f8481"
+  }
+}
