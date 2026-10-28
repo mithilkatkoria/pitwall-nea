@@ -1,6 +1,7 @@
 """First usable Pygame interface. Calculations remain in model.py."""
 import pygame
 import charts
+from widgets import fit_text, wrap_text
 import driver_view
 from analysis import read_laps, SAMPLE_PATH
 from circuits import load_circuits
@@ -31,6 +32,9 @@ class App:
         self.compounds = [['S', 'H', 'H'], ['M', 'H', 'H']]
         self.counts = [1, 1]
         self.focus = None
+        self.select_all = False
+        self.stale = True
+        self.tooltips = []
         self.controls = {}
         self.advanced = False
         self.view = "strategy"
@@ -88,6 +92,7 @@ class App:
             self.status, self.error = str(error), True
             return False
         self.result = result
+        self.stale = False
         self.replay = Replay(max(result.a.total,result.b.total))
         self.status, self.error = "Results updated. Positive B-A means A is faster. Illustrative model, not telemetry.", False
         return True
@@ -141,6 +146,7 @@ class App:
             self.compounds[i]=list(plan.compounds)+['H']*(3-len(plan.compounds))
             for j,stop in enumerate(plan.stops): self.fields[f'stop{i}_{j}']=str(stop)
         self.result=result
+        self.stale=False
         self.replay=Replay(max(result.a.total,result.b.total))
         self.status,self.error='Session loaded and validated.',False
         return True
@@ -159,19 +165,23 @@ class App:
             else:
                 result=export_laps(path,self.session())
                 self.result=result
+                self.stale=False
                 self.replay=Replay(max(result.a.total,result.b.total))
                 self.status,self.error=f'Exported {2*len(result.a.laps)} lap rows.',False
         except (ValueError,RuntimeError) as error:
             self.status,self.error=str(error),True
 
     def dirty(self):
+        self.stale = True
         self.status, self.error = "Settings changed. Simulate to update the results below.", False
 
     def activate(self, key):
         if key in self.fields and key != 'weather':
             self.focus = key
+            self.select_all = True
         else:
             self.focus = None
+            self.select_all = False
             if key in ('driver_view','strategy_view','notes_view'):
                 self.view={'driver_view':'drivers','strategy_view':'strategy','notes_view':'notes'}[key]
             elif key == 'filter': self.exclude_pits=not self.exclude_pits
@@ -218,6 +228,8 @@ class App:
                         self.activate(key)
                     break
         elif event.type == pygame.TEXTINPUT and self.focus in self.fields and self.focus != 'weather':
+            if self.select_all:
+                self.fields[self.focus]='';self.select_all=False
             if len(self.fields[self.focus])+len(event.text) <= 16:
                 self.fields[self.focus] += event.text
                 self.dirty()
@@ -231,13 +243,15 @@ class App:
                 keys=list(self.controls)
                 direction=-1 if event.mod & pygame.KMOD_SHIFT else 1
                 if keys: self.focus=keys[(keys.index(self.focus)+direction)%len(keys)] if self.focus in keys else keys[0]
+                self.select_all=self.focus in self.fields
             elif event.key == pygame.K_RETURN:
                 if self.focus in self.controls and not editing: self.activate(self.focus)
                 elif self.view=='strategy': self.calculate()
             elif editing and event.key == pygame.K_BACKSPACE:
-                self.fields[self.focus]=self.fields[self.focus][:-1];self.dirty()
+                self.fields[self.focus]='' if self.select_all else self.fields[self.focus][:-1]
+                self.select_all=False;self.dirty()
             elif editing and event.key == pygame.K_a and event.mod & pygame.KMOD_CTRL:
-                self.fields[self.focus]='';self.dirty()
+                self.select_all=True
             elif event.mod & pygame.KMOD_CTRL:
                 actions={pygame.K_s:'save',pygame.K_l:'load',pygame.K_e:'export',pygame.K_i:'import'}
                 if event.key in actions: self.file_action(actions[event.key])
@@ -261,9 +275,13 @@ class App:
     def button(self, key, label, rect, color=None):
         rect = pygame.Rect(rect)
         self.controls[key] = rect
-        pygame.draw.rect(self.screen, PANEL, rect)
+        pygame.draw.rect(self.screen, (49,54,60) if rect.collidepoint(self.mouse) else PANEL, rect)
         pygame.draw.rect(self.screen, color or (RED if self.focus == key else (75,82,89)), rect, 1)
-        self.text(label, rect.x+10, rect.y+10, color or TEXT)
+        shown=fit_text(label,self.font,rect.width-20)
+        if shown!=label: self.tooltips.append((rect,label))
+        if self.focus==key and self.select_all and key in self.fields:
+            pygame.draw.rect(self.screen,(78,63,65),rect.inflate(-8,-8))
+        self.text(shown, rect.x+10, rect.y+10, color or TEXT)
 
     def field(self, key, label, x, y, width=100):
         self.text(label, x,y,MUTED,True)
@@ -278,6 +296,7 @@ class App:
             return
         self.screen.fill(BG)
         self.controls = {}
+        self.tooltips = []
         self.screen.blit(self.title.render('PITWALL',True,TEXT),(30,22))
         self.text('STRATEGY WORKBENCH / FIRST INTERFACE',220,34,MUTED,True)
         self.button('profile',self.profile.name,(700,20,270,42))
@@ -288,7 +307,7 @@ class App:
         for i in range(2):
             y=200+i*78
             self.text(f'PLAN {"AB"[i]}',30,y+12)
-            self.button(f'count{i}',f'{self.counts[i]} stops',(125,y,110,40))
+            self.button(f'count{i}',f'{self.counts[i]} stop'+('' if self.counts[i]==1 else 's'),(125,y,110,40))
             for j in range(self.counts[i]+1):
                 compound=self.compounds[i][j]
                 self.button(f'tyre{i}{j}',compound,(260+j*70,y,56,40),TYRES[compound])
@@ -305,13 +324,14 @@ class App:
         if self.result:
             y=520 if self.advanced else 445
             r=self.result
+            self.text('RESULTS NEED UPDATE' if self.stale else 'PREDICTED TOTALS',30,y-24,RED if self.stale else MUTED,True)
             self.text(f'A   {r.a.total:.3f} s',30,y)
             self.text(f'B   {r.b.total:.3f} s',285,y)
             verdict='Equal predicted totals' if r.winner=='Tie' else f'{r.winner} faster by {abs(r.gap):.3f} s'
             self.text(verdict,545,y,TYRES['M'])
             self.text(f'B minus A: {r.gap:+.3f} s. Lower total wins.',30,y+36,MUTED)
         self.text('S Soft: quicker, wears faster. M Medium: balance. H Hard: slower, lasts longer.',30,760,MUTED,True)
-        self.text(self.status[:115],30,875,RED if self.error else TEXT,True)
+        self.draw_status()
         if not self.advanced and self.result: self.draw_chart()
         self.draw_track()
         self.button('play','Pause' if self.replay.playing else 'Play',(30,790,100,38))
@@ -322,6 +342,25 @@ class App:
         pygame.draw.rect(self.screen,PANEL,self.controls['timeline'])
         fraction=self.replay.elapsed/self.replay.duration if self.replay.duration else 0
         pygame.draw.rect(self.screen,RED,(30,840,940*fraction,20))
+        self.present()
+
+    def draw_status(self):
+        lines=wrap_text(self.status,self.small,1340)
+        for i,line in enumerate(lines[:2]): self.text(line,30,863+i*18,RED if self.error else MUTED,True)
+        if len(lines)>2: self.tooltips.append((pygame.Rect(30,861,1340,39),self.status))
+
+    def present(self):
+        for rect,label in self.tooltips:
+            if rect.collidepoint(self.mouse):
+                lines=wrap_text(label,self.small,700)
+                width=min(740,max(self.small.size(line)[0] for line in lines)+24)
+                height=len(lines)*20+20
+                x=min(self.mouse[0]+14,1400-width-10)
+                y=max(8,min(self.mouse[1]+24,900-height-8))
+                pygame.draw.rect(self.screen,(10,12,14),(x,y,width,height))
+                pygame.draw.rect(self.screen,MUTED,(x,y,width,height),1)
+                for i,line in enumerate(lines): self.text(line,x+12,y+10+i*20,TEXT,True)
+                break
         pygame.display.flip()
 
     def navigation(self):
@@ -329,7 +368,7 @@ class App:
             self.button(key,label,(1000+i*130,20,120,40))
 
     def draw_notes(self):
-        self.screen.fill(BG);self.controls={}
+        self.screen.fill(BG);self.controls={};self.tooltips=[]
         self.text('MODEL NOTES / assumptions and controls',30,30)
         self.navigation()
         lines=[
@@ -355,7 +394,7 @@ class App:
             'Data and formulas are illustrative. Model details are in docs/model.md and data/README.md.'
         ]
         for index,line in enumerate(lines): self.text(line,30,105+index*34,TEXT if index<17 else MUTED,True)
-        pygame.display.flip()
+        self.present()
 
     def chart_readout(self,index):
         values=charts.series(self.result,self.metric)

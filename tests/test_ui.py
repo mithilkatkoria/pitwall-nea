@@ -105,3 +105,21 @@ class InterfaceTests(unittest.TestCase):
         self.assertTrue(self.app.replay.playing)
         self.app.handle(pygame.event.Event(pygame.KEYDOWN,key=pygame.K_r,mod=0))
         self.assertFalse(self.app.replay.playing)
+
+    def test_focus_replaces_value_and_marks_stale(self):
+        self.click('base')
+        self.app.handle(pygame.event.Event(pygame.TEXTINPUT,text='91'))
+        self.assertEqual(self.app.fields['base'],'91')
+        self.assertTrue(self.app.stale)
+        self.click('simulate');self.assertFalse(self.app.stale)
+
+    def test_long_text_fits_and_keeps_full_tooltip(self):
+        from widgets import fit_text,wrap_text
+        text='WIDE DRIVER NAME WITH 32 CHARS XX'
+        fitted=fit_text(text,self.app.font,270)
+        self.assertLessEqual(self.app.font.size(fitted)[0],270)
+        self.assertNotEqual(text,fitted)
+        self.assertTrue(all(self.app.small.size(line)[0]<=200 for line in wrap_text(text*4,self.app.small,200)))
+        self.app.tooltips=[]
+        self.app.button('long',text,(30,30,290,40))
+        self.assertEqual(self.app.tooltips[0][1],text)
