@@ -135,3 +135,75 @@ class InterfaceTests(unittest.TestCase):
         self.click('advanced')
         self.assertIn('temperature',self.app.controls)
         self.assertIn('metric_gap',self.app.controls)
+
+    def test_file_buttons_roundtrip_export_and_cancel(self):
+        import csv
+        import tempfile
+        from pathlib import Path
+        from unittest.mock import patch
+        from storage import load_session
+        with tempfile.TemporaryDirectory() as temp:
+            path=Path(temp)/'session.json'
+            before=self.app.session()
+            with patch('ui.choose_path',return_value=str(path)):
+                self.click('save')
+                self.assertEqual(load_session(path),before)
+                self.app.fields['base']='99'
+                self.click('load')
+                self.assertEqual(self.app.session(),before)
+            target=Path(temp)/'laps.csv'
+            self.app.fields['base']='91'
+            self.app.dirty()
+            with patch('ui.choose_path',return_value=str(target)):
+                self.click('export')
+            with target.open(newline='') as stream:
+                rows=list(csv.DictReader(stream))
+            self.assertEqual(len(rows),104)
+            self.assertEqual(rows[0]['base'],'91.000')
+            self.assertFalse(self.app.stale)
+            result=self.app.result
+            with patch('ui.choose_path',return_value=''):
+                for action in ('save','load','export','import'):
+                    self.app.file_action(action)
+            self.assertIs(self.app.result,result)
+            self.assertEqual(self.app.fields['base'],'91')
+
+    def test_import_button_pagination_and_empty_pit_filter(self):
+        import tempfile
+        from pathlib import Path
+        from unittest.mock import patch
+        with tempfile.TemporaryDirectory() as temp:
+            path=Path(temp)/'drivers.csv'
+            path.write_text('driver,lap,lap_time,pit_lap\n'+''.join(
+                f'Driver {i:02},1,{90+i},1\n' for i in range(12)))
+            self.click('driver_view')
+            with patch('ui.choose_path',return_value=str(path)):
+                self.click('import')
+            self.assertFalse(self.app.error)
+            self.assertIsNone(self.app.selected_driver)
+            self.click('filter')
+            self.assertEqual(len([k for k in self.app.controls if k.startswith('driver_') and k!='driver_view']),6)
+            self.click('next_drivers')
+            self.assertEqual(self.app.driver_page,1)
+            self.click('driver_Driver 11')
+            self.assertEqual(self.app.selected_driver,'Driver 11')
+            self.click('next_drivers')
+            self.assertEqual(self.app.driver_page,1)
+            self.click('previous_drivers')
+            self.assertEqual(self.app.driver_page,0)
+
+    def test_full_control_layout_all_profiles_and_two_stops(self):
+        for index in range(3):
+            self.app.set_profile(index)
+            self.app.counts=[2,2]
+            self.app.advanced=True
+            self.app.draw()
+            self.click('simulate')
+            self.assertFalse(self.app.error)
+            canvas=self.app.screen.get_rect()
+            controls=list(self.app.controls.items())
+            for key,rect in controls:
+                self.assertTrue(canvas.contains(rect),key)
+            for i,(key,rect) in enumerate(controls):
+                for other,target in controls[i+1:]:
+                    self.assertFalse(rect.colliderect(target),(key,other))

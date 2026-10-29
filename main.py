@@ -1,4 +1,4 @@
-"""Stage 10: full illustrative race model and shared-condition comparison."""
+"""Launch the desktop app or calculate illustrative race strategies in the terminal."""
 import argparse
 import sys
 
@@ -59,7 +59,7 @@ def main():
                 raise ValueError("Search needs --laps.")
             search = optimise(args.base, args.laps, args.pit_loss, conditions, args.pace)
             best = search.best
-            print("PITWALL / stage 10 / one-stop search")
+            print("PITWALL / one-stop search")
             print(f"Checked {len(search.candidates)} candidates: 6 x (laps - 1).")
             print(f"Best: {' > '.join(best.plan.compounds)}, stop {best.plan.stops[0]}; {best.total:.3f} s")
             print("One stop, two different compounds only. Ties within 1e-8 s keep the first enumerated plan.")
@@ -77,7 +77,7 @@ def main():
             if args.compare:
                 plan_b = Strategy(tuple(args.compounds_b or ["M"]), tuple(args.stops_b))
                 result = compare(args.base, args.laps, plan, plan_b, args.pit_loss, conditions, args.pace, args.pace_b)
-                print("PITWALL / stage 10 / comparison")
+                print("PITWALL / comparison")
                 print(f"A: {result.a.total:.3f} s; B: {result.b.total:.3f} s")
                 print(f"B minus A: {result.gap:+.3f} s; faster: {result.winner}")
                 print("Positive gap favours A; negative gap favours B. Same race settings.")
@@ -86,7 +86,7 @@ def main():
                     print(f"{a.number:3}  {a.time:9.3f}   {b.time:9.3f}   {gap:+16.3f}")
                 return
             result = simulate(args.base, args.laps, plan, args.pit_loss, conditions, args.pace)
-            print("PITWALL / stage 10 / strategy")
+            print("PITWALL / strategy")
             print("LAP  TYRE  AGE     LAP TIME     ELAPSED     TYRE LOSS     PIT LOSS")
             for lap in result.laps:
                 print(f"{lap.number:3}  {lap.compound:4}  {lap.age:3}  {lap.time:11.3f}  {lap.elapsed:10.3f}  {lap.degradation:12.3f}  {lap.pit:11.3f}")
@@ -95,7 +95,7 @@ def main():
         seconds = lap_time(args.base, args.compound, args.age)
     except ValueError as error:
         parser.error(str(error))
-    print("PITWALL / stage 4 / tyre degradation")
+    print("PITWALL / tyre degradation")
     print(f"Compound: {args.compound}; age: {args.age}; lap time: {seconds:.3f} s")
     print(f"Tyre degradation: {tyre_loss(args.compound, args.age):.3f} s")
     print("Use --laps for race simulation. Single-lap mode excludes race conditions; use --laps for the full model.")

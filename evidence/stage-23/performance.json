@@ -1,0 +1,18 @@
+{
+  "python": "3.14.0",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "processor": "ARMv8 (64-bit) Family 8 Model 1 Revision 201, Qualcomm Technologies Inc",
+  "optimiser_100_laps_seconds": [
+    0.22724619999644347,
+    0.23686949999682838,
+    0.2541823999999906,
+    0.24821780000638682,
+    0.22967700000299374
+  ],
+  "candidates": 594,
+  "under_one_second_each": true,
+  "driver_records": 12000,
+  "driver_draw_mean_seconds": 0.03606189999991329,
+  "driver_draw_frames": 30,
+  "render_backend": "SDL dummy, software draw and present; not native FPS"
+}

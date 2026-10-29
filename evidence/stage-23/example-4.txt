@@ -1,0 +1,10 @@
+command: python main.py --laps 10 --stops 10
+usage: main.py [-h] [--base BASE] [--compound {S,M,H}] [--age AGE]
+               [--laps LAPS] [--compounds {S,M,H} [{S,M,H} ...]]
+               [--stops [STOPS ...]] [--pit-loss PIT_LOSS] [--compare]
+               [--compounds-b {S,M,H} [{S,M,H} ...]] [--stops-b [STOPS_B ...]]
+               [--optimise] [--wear WEAR] [--temperature TEMPERATURE]
+               [--weather {Dry,Damp,Wet}] [--pace PACE] [--pace-b PACE_B]
+               [--sc-start SC_START] [--sc-duration SC_DURATION]
+               [--circuit CIRCUIT]
+main.py: error: Choose 0-2 stops and one compound per stint.
