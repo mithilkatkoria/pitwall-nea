@@ -1,0 +1,12 @@
+{
+  "failure": "AssertionError: .gitignore",
+  "failed_check": "archive bytes == working tree bytes",
+  "archive_crlf": 7,
+  "archive_lf": 7,
+  "working_crlf": 0,
+  "working_lf": 7,
+  "archive_equals_tag_blob": false,
+  "normalised_working_equals_archive": false,
+  "git_autocrlf": "true",
+  "release_at_failure": "a3d46b3c93bed723ec66dd29b1dbea9cfa28dac2"
+}

@@ -1,0 +1,13 @@
+Stage 24 delivery verification, 31 October 2026.
+The archive creation and git bundle verify commands succeeded.
+The subsequent comparison with raw working-tree bytes failed:
+
+Traceback (most recent call last):
+  File "<stdin>", line 42, in <module>
+AssertionError: .gitignore
+
+Failing assertion from the executed one-off packaging script:
+for name in filter(None, tracked):
+    assert z.read('pitwall-nea/'+name) == (root/name).read_bytes(), name
+
+This file records the actual final traceback and failing statement, not a complete terminal transcript. The archive and bundle created before this failure remain unchanged outside the repository. Investigation was performed before changing the check. No application test failed.
