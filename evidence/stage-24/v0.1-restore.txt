@@ -1,0 +1,2 @@
+HEAD is now at 2143767 add lap time calculation
+Preparing worktree (detached HEAD 2143767)

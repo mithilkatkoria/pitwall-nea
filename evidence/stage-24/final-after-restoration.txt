@@ -1,0 +1,3 @@
+Current branch: incremental-build
+exit: 0
+pygame-ce 2.5.7 (SDL 2.32.10, Python 3.14.0)

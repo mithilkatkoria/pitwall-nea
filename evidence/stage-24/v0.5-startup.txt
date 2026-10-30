@@ -1,0 +1,4 @@
+cwd: <workspace>\pitwall-v0.5
+command: ['<workspace>\\pitwall-clean-env\\Scripts\\python.exe', 'main.py', '--gui', '--frames', '3', '--screenshot', '<workspace>\\pitwall-nea\\evidence\\stage-24\\v0.5-restored.png']
+exit: 0
+pygame-ce 2.5.7 (SDL 2.32.10, Python 3.14.0)
