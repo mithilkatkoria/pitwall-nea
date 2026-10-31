@@ -1,0 +1,8 @@
+Actual delivery-tool failure on 31 October 2026, after publication of 10e89d1b275a026638aaaf0a20bb940e0da32cf8.
+
+Transcribed tool-result excerpt (no screenshot captured):
+Traceback (most recent call last):
+  File "<stdin>", line 6, in <module>
+AssertionError
+
+The combined line checked HEAD, branch and clean status. Read-only diagnosis confirmed the first two conditions matched and ordinary status was clean. The failure was the final status assertion under an incorrectly global-to-the-helper core.autocrlf=false override. No delivery artifact had yet been written.

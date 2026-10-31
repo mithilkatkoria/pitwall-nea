@@ -1,0 +1,17 @@
+{
+  "date": "31 October 2026",
+  "classification": "Packaging-tool configuration; not an application defect",
+  "original_head": "10e89d1b275a026638aaaf0a20bb940e0da32cf8",
+  "ordinary_core_autocrlf": "true",
+  "ordinary_status_at_diagnosis": "clean",
+  "archive_override_status": "41 unchanged CRLF working files reported modified",
+  "cause": "The helper passed core.autocrlf=false to all Git calls, including status, rather than only archive. This changed the interpretation of checked-out text.",
+  "correction": "Use normal Git settings for status/diff. Pass -c core.autocrlf=false only to git archive; compare archive bytes with committed blobs. No global configuration change.",
+  "retest": {
+    "ordinary_status_before_and_after": "clean",
+    "zip_integrity": "passed",
+    "canonical_members_matched": 345,
+    "runtime_changes": false
+  },
+  "evidence_kind": "Actual tool traceback excerpt and read-only diagnosis, followed by executed canonical-archive retest; no terminal screenshot."
+}
