@@ -1,0 +1,9 @@
+command: python main.py --laps 10 --sc-start 10 --sc-duration 2
+usage: main.py [-h] [--base BASE] [--compound {S,M,H}] [--age AGE]
+               [--laps LAPS] [--compounds {S,M,H} [{S,M,H} ...]]
+               [--stops [STOPS ...]] [--pit-loss PIT_LOSS] [--compare]
+               [--compounds-b {S,M,H} [{S,M,H} ...]] [--stops-b [STOPS_B ...]]
+               [--optimise] [--wear WEAR] [--temperature TEMPERATURE]
+               [--weather {Dry,Damp,Wet}] [--pace PACE] [--pace-b PACE_B]
+               [--sc-start SC_START] [--sc-duration SC_DURATION]
+main.py: error: Safety car period extends past the race.

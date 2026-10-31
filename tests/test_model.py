@@ -9,7 +9,7 @@ from model import lap_time, tyre_loss, simulate, Strategy, compare
 
 class RaceTests(unittest.TestCase):
     def test_ten_lap_total_against_independent_sum(self):
-        self.assertAlmostEqual(simulate(90, 10).total, 904.275)
+        self.assertAlmostEqual(simulate(90, 10).total, 906.985)
 
     def test_lap_age_and_cumulative_trace(self):
         result = simulate(90, 10)
@@ -125,10 +125,10 @@ class LapTests(unittest.TestCase):
 class PitTests(unittest.TestCase):
     def test_independent_total_and_transition(self):
         race = simulate(90, 10, Strategy(('S', 'H'), (4,)), 22.5)
-        self.assertAlmostEqual(race.total, 929.625)
+        self.assertAlmostEqual(race.total, 932.885)
         self.assertEqual((race.laps[3].compound, race.laps[3].age, race.laps[3].pit), ('S', 3, 22.5))
         self.assertEqual((race.laps[4].compound, race.laps[4].age), ('H', 0))
-        self.assertAlmostEqual(race.laps[3].time, 112.785)
+        self.assertAlmostEqual(race.laps[3].time, 113.073)
 
     def test_first_and_penultimate_stops(self):
         for stop in (1, 9):
@@ -139,7 +139,7 @@ class PitTests(unittest.TestCase):
     def test_zero_cost_still_changes_and_resets(self):
         race = simulate(90, 10, Strategy(('S', 'H'), (4,)), 0)
         self.assertEqual((race.laps[4].compound, race.laps[4].age), ('H', 0))
-        self.assertAlmostEqual(race.total, 907.125)
+        self.assertAlmostEqual(race.total, 910.385)
 
     def test_invalid_stop_positions(self):
         for stop in (0, -1, 10, 11, True, 4.0, [4, 4]):
@@ -159,9 +159,9 @@ class PitTests(unittest.TestCase):
 
 class StrategyTests(unittest.TestCase):
     def test_two_stops_independent_total(self):
-        # Base 900 + offsets 5.44 + wear .285+.18+.222 + two pits 45.
+        # Base 900 + offsets 5.44 + wear .285+.18+.222 + pits 45 + fuel 2.16 + warmups 1.65.
         race = simulate(90, 10, Strategy(('S', 'M', 'H'), (3, 6)))
-        self.assertAlmostEqual(race.total, 951.127)
+        self.assertAlmostEqual(race.total, 954.937)
         self.assertEqual([race.laps[i].age for i in (0, 3, 6)], [0, 0, 0])
         self.assertEqual([race.laps[i].compound for i in (0, 3, 6)], ['S', 'M', 'H'])
 
@@ -176,15 +176,15 @@ class StrategyTests(unittest.TestCase):
 
     def test_same_compound_replacement_is_allowed(self):
         race = simulate(90, 10, Strategy(('S','S'), (5,)), 0)
-        self.assertAlmostEqual(race.total, 901.9)
+        self.assertAlmostEqual(race.total, 905.16)
 
 
 class ComparisonTests(unittest.TestCase):
     def test_independent_gap_and_reverse(self):
         soft, hard = Strategy(('S',)), Strategy(('H',))
         result = compare(90, 10, soft, hard)
-        self.assertAlmostEqual(result.a.total, 904.275)
-        self.assertAlmostEqual(result.b.total, 911.665)
+        self.assertAlmostEqual(result.a.total, 906.985)
+        self.assertAlmostEqual(result.b.total, 914.375)
         self.assertAlmostEqual(result.gap, 7.390)
         self.assertEqual(result.winner, 'A')
         reverse = compare(90, 10, hard, soft)
@@ -200,9 +200,20 @@ class ComparisonTests(unittest.TestCase):
 
     def test_one_against_two_stops(self):
         result = compare(90, 10, Strategy(('S','H'), (4,)), Strategy(('S','M','H'), (3,6)))
-        self.assertAlmostEqual(result.gap, 21.502)
+        self.assertAlmostEqual(result.gap, 22.052)
         self.assertEqual(len(result.a.laps), len(result.b.laps))
 
     def test_invalid_b_is_rejected(self):
         with self.assertRaises(ValueError):
             compare(90, 10, Strategy(), Strategy(('S','H'), (10,)))
+
+
+class FuelWarmupTests(unittest.TestCase):
+    def test_independent_components(self):
+        race = simulate(90,10,Strategy(('S','H'),(4,)))
+        self.assertAlmostEqual(race.laps[0].fuel, .432)
+        self.assertAlmostEqual(race.laps[0].time, 90.982)
+        self.assertEqual(race.laps[-1].fuel, 0)
+        self.assertAlmostEqual(sum(lap.fuel for lap in race.laps), 2.16)
+        self.assertAlmostEqual(sum(lap.warmup for lap in race.laps), 1.10)
+        self.assertEqual(race.laps[4].warmup, .55)
