@@ -1,0 +1,2 @@
+for name in filter(None, tracked):
+    assert z.read('pitwall-nea/'+name) == (root/name).read_bytes(), name

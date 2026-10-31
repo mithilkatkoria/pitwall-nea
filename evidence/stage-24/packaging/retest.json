@@ -1,0 +1,7 @@
+{
+  "revision": "v1.0",
+  "fix": "git -c core.autocrlf=false archive; compare every archived file with its tagged Git blob",
+  "tracked_files_passed": 269,
+  "zip_crc_check": "passed",
+  "application_changes": false
+}
