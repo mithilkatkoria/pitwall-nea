@@ -5,7 +5,7 @@ from charts import limits
 
 
 def draw(app):
-    app.screen.fill((24,27,30));app.controls={}
+    app.screen.fill((24,27,30));app.controls={};app.tooltips=[]
     app.text('DRIVER ANALYSIS / seconds',30,25)
     app.navigation()
     app.button('import','Import CSV',(30,80,190,40))
@@ -43,5 +43,5 @@ def draw(app):
     else:
         app.text('No laps remain with this filter.',30,520)
     app.text('Population deviation describes this dataset. Trend is linear seconds per lap, not driver ability.',30,835,(170,177,184),True)
-    app.text(app.status[:125],30,875,(220,63,67) if app.error else (238,240,242),True)
-    pygame.display.flip()
+    app.draw_status()
+    app.present()
