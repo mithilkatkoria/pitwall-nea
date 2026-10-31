@@ -1,11 +1,21 @@
 """Stage 10: full illustrative race model and shared-condition comparison."""
 import argparse
+import sys
 
 from circuits import load_circuits
 
 from model import COMPOUND_PACE, lap_time, tyre_loss, simulate, Strategy, compare, optimise, Conditions
 
 def main():
+    if len(sys.argv) == 1 or '--gui' in sys.argv:
+        gui = argparse.ArgumentParser(description="Pitwall graphical interface")
+        gui.add_argument('--gui', action='store_true')
+        gui.add_argument('--frames', type=int)
+        gui.add_argument('--screenshot')
+        options = gui.parse_args()
+        from ui import run
+        run(options.frames, options.screenshot)
+        return
     parser = argparse.ArgumentParser(description="Pitwall: compound lap calculation")
     parser.add_argument("--base", type=float, default=None, help="Base lap seconds (30-200)")
     parser.add_argument("--compound", default="S", choices=COMPOUND_PACE, help="S=Soft, M=Medium, H=Hard")
