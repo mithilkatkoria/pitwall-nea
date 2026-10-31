@@ -61,28 +61,46 @@ def validate_laps(laps):
         raise ValueError("Race laps must be a whole number from 10 to 100.")
 
 
-def simulate(base_time, laps, compound="S", stop=None, next_compound=None, pit_loss=22.5):
-    """Start on fresh tyres and keep the full race trace as they age."""
+@dataclass(frozen=True)
+class Strategy:
+    compounds: tuple[str, ...] = ("S",)
+    stops: tuple[int, ...] = ()
+
+    def validate(self, laps):
+        validate_laps(laps)
+        if not isinstance(self.compounds, tuple) or not isinstance(self.stops, tuple):
+            raise ValueError("Compounds and stops must be tuples in stint order.")
+        if not 0 <= len(self.stops) <= 2 or len(self.compounds) != len(self.stops) + 1:
+            raise ValueError("Choose 0-2 stops and one compound per stint.")
+        for compound in self.compounds:
+            validate_compound(compound)
+        previous = 0
+        for stop in self.stops:
+            if type(stop) is not int or not previous < stop < laps:
+                raise ValueError("Pit laps must increase uniquely from 1 to the penultimate lap.")
+            previous = stop
+
+
+def simulate(base_time, laps, plan=Strategy(), pit_loss=22.5):
+    """Validate once, then record each lap before changing stint or age."""
     number_in_range(base_time, "Base lap time", 30, 200)
-    validate_laps(laps)
-    validate_compound(compound)
+    if not isinstance(plan, Strategy):
+        raise ValueError("A Strategy is required.")
+    plan.validate(laps)
     number_in_range(pit_loss, "Pit loss", 0, 60)
-    if stop is not None:
-        if type(stop) is not int or not 1 <= stop < laps:
-            raise ValueError("Pit lap must be a whole number from 1 to the penultimate lap.")
-        validate_compound(next_compound)
-    elif next_compound is not None:
-        raise ValueError("A next compound needs a pit lap.")
     elapsed = 0.0
     records = []
     age = 0
+    stint = 0
     for number in range(1, laps + 1):
-        pit = pit_loss if number == stop else 0.0
+        compound = plan.compounds[stint]
+        stopping = number in plan.stops
+        pit = pit_loss if stopping else 0.0
         seconds = lap_time(base_time, compound, age) + pit
         elapsed += seconds
         records.append(Lap(number, compound, age, seconds, elapsed, tyre_loss(compound, age), pit))
-        if number == stop:
-            compound = next_compound
+        if stopping:
+            stint += 1
             age = 0
         else:
             age += 1
