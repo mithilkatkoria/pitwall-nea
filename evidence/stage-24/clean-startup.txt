@@ -1,0 +1,3 @@
+command: ['<workspace>\\pitwall-clean-env\\Scripts\\python.exe', 'main.py', '--gui', '--frames', '3', '--screenshot', 'evidence\\stage-24\\clean-startup.png']
+exit: 0
+pygame-ce 2.5.7 (SDL 2.32.10, Python 3.14.0)

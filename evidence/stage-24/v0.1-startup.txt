@@ -1,0 +1,6 @@
+cwd: <workspace>\pitwall-v0.1
+command: ['<workspace>\\pitwall-clean-env\\Scripts\\python.exe', 'main.py', '--base', '90']
+exit: 0
+PITWALL / stage 2 / base-only model
+Base lap time: 90.000 s
+Tyres, wear, fuel and pit stops are not modelled in this version.

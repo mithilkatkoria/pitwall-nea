@@ -1,0 +1,12 @@
+{
+  "created": "2026-10-31",
+  "base_python": "3.14.0",
+  "fresh_venv": "<workspace>\\pitwall-clean-env",
+  "site_packages_inherited": false,
+  "install": "pip install -r requirements.txt",
+  "installed": "pygame-ce 2.5.7, pip 25.2",
+  "wheel": "pygame_ce-2.5.7-cp314-cp314-win_amd64.whl, cached download",
+  "tests_passed": 90,
+  "gui_smoke_frames": 3,
+  "backend": "SDL dummy"
+}

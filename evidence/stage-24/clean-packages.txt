@@ -1,0 +1,6 @@
+command: ['<workspace>\\pitwall-clean-env\\Scripts\\python.exe', '-m', 'pip', 'list']
+exit: 0
+Package   Version
+--------- -------
+pip       25.2
+pygame-ce 2.5.7

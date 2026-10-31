@@ -1,0 +1,16 @@
+[
+  {
+    "tag": "v0.1",
+    "folder": "<workspace>\\pitwall-v0.1",
+    "commit": "214376762124f267d2137f1fd4b0c5625c878aaa",
+    "checks": "own unittest suite and startup, passed",
+    "status": ""
+  },
+  {
+    "tag": "v0.5",
+    "folder": "<workspace>\\pitwall-v0.5",
+    "commit": "9b5d3b056f278fa72e7c66c1299a13e82b6ef25f",
+    "checks": "own unittest suite and startup, passed",
+    "status": ""
+  }
+]
