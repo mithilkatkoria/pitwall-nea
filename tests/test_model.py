@@ -4,7 +4,32 @@ import sys
 import unittest
 from pathlib import Path
 
-from main import lap_time
+from main import lap_time, tyre_loss
+
+
+class WearTests(unittest.TestCase):
+    def test_fresh_tyres_have_no_degradation(self):
+        for compound in "SMH":
+            self.assertEqual(tyre_loss(compound, 0), 0)
+
+    def test_linear_wear_and_life_boundary(self):
+        self.assertAlmostEqual(tyre_loss("S", 1), 0.095)
+        self.assertAlmostEqual(tyre_loss("S", 18), 1.710)
+        self.assertAlmostEqual(tyre_loss("M", 28), 1.680)
+        self.assertAlmostEqual(tyre_loss("H", 38), 1.406)
+
+    def test_quadratic_cliff_independent_example(self):
+        self.assertAlmostEqual(tyre_loss("S", 20), 1.972)
+        self.assertAlmostEqual(lap_time(90, "S", 20), 91.972)
+
+    def test_wear_increases_across_twenty_laps(self):
+        losses = [tyre_loss("S", age) for age in range(21)]
+        self.assertTrue(all(b > a for a, b in zip(losses, losses[1:])))
+
+    def test_invalid_age(self):
+        for age in (-1, 1001, 1.5, True, "1", None, 10 ** 400):
+            with self.subTest(age=age), self.assertRaises(ValueError):
+                tyre_loss("S", age)
 
 
 class CompoundTests(unittest.TestCase):

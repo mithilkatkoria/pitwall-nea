@@ -1,0 +1,5 @@
+command: python main.py --compound M --age 28
+PITWALL / stage 4 / tyre degradation
+Compound: M; age: 28; lap time: 92.160 s
+Tyre degradation: 1.680 s
+Fuel, warmup, conditions and pit stops arrive in later versions.

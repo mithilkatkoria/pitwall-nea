@@ -1,0 +1,60 @@
+[
+  {
+    "id": "S04-CLI01",
+    "date": "2026-10-31",
+    "stage": 4,
+    "requirements": [
+      "SC02",
+      "SC03"
+    ],
+    "args": [
+      "--compound",
+      "S",
+      "--age",
+      "20"
+    ],
+    "expected_exit": 0,
+    "expected_text": "91.972 s",
+    "actual_exit": 0,
+    "actual_output": "PITWALL / stage 4 / tyre degradation\nCompound: S; age: 20; lap time: 91.972 s\nTyre degradation: 1.972 s\nFuel, warmup, conditions and pit stops arrive in later versions.\n",
+    "passed": true
+  },
+  {
+    "id": "S04-CLI02",
+    "date": "2026-10-31",
+    "stage": 4,
+    "requirements": [
+      "SC02",
+      "SC03"
+    ],
+    "args": [
+      "--compound",
+      "M",
+      "--age",
+      "28"
+    ],
+    "expected_exit": 0,
+    "expected_text": "92.160 s",
+    "actual_exit": 0,
+    "actual_output": "PITWALL / stage 4 / tyre degradation\nCompound: M; age: 28; lap time: 92.160 s\nTyre degradation: 1.680 s\nFuel, warmup, conditions and pit stops arrive in later versions.\n",
+    "passed": true
+  },
+  {
+    "id": "S04-CLI03",
+    "date": "2026-10-31",
+    "stage": 4,
+    "requirements": [
+      "SC02",
+      "SC03"
+    ],
+    "args": [
+      "--age",
+      "-1"
+    ],
+    "expected_exit": 2,
+    "expected_text": "Tyre age must",
+    "actual_exit": 2,
+    "actual_output": "usage: main.py [-h] [--base BASE] [--compound {S,M,H}] [--age AGE]\nmain.py: error: Tyre age must be a whole number from 0 to 1000.\n",
+    "passed": true
+  }
+]
