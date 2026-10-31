@@ -1,8 +1,9 @@
-"""First usable Pygame interface. Calculations remain in model.py."""
+"""Application state and input handling. Views and calculations are separate."""
 import pygame
 import charts
 from widgets import fit_text, wrap_text
 import driver_view
+import strategy_view
 from analysis import read_laps, SAMPLE_PATH
 from circuits import load_circuits
 from track import fit_points, point_at
@@ -21,11 +22,14 @@ TYRES = {'S': (235, 79, 85), 'M': (235, 202, 76), 'H': (225, 229, 232)}
 class App:
     def __init__(self):
         pygame.init()
-        self.screen = pygame.display.set_mode((1400, 900))
-        pygame.display.set_caption("PITWALL | circuit workbench")
-        self.font = pygame.font.Font(None, 25)
-        self.small = pygame.font.Font(None, 21)
-        self.title = pygame.font.Font(None, 42)
+        self.window = pygame.display.set_mode((1152, 720), pygame.RESIZABLE)
+        self.screen = pygame.Surface((1440,900))
+        self.viewport = pygame.Rect(0,0,1152,720)
+        pygame.display.set_caption("PITWALL | race strategy workstation")
+        self.font = pygame.font.SysFont("bahnschrift",20)
+        self.small = pygame.font.SysFont("bahnschrift",16)
+        self.title = pygame.font.SysFont("bahnschrift",38,bold=True)
+        self.numbers = pygame.font.SysFont("consolas",24)
         self.profiles = load_circuits()
         self.profile_index = 0
         self.fields = {}
@@ -209,7 +213,20 @@ class App:
                 i,j = map(int,key[-2:]); choices = 'SMH'
                 self.compounds[i][j] = choices[(choices.index(self.compounds[i][j])+1)%3]; self.dirty()
 
+    def to_logical(self,point):
+        return ((point[0]-self.viewport.x)*1440/self.viewport.width,
+                (point[1]-self.viewport.y)*900/self.viewport.height)
+
+    def to_window(self,point):
+        return (round(self.viewport.x+point[0]*self.viewport.width/1440),
+                round(self.viewport.y+point[1]*self.viewport.height/900))
+
     def handle(self, event):
+        if event.type==pygame.VIDEORESIZE:
+            self.window=pygame.display.set_mode((max(864,event.w),max(540,event.h)),pygame.RESIZABLE)
+            return
+        if hasattr(event,'pos'):
+            event=pygame.event.Event(event.type,{**event.dict,'pos':self.to_logical(event.pos)})
         if event.type == pygame.MOUSEMOTION: self.mouse = event.pos
         if event.type == pygame.QUIT:
             self.running = False
@@ -288,61 +305,9 @@ class App:
         self.button(key,self.fields[key],(x,y+23,width,38))
 
     def draw(self):
-        if self.view=='notes':
-            self.draw_notes()
-            return
-        if self.view=='drivers':
-            driver_view.draw(self)
-            return
-        self.screen.fill(BG)
-        self.controls = {}
-        self.tooltips = []
-        self.screen.blit(self.title.render('PITWALL',True,TEXT),(30,22))
-        self.text('STRATEGY WORKBENCH / FIRST INTERFACE',220,34,MUTED,True)
-        self.button('profile',self.profile.name,(700,20,270,42))
-        self.navigation()
-        for key,label,x in [('laps','Race laps',30),('base','Base seconds',150),('pit','Pit loss seconds',290)]:
-            self.field(key,label,x,100,120 if key != 'laps' else 100)
-        self.button('advanced','Conditions +',(700,110,270,40))
-        for i in range(2):
-            y=200+i*78
-            self.text(f'PLAN {"AB"[i]}',30,y+12)
-            self.button(f'count{i}',f'{self.counts[i]} stop'+('' if self.counts[i]==1 else 's'),(125,y,110,40))
-            for j in range(self.counts[i]+1):
-                compound=self.compounds[i][j]
-                self.button(f'tyre{i}{j}',compound,(260+j*70,y,56,40),TYRES[compound])
-            for j in range(self.counts[i]):
-                self.field(f'stop{i}_{j}',f'Stop {j+1} after lap',520+j*160,y-20,130)
-        self.button('simulate','Simulate both',(30,362,195,42),RED)
-        self.button('optimise','Best one-stop A',(240,362,230,42))
-        for action,label,x in [('save','Save',500),('load','Load',610),('export','Export CSV',720)]:
-            self.button(action,label,(x,362,100 if action!='export' else 120,42))
-        if self.advanced:
-            for key,label,x in [('wear','Wear x',30),('temperature','Track C',150),('sc_start','SC start (0 off)',300),('sc_duration','SC laps',470),('pace_a','Pace A seconds',600),('pace_b','Pace B seconds',770)]:
-                self.field(key,label,x,430,110)
-            self.button('weather',self.fields['weather'],(850,362,120,42))
-        if self.result:
-            y=520 if self.advanced else 445
-            r=self.result
-            self.text('RESULTS NEED UPDATE' if self.stale else 'PREDICTED TOTALS',30,y-24,RED if self.stale else MUTED,True)
-            self.text(f'A   {r.a.total:.3f} s',30,y)
-            self.text(f'B   {r.b.total:.3f} s',285,y)
-            verdict='Equal predicted totals' if r.winner=='Tie' else f'{r.winner} faster by {abs(r.gap):.3f} s'
-            self.text(verdict,545,y,TYRES['M'])
-            self.text(f'B minus A: {r.gap:+.3f} s. Lower total wins.',30,y+36,MUTED)
-        self.text('S Soft: quicker, wears faster. M Medium: balance. H Hard: slower, lasts longer.',30,760,MUTED,True)
-        self.draw_status()
-        if not self.advanced and self.result: self.draw_chart()
-        self.draw_track()
-        self.button('play','Pause' if self.replay.playing else 'Play',(30,790,100,38))
-        self.button('restart','Restart',(145,790,110,38))
-        self.button('speed',f'{self.replay.speed}x',(270,790,100,38))
-        self.text(f'{self.replay.elapsed:.1f} / {self.replay.duration:.1f} s',400,800,MUTED)
-        self.controls['timeline']=pygame.Rect(30,840,940,20)
-        pygame.draw.rect(self.screen,PANEL,self.controls['timeline'])
-        fraction=self.replay.elapsed/self.replay.duration if self.replay.duration else 0
-        pygame.draw.rect(self.screen,RED,(30,840,940*fraction,20))
-        self.present()
+        if self.view=='notes': self.draw_notes()
+        elif self.view=='drivers': driver_view.draw(self)
+        else: strategy_view.draw(self)
 
     def draw_status(self):
         lines=wrap_text(self.status,self.small,1340)
@@ -355,17 +320,23 @@ class App:
                 lines=wrap_text(label,self.small,700)
                 width=min(740,max(self.small.size(line)[0] for line in lines)+24)
                 height=len(lines)*20+20
-                x=min(self.mouse[0]+14,1400-width-10)
+                x=min(self.mouse[0]+14,1440-width-10)
                 y=max(8,min(self.mouse[1]+24,900-height-8))
                 pygame.draw.rect(self.screen,(10,12,14),(x,y,width,height))
                 pygame.draw.rect(self.screen,MUTED,(x,y,width,height),1)
                 for i,line in enumerate(lines): self.text(line,x+12,y+10+i*20,TEXT,True)
                 break
+        width,height=self.window.get_size()
+        scale=min(width/1440,height/900)
+        size=(max(1,round(1440*scale)),max(1,round(900*scale)))
+        self.viewport=pygame.Rect((width-size[0])//2,(height-size[1])//2,*size)
+        self.window.fill((7,10,12))
+        self.window.blit(pygame.transform.smoothscale(self.screen,size),self.viewport)
         pygame.display.flip()
 
     def navigation(self):
         for i,(key,label) in enumerate((('strategy_view','Strategy F1'),('driver_view','Drivers F2'),('notes_view','Model F3'))):
-            self.button(key,label,(1000+i*130,20,120,40))
+            self.button(key,label,(800+i*205,25,195,42))
 
     def draw_notes(self):
         self.screen.fill(BG);self.controls={};self.tooltips=[]
@@ -403,49 +374,6 @@ class App:
         if len(values)==2: text+=f' / B {values[1][index]:.3f} s'
         return text
 
-    def draw_chart(self):
-        labels={'lap':'Lap time incl. pits','gap':'Cumulative B-A','tyre':'Degradation only'}
-        for i,(metric,label) in enumerate(labels.items()):
-            self.button('metric_'+metric,label,(30+i*235,520,220,36),RED if metric==self.metric else None)
-        values=charts.series(self.result,self.metric)
-        bounds=pygame.Rect(80,595,880,135)
-        low,high=charts.limits(values)
-        self.text(f'{high:.2f}',30,590,MUTED,True)
-        self.text(f'{low:.2f}',30,715,MUTED,True)
-        for fraction in (0,.5,1):
-            y=bounds.y+fraction*bounds.height
-            pygame.draw.line(self.screen,PANEL,(bounds.x,y),(bounds.right,y))
-        for i,group in enumerate(values):
-            pygame.draw.lines(self.screen,RED if i==0 else TEXT,False,charts.points(group,bounds,(low,high)),2)
-        self.text('L1',80,735,MUTED,True)
-        self.text(f'L{len(values[0])}',920,735,MUTED,True)
-        if bounds.collidepoint(self.mouse):
-            index=charts.hover_index(self.mouse[0],len(values[0]),bounds)
-            x=charts.points(values[0],bounds,(low,high))[index][0]
-            pygame.draw.line(self.screen,MUTED,(x,bounds.y),(x,bounds.bottom))
-            self.text(self.chart_readout(index),30,567,TEXT,True)
-        else:
-            self.text('Hover for recorded values. Red: A / White: B. Gap: B minus A.',30,567,MUTED,True)
-
-    def draw_track(self):
-        panel = pygame.Rect(1000,90,380,570)
-        pygame.draw.rect(self.screen,PANEL,panel)
-        self.text(self.profile.name.upper(),1020,110)
-        self.text(f'{self.profile.length:.3f} km / schematic',1020,145,MUTED,True)
-        points=fit_points(self.profile.points,(1000,180,380,430))
-        pygame.draw.lines(self.screen,(105,113,121),True,points,13)
-        pygame.draw.lines(self.screen,(185,192,199),True,points,2)
-        pygame.draw.circle(self.screen,RED,points[0],7)
-        self.text('Start / finish. Shared race clock.',1020,625,MUTED,True)
-        if self.result:
-            for i,result in enumerate((self.result.a,self.result.b)):
-                distance,index=progress(result,self.replay.elapsed)
-                point=point_at(points,distance)
-                color=RED if i==0 else TEXT
-                pygame.draw.circle(self.screen,color,point,9 if i==0 else 6)
-                self.text('AB'[i],point[0]+12,point[1]-10,color,True)
-                label='FINISHED' if distance>=len(result.laps) else f'L{index+1:02} {result.laps[index].compound}'
-                self.text(f'{"AB"[i]}  {label}',1020+i*180,675,color,True)
 
 
 def choose_path(action):

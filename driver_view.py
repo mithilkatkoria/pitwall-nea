@@ -16,9 +16,11 @@ def draw(app):
     names=[row.driver for row in summaries]
     if app.selected_driver not in names: app.selected_driver=names[0] if names else None
     app.driver_page=min(app.driver_page,max(0,(len(summaries)-1)//6))
-    app.text('DRIVER                         LAPS      BEST       MEAN       POP. SD      TREND s/lap',30,180)
+    for label,x in [('DRIVER',30),('LAPS',350),('BEST',440),('MEAN',555),('POP. SD',680),('TREND s/lap',820)]:
+        app.text(label,x,180)
     for i,row in enumerate(summaries[app.driver_page*6:app.driver_page*6+6]):
         y=220+i*43
+        pygame.draw.line(app.screen,(53,62,68),(30,y+40),(960,y+40))
         app.button('driver_'+row.driver,row.driver,(30,y,290,36),(220,63,67) if row.driver==app.selected_driver else None)
         for text,x in [(str(row.count),350),(f'{row.best:.3f}',440),(f'{row.mean:.3f}',555),(f'{row.deviation:.3f}',680),(f'{row.trend:+.4f}',820)]:
             app.text(text,x,y+10)
