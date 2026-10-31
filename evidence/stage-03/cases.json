@@ -1,0 +1,74 @@
+[
+  {
+    "id": "S03-CLI01",
+    "date": "2026-10-31",
+    "stage": 3,
+    "requirements": [
+      "SC02",
+      "SC03"
+    ],
+    "args": [
+      "--compound",
+      "S"
+    ],
+    "expected_exit": 0,
+    "expected_text": "90.000 s",
+    "actual_exit": 0,
+    "actual_output": "PITWALL / stage 3 / base and compound\nCompound: S; lap time: 90.000 s\nWear, fuel and pit stops are not modelled in this version.\n",
+    "passed": true
+  },
+  {
+    "id": "S03-CLI02",
+    "date": "2026-10-31",
+    "stage": 3,
+    "requirements": [
+      "SC02",
+      "SC03"
+    ],
+    "args": [
+      "--compound",
+      "M"
+    ],
+    "expected_exit": 0,
+    "expected_text": "90.480 s",
+    "actual_exit": 0,
+    "actual_output": "PITWALL / stage 3 / base and compound\nCompound: M; lap time: 90.480 s\nWear, fuel and pit stops are not modelled in this version.\n",
+    "passed": true
+  },
+  {
+    "id": "S03-CLI03",
+    "date": "2026-10-31",
+    "stage": 3,
+    "requirements": [
+      "SC02",
+      "SC03"
+    ],
+    "args": [
+      "--compound",
+      "H"
+    ],
+    "expected_exit": 0,
+    "expected_text": "91.000 s",
+    "actual_exit": 0,
+    "actual_output": "PITWALL / stage 3 / base and compound\nCompound: H; lap time: 91.000 s\nWear, fuel and pit stops are not modelled in this version.\n",
+    "passed": true
+  },
+  {
+    "id": "S03-CLI04",
+    "date": "2026-10-31",
+    "stage": 3,
+    "requirements": [
+      "SC02",
+      "SC03"
+    ],
+    "args": [
+      "--compound",
+      "X"
+    ],
+    "expected_exit": 2,
+    "expected_text": "invalid choice",
+    "actual_exit": 2,
+    "actual_output": "usage: main.py [-h] [--base BASE] [--compound {S,M,H}]\nmain.py: error: argument --compound: invalid choice: 'X' (choose from S, M, H)\n",
+    "passed": true
+  }
+]
