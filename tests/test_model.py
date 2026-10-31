@@ -4,7 +4,36 @@ import sys
 import unittest
 from pathlib import Path
 
-from main import lap_time, tyre_loss
+from model import lap_time, tyre_loss, simulate
+
+
+class RaceTests(unittest.TestCase):
+    def test_ten_lap_total_against_independent_sum(self):
+        self.assertAlmostEqual(simulate(90, 10).total, 904.275)
+
+    def test_lap_age_and_cumulative_trace(self):
+        result = simulate(90, 10)
+        self.assertEqual([lap.number for lap in result.laps], list(range(1, 11)))
+        self.assertEqual([lap.age for lap in result.laps], list(range(10)))
+        self.assertAlmostEqual(result.laps[-1].time, 90.855)
+        self.assertAlmostEqual(result.total, sum(lap.time for lap in result.laps))
+        self.assertTrue(all(b.elapsed > a.elapsed for a, b in zip(result.laps, result.laps[1:])))
+
+    def test_maximum_race_length(self):
+        self.assertEqual(len(simulate(90, 100).laps), 100)
+
+    def test_invalid_race_lengths(self):
+        for laps in (0, 9, 101, -1, True, 10.0, "10", None):
+            with self.subTest(laps=laps), self.assertRaises(ValueError):
+                simulate(90, laps)
+
+    def test_invalid_race_inputs(self):
+        for base, compound in ((-1, "S"), (90, "X")):
+            with self.subTest(base=base, compound=compound), self.assertRaises(ValueError):
+                simulate(base, 10, compound)
+
+    def test_repeatable(self):
+        self.assertEqual(simulate(90, 10, "M"), simulate(90, 10, "M"))
 
 
 class WearTests(unittest.TestCase):
