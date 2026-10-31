@@ -1,6 +1,8 @@
 """First usable Pygame interface. Calculations remain in model.py."""
 import pygame
 import charts
+import driver_view
+from analysis import read_laps, SAMPLE_PATH
 from circuits import load_circuits
 from track import fit_points, point_at
 from replay import Replay, progress
@@ -31,6 +33,12 @@ class App:
         self.focus = None
         self.controls = {}
         self.advanced = False
+        self.view = "strategy"
+        self.driver_rows = read_laps(SAMPLE_PATH)
+        self.driver_source = "Synthetic demonstration data / 180 laps / not telemetry"
+        self.exclude_pits = True
+        self.driver_page = 0
+        self.selected_driver = None
         self.metric = "lap"
         self.mouse = (0,0)
         self.result = None
@@ -99,6 +107,19 @@ class App:
         self.calculate()
         self.status = f"A optimised across {len(found.candidates)} different-compound one-stop plans. Ties keep the first."
 
+    def import_from(self,path,sample=False):
+        try:
+            rows=read_laps(path)
+        except ValueError as error:
+            self.status,self.error=str(error),True
+            return False
+        self.driver_rows=rows
+        self.driver_source='Synthetic demonstration data / not telemetry' if sample else f'Imported CSV: {len(rows)} lap records'
+        self.selected_driver=None
+        self.driver_page=0
+        self.status,self.error='Lap data loaded. Statistics use the selected pit filter.',False
+        return True
+
     def session(self):
         base,laps,plans,pit,conditions,paces=self.inputs()
         return Session(self.profile.key,base,laps,pit,conditions,plans,paces)
@@ -128,7 +149,9 @@ class App:
         try:
             path=choose_path(action)
             if not path: return
-            if action=='load':
+            if action=='import':
+                self.import_from(path)
+            elif action=='load':
                 self.load_from(path)
             elif action=='save':
                 save_session(path,self.session())
@@ -149,7 +172,15 @@ class App:
             self.focus = key
         else:
             self.focus = None
-            if key.startswith('metric_'): self.metric=key[7:]
+            if key == 'driver_view': self.view='drivers'
+            elif key == 'strategy_view': self.view='strategy'
+            elif key == 'filter': self.exclude_pits=not self.exclude_pits
+            elif key == 'sample': self.import_from(SAMPLE_PATH, sample=True)
+            elif key == 'import': self.file_action('import')
+            elif key == 'previous_drivers': self.driver_page=max(0,self.driver_page-1)
+            elif key == 'next_drivers': self.driver_page+=1
+            elif key.startswith('driver_'): self.selected_driver=key[7:]
+            elif key.startswith('metric_'): self.metric=key[7:]
             elif key in ('save','load','export'): self.file_action(key)
             elif key == 'play': self.replay.toggle()
             elif key == 'restart': self.replay.restart()
@@ -223,11 +254,15 @@ class App:
         self.button(key,self.fields[key],(x,y+23,width,38))
 
     def draw(self):
+        if self.view=='drivers':
+            driver_view.draw(self)
+            return
         self.screen.fill(BG)
         self.controls = {}
         self.screen.blit(self.title.render('PITWALL',True,TEXT),(30,22))
         self.text('STRATEGY WORKBENCH / FIRST INTERFACE',220,34,MUTED,True)
         self.button('profile',self.profile.name,(700,20,270,42))
+        self.button('driver_view','Driver analysis',(1030,20,340,42))
         for key,label,x in [('laps','Race laps',30),('base','Base seconds',150),('pit','Pit loss seconds',290)]:
             self.field(key,label,x,100,120 if key != 'laps' else 100)
         self.button('advanced','Conditions +',(700,110,270,40))
@@ -327,6 +362,8 @@ def choose_path(action):
     root=None
     try:
         root=Tk();root.withdraw();root.attributes('-topmost',True)
+        if action=='import':
+            return filedialog.askopenfilename(parent=root,title='Import driver lap CSV',filetypes=[('Lap data','*.csv')])
         if action=='load':
             return filedialog.askopenfilename(parent=root,title='Load Pitwall session',filetypes=[('Pitwall session','*.json')])
         extension='.csv' if action=='export' else '.json'

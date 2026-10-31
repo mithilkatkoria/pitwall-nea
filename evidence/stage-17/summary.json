@@ -1,0 +1,28 @@
+{
+  "stage": 17,
+  "unit_tests_passed": 80,
+  "cli_cases_passed": 1,
+  "parent_commit": "304bd8c5e75d85356279e628862aa678f5468fd8",
+  "source_sha256": {
+    "analysis.py": "8bb9635b131d87fdadfb7e26ac1aa9b18a8cfec303e4e13516169f26fdf9dab6",
+    "charts.py": "3f890ab5e28e65499bc2f6acd0419ae8e8e8b189a6010915a87f7b8fc899af0c",
+    "circuits.py": "6920813bd77745c2524febf52952341d5d391f0a0a208f05d2890a16219f274b",
+    "driver_view.py": "deb2caddc1ddbf1207f35443a241c9590fb9417d3f5565aebd30c3fa2b78e1b7",
+    "main.py": "fea915ccc4e5a95399fa50c859441f8d0a4de3c8d6571315d3463b45bef71060",
+    "model.py": "b962454fdf6f3d94b3abe2ddead8e3ace4245d2486dfea39aa3cfe600b4e5767",
+    "replay.py": "00d3010dbf01ceb77bc391343eed2b13917dce1ea7ffccc35ffa3e7865142442",
+    "storage.py": "8426a547b45951b0015fd50cd761ae0ced88aa6945a86a4cb0c9ddd3272273a0",
+    "track.py": "32c15985eeb42f63a9958e98199563792cf83cc1a033815569d4b93ff647f8f7",
+    "ui.py": "4fe1b93cdea8624406a2ae5e559cec08bafc068e0a5157b2ec3b6113713feb03",
+    "tests\\test_analysis.py": "267106914f72a8d10598bffb72257b718449a3712b7cb57076bd5a05864b5ff3",
+    "tests\\test_charts.py": "3e7c2781d08f2847fbacb75224f71a6c1dafe2f49b3d561108d0f177a3106a76",
+    "tests\\test_circuits.py": "b9554f7370534366b36529d9d23c4f19485c0b41c3fd0d04abb79ef983428228",
+    "tests\\test_conditions.py": "edb3a29a5f5fa51f7c2602e449159a9365e3548cf04be7bf05d62157c3b60abd",
+    "tests\\test_model.py": "1972272d8d3da6236836de596a030f95b0e83d4c54d171d2e68b660ec88f9384",
+    "tests\\test_replay.py": "cb68e3c7d56396736b66a007e18239742a36bfc21555546d4cd9f09f8ba44437",
+    "tests\\test_search.py": "bdf9dd528b1d4157e6c9b466f72762192f4cc7147ef504b188abbf696bd03125",
+    "tests\\test_storage.py": "60d5e47c5adb6ef044024bbfd1c8c0e71dac862ffd8d9521e4cbc4284e18756f",
+    "tests\\test_track.py": "4e495fdfec5e98b9e077da775d758658c87cfbb35cefe66637a47735a1b4d8ac",
+    "tests\\test_ui.py": "5e3561e043da9126347e81736672eaf3acc186c3ff9638b958989d3fdcab7e40"
+  }
+}
