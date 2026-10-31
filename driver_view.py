@@ -7,7 +7,7 @@ from charts import limits
 def draw(app):
     app.screen.fill((24,27,30));app.controls={}
     app.text('DRIVER ANALYSIS / seconds',30,25)
-    app.button('strategy_view','Strategy',(1150,20,220,40))
+    app.navigation()
     app.button('import','Import CSV',(30,80,190,40))
     app.button('sample','Synthetic sample',(235,80,230,40))
     app.button('filter','Exclude pits: '+('ON' if app.exclude_pits else 'OFF'),(480,80,250,40))
