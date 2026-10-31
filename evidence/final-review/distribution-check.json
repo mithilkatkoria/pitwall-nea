@@ -1,0 +1,40 @@
+{
+  "verified_at": "2026-10-31T15:22:07.369993+00:00",
+  "tested_archive_commit": "5877ae935aca0e6a22a2a8ca8fc69231e9970dc3",
+  "tested_runtime_commit": "6d7f454c702fec59b53c27d8244308e322ee741e",
+  "canonical_files_verified": 343,
+  "zip_integrity": "passed",
+  "archive_sha256": "a0bf40d8831a1264b28c7e41d276ea46e1b77e63a3d194755d9a0289055900f7",
+  "tests": 99,
+  "test_result": "passed",
+  "startup_and_cli": [
+    {
+      "arguments": [
+        "--gui",
+        "--frames",
+        "3"
+      ],
+      "exit": 0,
+      "stdout": ""
+    },
+    {
+      "arguments": [
+        "--base",
+        "90"
+      ],
+      "exit": 0,
+      "stdout": "PITWALL / tyre degradation\r\nCompound: S; age: 0; lap time: 90.000 s\r\nTyre degradation: 0.000 s\r\nUse --laps for race simulation. Single-lap mode excludes race conditions; use --laps for the full model.\r\n"
+    },
+    {
+      "arguments": [
+        "--circuit",
+        "silverstone",
+        "--optimise"
+      ],
+      "exit": 0,
+      "stdout": "PITWALL / one-stop search\r\nChecked 306 candidates: 6 x (laps - 1).\r\nBest: S > M, stop 22; 4757.761 s\r\nOne stop, two different compounds only. Ties within 1e-8 s keep the first enumerated plan.\r\n"
+    }
+  ],
+  "method": "Git archive with core.autocrlf=false; every member compared with its canonical Git blob; fresh extraction with no repository/environment files.",
+  "final_archive_rule": "Later evidence-only commits may be included in the final delivered ZIP; runtime/tests/data must remain identical to this tested source and every final member must match its committed blob."
+}
