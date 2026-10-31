@@ -4,7 +4,7 @@ import sys
 import unittest
 from pathlib import Path
 
-from model import lap_time, tyre_loss, simulate, Strategy
+from model import lap_time, tyre_loss, simulate, Strategy, compare
 
 
 class RaceTests(unittest.TestCase):
@@ -177,3 +177,32 @@ class StrategyTests(unittest.TestCase):
     def test_same_compound_replacement_is_allowed(self):
         race = simulate(90, 10, Strategy(('S','S'), (5,)), 0)
         self.assertAlmostEqual(race.total, 901.9)
+
+
+class ComparisonTests(unittest.TestCase):
+    def test_independent_gap_and_reverse(self):
+        soft, hard = Strategy(('S',)), Strategy(('H',))
+        result = compare(90, 10, soft, hard)
+        self.assertAlmostEqual(result.a.total, 904.275)
+        self.assertAlmostEqual(result.b.total, 911.665)
+        self.assertAlmostEqual(result.gap, 7.390)
+        self.assertEqual(result.winner, 'A')
+        reverse = compare(90, 10, hard, soft)
+        self.assertAlmostEqual(reverse.gap, -7.390)
+        self.assertEqual(reverse.winner, 'B')
+        self.assertAlmostEqual(result.gaps[-1], result.gap)
+
+    def test_identical_plans_tie(self):
+        plan = Strategy(('M','H'), (5,))
+        result = compare(90, 10, plan, plan)
+        self.assertEqual(result.winner, 'Tie')
+        self.assertEqual(result.gaps, (0,)*10)
+
+    def test_one_against_two_stops(self):
+        result = compare(90, 10, Strategy(('S','H'), (4,)), Strategy(('S','M','H'), (3,6)))
+        self.assertAlmostEqual(result.gap, 21.502)
+        self.assertEqual(len(result.a.laps), len(result.b.laps))
+
+    def test_invalid_b_is_rejected(self):
+        with self.assertRaises(ValueError):
+            compare(90, 10, Strategy(), Strategy(('S','H'), (10,)))

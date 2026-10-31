@@ -1,0 +1,6 @@
+command: python main.py --compounds-b H
+usage: main.py [-h] [--base BASE] [--compound {S,M,H}] [--age AGE]
+               [--laps LAPS] [--compounds {S,M,H} [{S,M,H} ...]]
+               [--stops [STOPS ...]] [--pit-loss PIT_LOSS] [--compare]
+               [--compounds-b {S,M,H} [{S,M,H} ...]] [--stops-b [STOPS_B ...]]
+main.py: error: Plan B needs --compare.

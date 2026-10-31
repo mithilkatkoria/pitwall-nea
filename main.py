@@ -1,7 +1,7 @@
-"""Stage 7: configurable zero-, one- and two-stop strategies."""
+"""Stage 8: compare two strategies under shared race settings."""
 import argparse
 
-from model import COMPOUND_PACE, lap_time, tyre_loss, simulate, Strategy
+from model import COMPOUND_PACE, lap_time, tyre_loss, simulate, Strategy, compare
 
 def main():
     parser = argparse.ArgumentParser(description="Pitwall: compound lap calculation")
@@ -12,14 +12,32 @@ def main():
     parser.add_argument("--compounds", nargs="+", choices=COMPOUND_PACE, help="One compound per stint")
     parser.add_argument("--stops", nargs="*", type=int, default=[], help="Increasing pit laps, at most two")
     parser.add_argument("--pit-loss", type=float, default=22.5, help="Pit lane loss in seconds (0-60)")
+    parser.add_argument("--compare", action="store_true", help="Compare with plan B under shared settings")
+    parser.add_argument("--compounds-b", nargs="+", choices=COMPOUND_PACE)
+    parser.add_argument("--stops-b", nargs="*", type=int, default=[])
     args = parser.parse_args()
     try:
+        if (args.compounds_b is not None or args.stops_b) and not args.compare:
+            raise ValueError("Plan B needs --compare.")
+        if args.compare and args.laps is None:
+            raise ValueError("Comparison needs --laps.")
         if args.laps is None and (args.compounds is not None or args.stops or args.pit_loss != 22.5):
             raise ValueError("Pit settings need --laps.")
         if args.laps is not None:
             if args.age != 0:
                 raise ValueError("A complete race starts on fresh tyres; use --age 0.")
             plan = Strategy(tuple(args.compounds or [args.compound]), tuple(args.stops))
+            if args.compare:
+                plan_b = Strategy(tuple(args.compounds_b or ["M"]), tuple(args.stops_b))
+                result = compare(args.base, args.laps, plan, plan_b, args.pit_loss)
+                print("PITWALL / stage 8 / comparison")
+                print(f"A: {result.a.total:.3f} s; B: {result.b.total:.3f} s")
+                print(f"B minus A: {result.gap:+.3f} s; faster: {result.winner}")
+                print("Positive gap favours A; negative gap favours B. Same race settings.")
+                print("LAP     A TIME      B TIME     CUMULATIVE B-A")
+                for a, b, gap in zip(result.a.laps, result.b.laps, result.gaps):
+                    print(f"{a.number:3}  {a.time:9.3f}   {b.time:9.3f}   {gap:+16.3f}")
+                return
             result = simulate(args.base, args.laps, plan, args.pit_loss)
             print("PITWALL / stage 7 / strategy")
             print("LAP  TYRE  AGE     LAP TIME     ELAPSED     TYRE LOSS     PIT LOSS")
