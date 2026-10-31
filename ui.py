@@ -1,6 +1,7 @@
 """First usable Pygame interface. Calculations remain in model.py."""
 import pygame
 from circuits import load_circuits
+from track import fit_points
 from model import Strategy, Conditions, compare, optimise
 
 BG = (24, 27, 30)
@@ -14,8 +15,8 @@ TYRES = {'S': (235, 79, 85), 'M': (235, 202, 76), 'H': (225, 229, 232)}
 class App:
     def __init__(self):
         pygame.init()
-        self.screen = pygame.display.set_mode((1000, 650))
-        pygame.display.set_caption("PITWALL | first interface")
+        self.screen = pygame.display.set_mode((1400, 760))
+        pygame.display.set_caption("PITWALL | circuit workbench")
         self.font = pygame.font.Font(None, 25)
         self.small = pygame.font.Font(None, 21)
         self.title = pygame.font.Font(None, 42)
@@ -183,7 +184,19 @@ class App:
             self.text(f'B minus A: {r.gap:+.3f} s. Lower total wins.',30,y+36,MUTED)
         self.text('S Soft: quicker, wears faster. M Medium: balance. H Hard: slower, lasts longer.',30,580,MUTED,True)
         self.text(self.status[:115],30,615,RED if self.error else TEXT,True)
+        self.draw_track()
         pygame.display.flip()
+
+    def draw_track(self):
+        panel = pygame.Rect(1000,90,380,570)
+        pygame.draw.rect(self.screen,PANEL,panel)
+        self.text(self.profile.name.upper(),1020,110)
+        self.text(f'{self.profile.length:.3f} km / schematic',1020,145,MUTED,True)
+        points=fit_points(self.profile.points,(1000,180,380,430))
+        pygame.draw.lines(self.screen,(105,113,121),True,points,13)
+        pygame.draw.lines(self.screen,(185,192,199),True,points,2)
+        pygame.draw.circle(self.screen,RED,points[0],7)
+        self.text('Start / finish',1020,625,MUTED,True)
 
 
 def run(frames=None, screenshot=None):

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "S13-CLI01",
+    "date": "2026-10-31",
+    "stage": 13,
+    "requirements": [
+      "SC07",
+      "SC12"
+    ],
+    "args": [
+      "--gui",
+      "--frames",
+      "3",
+      "--screenshot",
+      "evidence/stage-13/circuit.png"
+    ],
+    "expected_exit": 0,
+    "expected_text": "",
+    "actual_exit": 0,
+    "actual_output": "pygame-ce 2.5.7 (SDL 2.32.10, Python 3.14.0)\n",
+    "passed": true
+  }
+]
