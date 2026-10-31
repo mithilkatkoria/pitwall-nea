@@ -1,0 +1,16 @@
+command: python -m unittest discover -s tests -v
+expected exit: 0
+actual exit: 0
+test_base_example (test_model.LapTests.test_base_example) ... ok
+test_cli_output (test_model.LapTests.test_cli_output) ... ok
+test_cli_rejects_invalid_input_without_traceback (test_model.LapTests.test_cli_rejects_invalid_input_without_traceback) ... ok
+test_fractional_base (test_model.LapTests.test_fractional_base) ... ok
+test_inclusive_base_boundaries (test_model.LapTests.test_inclusive_base_boundaries) ... ok
+test_invalid_base_range (test_model.LapTests.test_invalid_base_range) ... ok
+test_nonfinite_base (test_model.LapTests.test_nonfinite_base) ... ok
+test_wrong_base_type (test_model.LapTests.test_wrong_base_type) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.630s
+
+OK

@@ -1,0 +1,5 @@
+command: python main.py --base -1
+expected exit: 2
+actual exit: 2
+usage: main.py [-h] [--base BASE]
+main.py: error: Base lap time must be between 30 and 200.
