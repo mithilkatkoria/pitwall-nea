@@ -3,6 +3,7 @@ import pygame
 from circuits import load_circuits
 from track import fit_points, point_at
 from replay import Replay, progress
+from storage import Session, save_session, load_session, export_laps
 from model import Strategy, Conditions, compare, optimise
 
 BG = (24, 27, 30)
@@ -95,6 +96,48 @@ class App:
         self.calculate()
         self.status = f"A optimised across {len(found.candidates)} different-compound one-stop plans. Ties keep the first."
 
+    def session(self):
+        base,laps,plans,pit,conditions,paces=self.inputs()
+        return Session(self.profile.key,base,laps,pit,conditions,plans,paces)
+
+    def load_from(self,path):
+        try:
+            session=load_session(path)
+            result=session.validate()
+        except ValueError as error:
+            self.status,self.error=str(error),True
+            return False
+        self.set_profile(next(i for i,c in enumerate(self.profiles) if c.key==session.circuit))
+        self.fields.update(base=str(session.base),laps=str(session.laps),pit=str(session.pit),
+                           wear=str(session.conditions.wear),temperature=str(session.conditions.temperature),
+                           weather=session.conditions.weather,sc_start=str(session.conditions.sc_start),
+                           sc_duration=str(session.conditions.sc_duration),pace_a=str(session.paces[0]),pace_b=str(session.paces[1]))
+        for i,plan in enumerate(session.plans):
+            self.counts[i]=len(plan.stops)
+            self.compounds[i]=list(plan.compounds)+['H']*(3-len(plan.compounds))
+            for j,stop in enumerate(plan.stops): self.fields[f'stop{i}_{j}']=str(stop)
+        self.result=result
+        self.replay=Replay(max(result.a.total,result.b.total))
+        self.status,self.error='Session loaded and validated.',False
+        return True
+
+    def file_action(self,action):
+        try:
+            path=choose_path(action)
+            if not path: return
+            if action=='load':
+                self.load_from(path)
+            elif action=='save':
+                save_session(path,self.session())
+                self.status,self.error='Session saved.',False
+            else:
+                result=export_laps(path,self.session())
+                self.result=result
+                self.replay=Replay(max(result.a.total,result.b.total))
+                self.status,self.error=f'Exported {2*len(result.a.laps)} lap rows.',False
+        except (ValueError,RuntimeError) as error:
+            self.status,self.error=str(error),True
+
     def dirty(self):
         self.status, self.error = "Settings changed. Simulate to update the results below.", False
 
@@ -103,7 +146,8 @@ class App:
             self.focus = key
         else:
             self.focus = None
-            if key == 'play': self.replay.toggle()
+            if key in ('save','load','export'): self.file_action(key)
+            elif key == 'play': self.replay.toggle()
             elif key == 'restart': self.replay.restart()
             elif key == 'speed': self.replay.cycle_speed()
             elif key == 'simulate': self.calculate()
@@ -193,6 +237,8 @@ class App:
                 self.field(f'stop{i}_{j}',f'Stop {j+1} after lap',520+j*160,y-20,130)
         self.button('simulate','Simulate both',(30,362,195,42),RED)
         self.button('optimise','Best one-stop A',(240,362,230,42))
+        for action,label,x in [('save','Save',500),('load','Load',610),('export','Export CSV',720)]:
+            self.button(action,label,(x,362,100 if action!='export' else 120,42))
         if self.advanced:
             for key,label,x in [('wear','Wear x',30),('temperature','Track C',150),('sc_start','SC start (0 off)',300),('sc_duration','SC laps',470),('pace_a','Pace A seconds',600),('pace_b','Pace B seconds',770)]:
                 self.field(key,label,x,430,110)
@@ -237,6 +283,22 @@ class App:
                 self.text('AB'[i],point[0]+12,point[1]-10,color,True)
                 label='FINISHED' if distance>=len(result.laps) else f'L{index+1:02} {result.laps[index].compound}'
                 self.text(f'{"AB"[i]}  {label}',1020+i*180,675,color,True)
+
+
+def choose_path(action):
+    from tkinter import Tk, filedialog, TclError
+    root=None
+    try:
+        root=Tk();root.withdraw();root.attributes('-topmost',True)
+        if action=='load':
+            return filedialog.askopenfilename(parent=root,title='Load Pitwall session',filetypes=[('Pitwall session','*.json')])
+        extension='.csv' if action=='export' else '.json'
+        return filedialog.asksaveasfilename(parent=root,title='Export lap data' if action=='export' else 'Save Pitwall session',
+                                           defaultextension=extension,filetypes=[('Pitwall file','*'+extension)])
+    except TclError as error:
+        raise RuntimeError(f'Cannot open file picker: {error}') from error
+    finally:
+        if root is not None: root.destroy()
 
 
 def run(frames=None, screenshot=None):
