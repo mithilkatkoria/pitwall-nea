@@ -1,0 +1,23 @@
+command: python -m unittest discover -s tests -v
+exit: 0
+test_compound_does_not_relax_base_validation (test_model.CompoundTests.test_compound_does_not_relax_base_validation) ... ok
+test_invalid_compounds (test_model.CompoundTests.test_invalid_compounds) ... ok
+test_offsets_against_hand_calculation (test_model.CompoundTests.test_offsets_against_hand_calculation) ... ok
+test_base_example (test_model.LapTests.test_base_example) ... ok
+test_cli_output (test_model.LapTests.test_cli_output) ... ok
+test_cli_rejects_invalid_input_without_traceback (test_model.LapTests.test_cli_rejects_invalid_input_without_traceback) ... ok
+test_fractional_base (test_model.LapTests.test_fractional_base) ... ok
+test_inclusive_base_boundaries (test_model.LapTests.test_inclusive_base_boundaries) ... ok
+test_invalid_base_range (test_model.LapTests.test_invalid_base_range) ... ok
+test_nonfinite_base (test_model.LapTests.test_nonfinite_base) ... ok
+test_wrong_base_type (test_model.LapTests.test_wrong_base_type) ... ok
+test_fresh_tyres_have_no_degradation (test_model.WearTests.test_fresh_tyres_have_no_degradation) ... ok
+test_invalid_age (test_model.WearTests.test_invalid_age) ... ok
+test_linear_wear_and_life_boundary (test_model.WearTests.test_linear_wear_and_life_boundary) ... ok
+test_quadratic_cliff_independent_example (test_model.WearTests.test_quadratic_cliff_independent_example) ... ok
+test_wear_increases_across_twenty_laps (test_model.WearTests.test_wear_increases_across_twenty_laps) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.626s
+
+OK
