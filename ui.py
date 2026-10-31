@@ -6,8 +6,7 @@ import driver_view
 import strategy_view
 from analysis import read_laps, SAMPLE_PATH
 from circuits import load_circuits
-from track import fit_points, point_at
-from replay import Replay, progress
+from replay import Replay
 from storage import Session, save_session, load_session, export_laps
 from model import Strategy, Conditions, compare, optimise
 
