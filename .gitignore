@@ -5,3 +5,14 @@ __pycache__/
 saved/
 outputs/
 .DS_Store
+
+# Keep the repository focused on the application and its tests.
+*.[mM][dD]
+*.[mM][dD][xX]
+*.[mM][aA][rR][kK][dD][oO][wW][nN]
+/docs/
+/.vscode/
+/evidence/reconstructed-timeline.json
+/evidence/history-recovery/
+/evidence/documentation-cleanup/
+/evidence/timeline-*
