@@ -1,11 +1,33 @@
 [
   {
+    "path": "evidence/final-review/after-oversized-input.png",
+    "size": [
+      1440,
+      900
+    ],
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "fc9a953713f832103a7517e497368f34b3a1b823e26927f69f34eb827c9e0f4f"
+  },
+  {
+    "path": "evidence/final-review/after-time-carry.png",
+    "size": [
+      1440,
+      900
+    ],
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "4f19a1a0a9a14373bb83d103862343ca02d6e97f01d6f71534847544bfbbd100"
+  },
+  {
     "path": "evidence/final-review/before-oversized-input.png",
     "size": [
       1440,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "72ddeb0c059b54b5f74411f418d550d918b1fd3ffe74111e363a84e282ca46cf"
   },
   {
     "path": "evidence/final-review/before-time-carry.png",
@@ -13,7 +35,99 @@
       1440,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "c53c571323b354b0e6234a39dfce96e8d4f53e469fe5446aa38a7a8464958af1"
+  },
+  {
+    "path": "evidence/final-review/drivers-minimum.png",
+    "size": [
+      864,
+      540
+    ],
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "9902d76848bdbea57689eec363216f7c1995b40e34e5fa7ab3931ec8ec79feee"
+  },
+  {
+    "path": "evidence/final-review/maximum-valid-driver-import.png",
+    "size": [
+      1152,
+      720
+    ],
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "a1a0c4fbc41aa00b4eba805d8a467957b8ac3e712bb8405dd6c84d448e1bb26b"
+  },
+  {
+    "path": "evidence/final-review/model-minimum.png",
+    "size": [
+      864,
+      540
+    ],
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "14deaab6354921d33ff07c31b8b7121d9161e21e2560fe985210a6dc22893471"
+  },
+  {
+    "path": "evidence/final-review/native-drivers.jpg",
+    "size": [
+      2020,
+      1316
+    ],
+    "format": "JPEG",
+    "legacy_extension": false,
+    "sha256": "50c4e7dc5dc7ebc04da183fa2b337d8bccc314ab5161c259e9e19c07ed3eddc5"
+  },
+  {
+    "path": "evidence/final-review/native-model.jpg",
+    "size": [
+      2020,
+      1316
+    ],
+    "format": "JPEG",
+    "legacy_extension": false,
+    "sha256": "3d4ff341187ee01707d403bd6ab1cc55e7bee0c5eb581d1f84baff1d4e1b1ee7"
+  },
+  {
+    "path": "evidence/final-review/native-replay-paused.jpg",
+    "size": [
+      2020,
+      1316
+    ],
+    "format": "JPEG",
+    "legacy_extension": false,
+    "sha256": "18bd08e9e30d0d64d36e8a1f338b81c600bfc4b304c01e85a80d3230fd0eb9d5"
+  },
+  {
+    "path": "evidence/final-review/native-strategy.jpg",
+    "size": [
+      2020,
+      1316
+    ],
+    "format": "JPEG",
+    "legacy_extension": false,
+    "sha256": "e35a3e80a5a490c4a5c5fe89cb5e99e334a1f9ecc4bf5a73b5f4de597afd8bea"
+  },
+  {
+    "path": "evidence/final-review/strategy-default.png",
+    "size": [
+      1152,
+      720
+    ],
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "4661b248824f165dfbb7ec29b1c3e0447499a3e805236e7aec630c300d8d46d0"
+  },
+  {
+    "path": "evidence/final-review/strategy-minimum.png",
+    "size": [
+      864,
+      540
+    ],
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "7aac4e42c2a73eebfb8575c66b7ad317028ae7c87d523d34f7bc4838c915a5d9"
   },
   {
     "path": "evidence/history-recovery/portfolio-page-october-checkpoint.png",
@@ -21,7 +135,9 @@
       1440,
       3211
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "16c1043018a41df11fe59e87c2fdc0251a523f1782c834b34738a99c55aab715"
   },
   {
     "path": "evidence/history-recovery/prototype-image-reused.png",
@@ -29,7 +145,9 @@
       1440,
       960
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "ef6ba82b0ed3df552d1f683c57350b59964a309f1770cb929efeb80e31678bdc"
   },
   {
     "path": "evidence/repository-rebuild/drivers.png",
@@ -37,7 +155,9 @@
       1440,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "14bd7e1b37c07927e15e07d29ae696cbdaf15254ae41d445837ab44b69507fac"
   },
   {
     "path": "evidence/repository-rebuild/notes.png",
@@ -45,7 +165,9 @@
       1440,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "c3d161eb186054fd046982592c14efb46bde2cc3b26d932ce30de679be87923d"
   },
   {
     "path": "evidence/repository-rebuild/strategy.png",
@@ -53,7 +175,9 @@
       1440,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "889a9b9f8e58d1ceb08863e2a80f2977aefee4d86d3333d80a741eba3598f37a"
   },
   {
     "path": "evidence/stage-12/first-window.png",
@@ -61,7 +185,9 @@
       1000,
       650
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "e74bd7ca4723eabc0dddde0ec861ff146db513044df3c978635eb5c622ab47ca"
   },
   {
     "path": "evidence/stage-12/native-corrected-input.png",
@@ -69,7 +195,9 @@
       1754,
       1194
     ],
-    "format": "JPEG (legacy .png filename)"
+    "format": "JPEG",
+    "legacy_extension": true,
+    "sha256": "89de7da8c62bfa8d4c06c151823a593beb3510f40cced8d35435210687ce4cab"
   },
   {
     "path": "evidence/stage-12/native-first-window.png",
@@ -77,7 +205,9 @@
       1754,
       1194
     ],
-    "format": "JPEG (legacy .png filename)"
+    "format": "JPEG",
+    "legacy_extension": true,
+    "sha256": "47872f6be3197ad6db3e62230d6a0022ed3ce164b8db7225b8731eac9d5448bd"
   },
   {
     "path": "evidence/stage-12/native-validation.png",
@@ -85,7 +215,9 @@
       1754,
       1194
     ],
-    "format": "JPEG (legacy .png filename)"
+    "format": "JPEG",
+    "legacy_extension": true,
+    "sha256": "91998bbd72c4275714597ed7cea84d01dbf562aa2b36aa69059dc27827014b55"
   },
   {
     "path": "evidence/stage-13/bahrain.png",
@@ -93,7 +225,9 @@
       1400,
       760
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "869af2096d4a9fd397d3503acfd676c87251edd3fc85b7242d7bdfa98db22cce"
   },
   {
     "path": "evidence/stage-13/circuit.png",
@@ -101,7 +235,9 @@
       1400,
       760
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "dea374989704c1ac25d4dad7f00f1f1e214f60e2cd2733067afbe092e7707c83"
   },
   {
     "path": "evidence/stage-13/monza.png",
@@ -109,7 +245,9 @@
       1400,
       760
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "f854399b6edf987705517ee2a3fe6c3967599a26b3a8b070369988bb12872b06"
   },
   {
     "path": "evidence/stage-14/movement-0.png",
@@ -117,7 +255,9 @@
       1400,
       760
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "3ef31d6bcdf740082e9b9df7b1a8b49b54e94cec051d78ed8fb8334b2af55875"
   },
   {
     "path": "evidence/stage-14/movement-44.png",
@@ -125,7 +265,9 @@
       1400,
       760
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "595ce87d81ed7ab941b25307540d3c69e5129b931478e1389f83e3fb96c45051"
   },
   {
     "path": "evidence/stage-14/movement-89.png",
@@ -133,7 +275,9 @@
       1400,
       760
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "032d6c44ad2b0ee88aa78474302b4ca46696dec17bc2dbffd76bfed0e5417ab6"
   },
   {
     "path": "evidence/stage-14/replay-start.png",
@@ -141,7 +285,9 @@
       1400,
       760
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "08bd09a137dcec2828eadce4a1472c45a6c6af552fe246d6741670158db4e5ef"
   },
   {
     "path": "evidence/stage-14/scrub-middle.png",
@@ -149,7 +295,9 @@
       1400,
       760
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "cf351c451f820afa9c83b664db3c77f174f8d569b0770410a02b06fa2792b786"
   },
   {
     "path": "evidence/stage-15/file-controls.png",
@@ -157,7 +305,9 @@
       1400,
       760
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "a8bbe15444134a87bef9ea7ed44333bab08429c386e5f84885b3992d1ae38209"
   },
   {
     "path": "evidence/stage-16/gap-hover.png",
@@ -165,7 +315,9 @@
       1400,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "7dcbd4a41fd46f361ff8207fe85798b40c101a1d9416bcaeaab2fc83572e5261"
   },
   {
     "path": "evidence/stage-16/lap-chart.png",
@@ -173,7 +325,9 @@
       1400,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "883e38bfceed443c3ab794f1a4f5c9d4fd4ddb02f0547bdcf29fac30c5e4af8e"
   },
   {
     "path": "evidence/stage-16/tyre-hover.png",
@@ -181,7 +335,9 @@
       1400,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "a73595c531743629d6f9f6b04ee9486d15faad1e1c8e384d4cc646a55e541618"
   },
   {
     "path": "evidence/stage-17/driver-analysis.png",
@@ -189,7 +345,9 @@
       1400,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "fe6ea0b58d378163142351fbc214d73f6857ffc003903663a2786ccfeaa25db6"
   },
   {
     "path": "evidence/stage-20/after-long-text.png",
@@ -197,7 +355,9 @@
       1400,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "9a53ab973a004012edecb66c30b59bb8d11f53036075b067a6cab62eee182119"
   },
   {
     "path": "evidence/stage-20/after-stale-results.png",
@@ -205,7 +365,9 @@
       1400,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "442397aeaceaab78ab098af0787c8fc3c4a509c6e1d114c85f60b221cf436055"
   },
   {
     "path": "evidence/stage-20/before-long-text.png",
@@ -213,7 +375,9 @@
       1400,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "bc769c83428e0629d51df93499571b4621143149d8678fcefaf7f67adbbf77c2"
   },
   {
     "path": "evidence/stage-20/before-stale-results.png",
@@ -221,7 +385,9 @@
       1400,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "a856ced5547703317e0acfea46e50e5e155a5c66f3d07b2c9405273850c91382"
   },
   {
     "path": "evidence/stage-20/improved-strategy.png",
@@ -229,7 +395,9 @@
       1400,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "6efdd753c18f2deb069fc3afb0cbc9d1c93e38e7ec5722abbc4aa9030bdce638"
   },
   {
     "path": "evidence/stage-21/conditions.png",
@@ -237,7 +405,9 @@
       1440,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "c8615188022cc38c2bf9f162882797909e2633511cb138389d089c7c03573512"
   },
   {
     "path": "evidence/stage-21/drivers-aligned.png",
@@ -245,7 +415,9 @@
       1440,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "14bd7e1b37c07927e15e07d29ae696cbdaf15254ae41d445837ab44b69507fac"
   },
   {
     "path": "evidence/stage-21/drivers-final.png",
@@ -253,7 +425,9 @@
       1440,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "808c16fa6f6d1238ac76e232be4d4bb7d6742f7b593be9028c6f6fb4473db791"
   },
   {
     "path": "evidence/stage-21/strategy-final.png",
@@ -261,7 +435,9 @@
       1440,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "889a9b9f8e58d1ceb08863e2a80f2977aefee4d86d3333d80a741eba3598f37a"
   },
   {
     "path": "evidence/stage-21/strategy.png",
@@ -269,7 +445,9 @@
       1440,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "afa96d21a74fb5e5b09a94ba2b751a54d225ab1604cd2458ce5822fffa21631e"
   },
   {
     "path": "evidence/stage-21/window-1000x650.png",
@@ -277,7 +455,9 @@
       1000,
       650
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "1b246776d41a19a6a66f6b258eca3f10a1b7977167f7d6449e01582b47699dd2"
   },
   {
     "path": "evidence/stage-21/window-1152x720.png",
@@ -285,7 +465,9 @@
       1152,
       720
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "a5f60ccb858f43116257262fec85357f63bd24e7e9262b6a5e83e91d48f9c0b4"
   },
   {
     "path": "evidence/stage-21/window-864x540.png",
@@ -293,7 +475,9 @@
       864,
       540
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "e1b2960799daf485dbd3c7e5dc8b6529f7065922f7973a31c57b584562188fbd"
   },
   {
     "path": "evidence/stage-23/max-driver-data.png",
@@ -301,7 +485,9 @@
       1440,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "ab15f66d76331ebedb83334c0e652f87eae21a5efe15b353ce3bf1c5e092c01a"
   },
   {
     "path": "evidence/stage-23/native-drivers.png",
@@ -309,7 +495,9 @@
       2020,
       1316
     ],
-    "format": "JPEG (legacy .png filename)"
+    "format": "JPEG",
+    "legacy_extension": true,
+    "sha256": "47a69ca9ff40ce7ea5bdd4b63dce1640bb4c07c4b47ba7b688a0b23b5b177020"
   },
   {
     "path": "evidence/stage-23/native-import-cancel.png",
@@ -317,7 +505,9 @@
       2020,
       1316
     ],
-    "format": "JPEG (legacy .png filename)"
+    "format": "JPEG",
+    "legacy_extension": true,
+    "sha256": "851ce330355a291d5525c08ffb65ee9a92a2fa45f80bfff62306f31a0b14fc8d"
   },
   {
     "path": "evidence/stage-23/native-paused.png",
@@ -325,7 +515,9 @@
       2020,
       1316
     ],
-    "format": "JPEG (legacy .png filename)"
+    "format": "JPEG",
+    "legacy_extension": true,
+    "sha256": "27f8ed06b35cbf06d20339b7f0ccbc34d6e2e930a67d5d8fd1ff55edf7676b0d"
   },
   {
     "path": "evidence/stage-23/native-playing.png",
@@ -333,7 +525,9 @@
       2020,
       1316
     ],
-    "format": "JPEG (legacy .png filename)"
+    "format": "JPEG",
+    "legacy_extension": true,
+    "sha256": "b8715c2343f84abaf63f2a22dd4fe3b61436c51cf6b4a6fdc33379f843cf6431"
   },
   {
     "path": "evidence/stage-23/native-restarted.png",
@@ -341,7 +535,9 @@
       2020,
       1316
     ],
-    "format": "JPEG (legacy .png filename)"
+    "format": "JPEG",
+    "legacy_extension": true,
+    "sha256": "489d70a4076d2100af50d83640f888b821e3c41820fa0d617ada906f13b98c5b"
   },
   {
     "path": "evidence/stage-23/native-strategy.png",
@@ -349,7 +545,9 @@
       2020,
       1316
     ],
-    "format": "JPEG (legacy .png filename)"
+    "format": "JPEG",
+    "legacy_extension": true,
+    "sha256": "54b854f80f6936123817a593cc6641ca40b8964e93d51c4f780c4c0d0c69344d"
   },
   {
     "path": "evidence/stage-24/clean-startup.png",
@@ -357,7 +555,9 @@
       1440,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "889a9b9f8e58d1ceb08863e2a80f2977aefee4d86d3333d80a741eba3598f37a"
   },
   {
     "path": "evidence/stage-24/final-after-restoration.png",
@@ -365,7 +565,9 @@
       1440,
       900
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "889a9b9f8e58d1ceb08863e2a80f2977aefee4d86d3333d80a741eba3598f37a"
   },
   {
     "path": "evidence/stage-24/native-final.png",
@@ -373,7 +575,9 @@
       2020,
       1316
     ],
-    "format": "JPEG (legacy .png filename)"
+    "format": "JPEG",
+    "legacy_extension": true,
+    "sha256": "eda611735cc8a04934ad98d79381cbe526fe6b338ac5a55a31dc078a63cf872c"
   },
   {
     "path": "evidence/stage-24/native-v0.5-restored.png",
@@ -381,7 +585,9 @@
       1754,
       1194
     ],
-    "format": "JPEG (legacy .png filename)"
+    "format": "JPEG",
+    "legacy_extension": true,
+    "sha256": "ae9a824af84ff6775d74dac32892397592d3b9f1df0f6b8b21c0675a4530c08b"
   },
   {
     "path": "evidence/stage-24/v0.5-restored.png",
@@ -389,6 +595,8 @@
       1000,
       650
     ],
-    "format": "PNG"
+    "format": "PNG",
+    "legacy_extension": false,
+    "sha256": "e74bd7ca4723eabc0dddde0ec861ff146db513044df3c978635eb5c622ab47ca"
   }
 ]
