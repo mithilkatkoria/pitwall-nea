@@ -1,0 +1,7 @@
+command: python main.py --laps 10 --optimise --stops 4
+usage: main.py [-h] [--base BASE] [--compound {S,M,H}] [--age AGE]
+               [--laps LAPS] [--compounds {S,M,H} [{S,M,H} ...]]
+               [--stops [STOPS ...]] [--pit-loss PIT_LOSS] [--compare]
+               [--compounds-b {S,M,H} [{S,M,H} ...]] [--stops-b [STOPS_B ...]]
+               [--optimise]
+main.py: error: Search chooses the strategy; do not combine it with plan or age settings.

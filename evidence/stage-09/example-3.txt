@@ -1,0 +1,7 @@
+command: python main.py --laps 9 --optimise
+usage: main.py [-h] [--base BASE] [--compound {S,M,H}] [--age AGE]
+               [--laps LAPS] [--compounds {S,M,H} [{S,M,H} ...]]
+               [--stops [STOPS ...]] [--pit-loss PIT_LOSS] [--compare]
+               [--compounds-b {S,M,H} [{S,M,H} ...]] [--stops-b [STOPS_B ...]]
+               [--optimise]
+main.py: error: Race laps must be a whole number from 10 to 100.

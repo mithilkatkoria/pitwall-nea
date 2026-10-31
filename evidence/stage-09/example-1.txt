@@ -1,0 +1,5 @@
+command: python main.py --laps 10 --optimise
+PITWALL / stage 9 / one-stop search
+Checked 54 candidates: 6 x (laps - 1).
+Best: S > M, stop 7; 926.115 s
+One stop, two different compounds only. Ties within 1e-8 s keep the first enumerated plan.

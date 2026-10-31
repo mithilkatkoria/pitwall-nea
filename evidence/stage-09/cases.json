@@ -1,0 +1,64 @@
+[
+  {
+    "id": "S09-CLI01",
+    "date": "2026-10-31",
+    "stage": 9,
+    "requirements": [
+      "SC02",
+      "SC03",
+      "SC05"
+    ],
+    "args": [
+      "--laps",
+      "10",
+      "--optimise"
+    ],
+    "expected_exit": 0,
+    "expected_text": "S > M, stop 7; 926.115 s",
+    "actual_exit": 0,
+    "actual_output": "PITWALL / stage 9 / one-stop search\nChecked 54 candidates: 6 x (laps - 1).\nBest: S > M, stop 7; 926.115 s\nOne stop, two different compounds only. Ties within 1e-8 s keep the first enumerated plan.\n",
+    "passed": true
+  },
+  {
+    "id": "S09-CLI02",
+    "date": "2026-10-31",
+    "stage": 9,
+    "requirements": [
+      "SC02",
+      "SC03",
+      "SC05"
+    ],
+    "args": [
+      "--laps",
+      "10",
+      "--optimise",
+      "--stops",
+      "4"
+    ],
+    "expected_exit": 2,
+    "expected_text": "Search chooses",
+    "actual_exit": 2,
+    "actual_output": "usage: main.py [-h] [--base BASE] [--compound {S,M,H}] [--age AGE]\n               [--laps LAPS] [--compounds {S,M,H} [{S,M,H} ...]]\n               [--stops [STOPS ...]] [--pit-loss PIT_LOSS] [--compare]\n               [--compounds-b {S,M,H} [{S,M,H} ...]] [--stops-b [STOPS_B ...]]\n               [--optimise]\nmain.py: error: Search chooses the strategy; do not combine it with plan or age settings.\n",
+    "passed": true
+  },
+  {
+    "id": "S09-CLI03",
+    "date": "2026-10-31",
+    "stage": 9,
+    "requirements": [
+      "SC02",
+      "SC03",
+      "SC05"
+    ],
+    "args": [
+      "--laps",
+      "9",
+      "--optimise"
+    ],
+    "expected_exit": 2,
+    "expected_text": "Race laps must",
+    "actual_exit": 2,
+    "actual_output": "usage: main.py [-h] [--base BASE] [--compound {S,M,H}] [--age AGE]\n               [--laps LAPS] [--compounds {S,M,H} [{S,M,H} ...]]\n               [--stops [STOPS ...]] [--pit-loss PIT_LOSS] [--compare]\n               [--compounds-b {S,M,H} [{S,M,H} ...]] [--stops-b [STOPS_B ...]]\n               [--optimise]\nmain.py: error: Race laps must be a whole number from 10 to 100.\n",
+    "passed": true
+  }
+]
