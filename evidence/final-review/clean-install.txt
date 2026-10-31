@@ -1,0 +1,8 @@
+Collecting pygame-ce==2.5.7 (from -r requirements.txt (line 1))
+  Using cached pygame_ce-2.5.7-cp314-cp314-win_amd64.whl.metadata (11 kB)
+Using cached pygame_ce-2.5.7-cp314-cp314-win_amd64.whl (10.6 MB)
+Installing collected packages: pygame-ce
+Successfully installed pygame-ce-2.5.7
+
+[notice] A new release of pip is available: 25.2 -> 26.2.2
+[notice] To update, run: <review-environment>\Scripts\python.exe -m pip install --upgrade pip

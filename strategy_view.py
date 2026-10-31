@@ -20,8 +20,11 @@ def panel(app,rect,label):
 
 
 def time_label(seconds):
-    hours=int(seconds//3600);minutes=int(seconds%3600//60)
-    return f'{hours}:{minutes:02}:{seconds%60:06.3f}'
+    # Round once before splitting, so 59.9996 carries into the next minute.
+    hours, remaining = divmod(round(seconds * 1000), 3_600_000)
+    minutes, remaining = divmod(remaining, 60_000)
+    whole_seconds, milliseconds = divmod(remaining, 1000)
+    return f'{hours}:{minutes:02}:{whole_seconds:02}.{milliseconds:03}'
 
 
 def draw(app):
@@ -78,6 +81,8 @@ def draw(app):
     fraction=app.replay.elapsed/app.replay.duration if app.replay.duration else 0
     pygame.draw.rect(app.screen,RED,(rail.x,rail.y,rail.width*fraction,rail.height))
     pygame.draw.circle(app.screen,TEXT,(rail.x+rail.width*fraction,rail.centery),5)
+    if app.focus == 'timeline':
+        pygame.draw.rect(app.screen,RED,rail.inflate(6,6),1)
     app.text(time_label(app.replay.elapsed),1212,820,TEXT)
     app.draw_status();app.present()
 

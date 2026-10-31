@@ -1,0 +1,34 @@
+{
+  "captured_on": "31 October 2026",
+  "source": "nea-final-review working tree after targeted fixes",
+  "captures": [
+    {
+      "file": "native-strategy.jpg",
+      "captured_at": "2026-10-31T14:46:27.715Z",
+      "type": "native window capture"
+    },
+    {
+      "file": "native-drivers.jpg",
+      "captured_at": "2026-10-31T14:47:37.577Z",
+      "type": "native window capture"
+    },
+    {
+      "file": "native-model.jpg",
+      "captured_at": "2026-10-31T14:48:58.883Z",
+      "type": "native window capture"
+    },
+    {
+      "file": "native-replay-paused.jpg",
+      "captured_at": "2026-10-31T14:53:55.171Z",
+      "type": "native window capture"
+    }
+  ],
+  "native_checks": {
+    "mouse_views": "Strategy, Drivers and Model displayed successfully",
+    "replay": "Play moved markers and elapsed clock; pause used the mouse control; projected totals remained unchanged",
+    "save_picker": "Opened visibly after interactive restart; cancelled without changing current results",
+    "native_typing": "Could not establish end-to-end filename entry. The owned picker was visible in related screenshots but not exposed as its own selectable window by the automation provider.",
+    "function_keys": "F2/F3 injection caused no observed view change. Posted-event tests pass; physical-key testing remains pending."
+  },
+  "publication": "Only application-window screenshots retained; incidental file-dialog folder images were not saved."
+}

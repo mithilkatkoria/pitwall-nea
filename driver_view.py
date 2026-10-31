@@ -1,6 +1,6 @@
 """Driver analysis rendering, using the application's small drawing helpers."""
 import pygame
-from analysis import summarise,filtered
+from analysis import filtered
 from charts import limits
 
 
@@ -12,7 +12,7 @@ def draw(app):
     app.button('sample','Synthetic sample',(235,80,230,40))
     app.button('filter','Exclude pits: '+('ON' if app.exclude_pits else 'OFF'),(480,80,250,40))
     app.text(app.driver_source,30,140,(170,177,184),True)
-    summaries=summarise(app.driver_rows,app.exclude_pits)
+    summaries=app.driver_summaries
     names=[row.driver for row in summaries]
     if app.selected_driver not in names: app.selected_driver=names[0] if names else None
     app.driver_page=min(app.driver_page,max(0,(len(summaries)-1)//6))

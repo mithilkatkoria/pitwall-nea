@@ -4,7 +4,7 @@ import charts
 from widgets import fit_text, wrap_text
 import driver_view
 import strategy_view
-from analysis import read_laps, SAMPLE_PATH
+from analysis import read_laps, summarise, SAMPLE_PATH
 from circuits import load_circuits
 from replay import Replay
 from storage import Session, save_session, load_session, export_laps
@@ -44,6 +44,7 @@ class App:
         self.driver_rows = read_laps(SAMPLE_PATH)
         self.driver_source = "Synthetic demonstration data / 180 laps / not telemetry"
         self.exclude_pits = True
+        self.driver_summaries = summarise(self.driver_rows, self.exclude_pits)
         self.driver_page = 0
         self.selected_driver = None
         self.metric = "lap"
@@ -72,6 +73,9 @@ class App:
         self.result = None
         self.replay = Replay()
         self.focus = None
+        self.select_all = False
+        self.stale = True
+        self.error = False
         self.status = f"{c.name} defaults loaded. Simulate to update the results."
 
     def inputs(self):
@@ -122,6 +126,7 @@ class App:
             self.status,self.error=str(error),True
             return False
         self.driver_rows=rows
+        self.driver_summaries=summarise(rows,self.exclude_pits)
         self.driver_source='Synthetic demonstration data / not telemetry' if sample else f'Imported CSV: {len(rows)} lap records'
         self.selected_driver=None
         self.driver_page=0
@@ -187,7 +192,9 @@ class App:
             self.select_all = False
             if key in ('driver_view','strategy_view','notes_view'):
                 self.view={'driver_view':'drivers','strategy_view':'strategy','notes_view':'notes'}[key]
-            elif key == 'filter': self.exclude_pits=not self.exclude_pits
+            elif key == 'filter':
+                self.exclude_pits=not self.exclude_pits
+                self.driver_summaries=summarise(self.driver_rows,self.exclude_pits)
             elif key == 'sample': self.import_from(SAMPLE_PATH, sample=True)
             elif key == 'import': self.file_action('import')
             elif key == 'previous_drivers': self.driver_page=max(0,self.driver_page-1)
@@ -244,11 +251,13 @@ class App:
                         self.activate(key)
                     break
         elif event.type == pygame.TEXTINPUT and self.focus in self.fields and self.focus != 'weather':
-            if self.select_all:
-                self.fields[self.focus]='';self.select_all=False
-            if len(self.fields[self.focus])+len(event.text) <= 16:
-                self.fields[self.focus] += event.text
+            value = event.text if self.select_all else self.fields[self.focus] + event.text
+            if len(value) <= 16:
+                self.fields[self.focus] = value
+                self.select_all = False
                 self.dirty()
+            else:
+                self.status, self.error = "Numeric entries are limited to 16 characters. The previous value was kept.", True
         elif event.type == pygame.KEYDOWN:
             editing=self.focus in self.fields and self.focus!='weather'
             if event.key in (pygame.K_F1,pygame.K_F2,pygame.K_F3):
@@ -258,8 +267,21 @@ class App:
             elif event.key == pygame.K_TAB:
                 keys=list(self.controls)
                 direction=-1 if event.mod & pygame.KMOD_SHIFT else 1
-                if keys: self.focus=keys[(keys.index(self.focus)+direction)%len(keys)] if self.focus in keys else keys[0]
+                if keys:
+                    if self.focus in keys:
+                        self.focus = keys[(keys.index(self.focus)+direction)%len(keys)]
+                    else:
+                        self.focus = keys[0] if direction == 1 else keys[-1]
                 self.select_all=self.focus in self.fields
+            elif self.focus == 'timeline' and event.key in (pygame.K_LEFT, pygame.K_RIGHT, pygame.K_HOME, pygame.K_END):
+                fraction = self.replay.elapsed / self.replay.duration if self.replay.duration else 0
+                if event.key == pygame.K_HOME:
+                    fraction = 0
+                elif event.key == pygame.K_END:
+                    fraction = 1
+                else:
+                    fraction += -.05 if event.key == pygame.K_LEFT else .05
+                self.replay.scrub(fraction)
             elif event.key == pygame.K_RETURN:
                 if self.focus in self.controls and not editing: self.activate(self.focus)
                 elif self.view=='strategy': self.calculate()
@@ -361,6 +383,7 @@ class App:
             'Limits: no traffic, overtaking, random events, physical tyre temperature or real telemetry calibration.',
             'F1/F2/F3 views. Tab/Shift+Tab controls. Enter activate/simulate. Escape clears focus.',
             'When not editing: Space play/pause, R restart, O optimise A, C chart. Ctrl+S/L/E/I save/load/export/import.',
+            'Focused replay timeline: Left/Right move 5%; Home/End jump to the start/finish.',
             'Data and formulas are illustrative. Model details are in docs/model.md and data/README.md.'
         ]
         for index,line in enumerate(lines): self.text(line,30,105+index*34,TEXT if index<17 else MUTED,True)

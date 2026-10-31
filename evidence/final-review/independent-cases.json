@@ -1,0 +1,168 @@
+{
+  "run_on": "31 October 2026",
+  "basis": "Hard-coded arithmetic expectations derived separately from documented equations; observer keys are not participant results.",
+  "cases": [
+    {
+      "id": "stakeholder-A1",
+      "inputs": {
+        "circuit": "silverstone",
+        "plans": [
+          "S/H after 24",
+          "S/H after 26"
+        ]
+      },
+      "expected": {
+        "a": 4763.38752,
+        "b": 4766.1184,
+        "gap": 2.73088
+      },
+      "actual": {
+        "a": 4763.387519999999,
+        "b": 4766.1184,
+        "gap": 2.7308800000009796
+      },
+      "result": "passed"
+    },
+    {
+      "id": "stakeholder-B1",
+      "inputs": {
+        "circuit": "silverstone",
+        "plans": [
+          "M/H after 24",
+          "M/H after 26"
+        ]
+      },
+      "expected": {
+        "a": 4762.97952,
+        "b": 4763.036,
+        "gap": 0.05648
+      },
+      "actual": {
+        "a": 4762.979519999999,
+        "b": 4763.036,
+        "gap": 0.05648000000110187
+      },
+      "result": "passed"
+    },
+    {
+      "id": "stakeholder-C1",
+      "inputs": {
+        "base": 90,
+        "laps": 10,
+        "plans": [
+          "S/H after 4",
+          "S/M/H after 3,6"
+        ],
+        "conditions": "defaults"
+      },
+      "expected": {
+        "a": 932.885,
+        "b": 954.937,
+        "gap": 22.052
+      },
+      "actual": {
+        "a": 932.885,
+        "b": 954.937,
+        "gap": 22.05200000000002
+      },
+      "result": "passed"
+    },
+    {
+      "id": "stakeholder-C2",
+      "inputs": {
+        "base": 90,
+        "laps": 10,
+        "conditions": "defaults"
+      },
+      "expected": {
+        "candidates": 54,
+        "compounds": [
+          "S",
+          "M"
+        ],
+        "stop": 7,
+        "total": 929.375
+      },
+      "actual": {
+        "candidates": 54,
+        "compounds": [
+          "S",
+          "M"
+        ],
+        "stop": 7,
+        "total": 929.3749999999999
+      },
+      "result": "passed"
+    },
+    {
+      "id": "soft-cliff",
+      "inputs": {
+        "compound": "S",
+        "age": 20
+      },
+      "expected": {
+        "loss": 1.972
+      },
+      "actual": {
+        "loss": 1.972
+      },
+      "result": "passed"
+    },
+    {
+      "id": "neutralised-stop",
+      "inputs": {
+        "base": 90,
+        "laps": 10,
+        "plan": "S/H after 4",
+        "sc_start": 4,
+        "sc_duration": 1
+      },
+      "expected": {
+        "lap4": 140.572,
+        "total": 960.384
+      },
+      "actual": {
+        "lap4": 140.572,
+        "total": 960.384
+      },
+      "result": "passed"
+    },
+    {
+      "id": "low-boundary-combination",
+      "inputs": {
+        "base": 30,
+        "laps": 10,
+        "wear": 0.1,
+        "temperature": 15,
+        "weather": "Wet",
+        "pace": -2
+      },
+      "expected": {
+        "total": 423.022075
+      },
+      "actual": {
+        "total": 423.022075
+      },
+      "result": "passed"
+    },
+    {
+      "id": "whole-race-sc-service-only-stop",
+      "inputs": {
+        "base": 90,
+        "laps": 10,
+        "pit": 1,
+        "sc_start": 1,
+        "sc_duration": 10
+      },
+      "expected": {
+        "total": 1261.54,
+        "lap5_age": 0
+      },
+      "actual": {
+        "total": 1261.54,
+        "lap5_age": 0
+      },
+      "result": "passed"
+    }
+  ]
+}

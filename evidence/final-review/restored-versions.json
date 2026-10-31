@@ -1,0 +1,171 @@
+{
+  "checked_on": "31 October 2026",
+  "method": "Canonical tag archives extracted to isolated temporary folders; tag objects unchanged; headless graphical startup for GUI tags.",
+  "versions": [
+    {
+      "tag": "v0.1",
+      "commit": "d55642708c184b71696e89e9ea9ff9320ea3c7e8",
+      "tests": 8,
+      "test_exit": 0,
+      "startup_arguments": [
+        "--base",
+        "90"
+      ],
+      "startup_exit": 0,
+      "seconds": 1.29
+    },
+    {
+      "tag": "v0.2",
+      "commit": "b5d6c5f9263ad2ccaf6a129a25cb7703dcb41f87",
+      "tests": 16,
+      "test_exit": 0,
+      "startup_arguments": [
+        "--base",
+        "90"
+      ],
+      "startup_exit": 0,
+      "seconds": 1.284
+    },
+    {
+      "tag": "v0.3",
+      "commit": "6a68d5ab167663ef6fc3cff17cbe60fa87989e7c",
+      "tests": 28,
+      "test_exit": 0,
+      "startup_arguments": [
+        "--base",
+        "90"
+      ],
+      "startup_exit": 0,
+      "seconds": 1.418
+    },
+    {
+      "tag": "v0.4",
+      "commit": "5494ab634edeb83bd39709471bded7018cf785fe",
+      "tests": 35,
+      "test_exit": 0,
+      "startup_arguments": [
+        "--base",
+        "90"
+      ],
+      "startup_exit": 0,
+      "seconds": 1.288
+    },
+    {
+      "tag": "v0.5",
+      "commit": "be14791830cee3797486ac30eff5cc26cf0e429c",
+      "tests": 58,
+      "test_exit": 0,
+      "startup_arguments": [
+        "--gui",
+        "--frames",
+        "3"
+      ],
+      "startup_exit": 0,
+      "seconds": 3.068
+    },
+    {
+      "tag": "v0.6",
+      "commit": "1099ac227a6f1f3d5429d7a3417a463443c74ba2",
+      "tests": 66,
+      "test_exit": 0,
+      "startup_arguments": [
+        "--gui",
+        "--frames",
+        "3"
+      ],
+      "startup_exit": 0,
+      "seconds": 3.642
+    },
+    {
+      "tag": "v0.7",
+      "commit": "0d0ee543f0727a6fca3be6771e3ed07c676c80de",
+      "tests": 86,
+      "test_exit": 0,
+      "startup_arguments": [
+        "--gui",
+        "--frames",
+        "3"
+      ],
+      "startup_exit": 0,
+      "seconds": 5.043
+    },
+    {
+      "tag": "v0.8",
+      "commit": "94031eea8eae5fbbd9010ac083a6ba4bd620e4cf",
+      "tests": 87,
+      "test_exit": 0,
+      "startup_arguments": [
+        "--gui",
+        "--frames",
+        "3"
+      ],
+      "startup_exit": 0,
+      "seconds": 5.773
+    },
+    {
+      "tag": "v1.0",
+      "commit": "6a9a3fd9c6ab51326572f7d39ff2fe8f21cd65d3",
+      "tests": 90,
+      "test_exit": 0,
+      "startup_arguments": [
+        "--gui",
+        "--frames",
+        "3"
+      ],
+      "startup_exit": 0,
+      "seconds": 6.509
+    },
+    {
+      "tag": "v1.0.1",
+      "commit": "fbe07cd67f05a8eca5d19204153bd29b50c4dbb5",
+      "tests": 90,
+      "test_exit": 0,
+      "startup_arguments": [
+        "--gui",
+        "--frames",
+        "3"
+      ],
+      "startup_exit": 0,
+      "seconds": 6.116
+    },
+    {
+      "tag": "v1.0.2",
+      "commit": "b308039bb1839d96b6172680fb2cbd6e96eb09a0",
+      "tests": 90,
+      "test_exit": 0,
+      "startup_arguments": [
+        "--gui",
+        "--frames",
+        "3"
+      ],
+      "startup_exit": 0,
+      "seconds": 6.997
+    },
+    {
+      "tag": "v1.0.3",
+      "commit": "77b49f7289be6348189ffb5bad50066624b7d321",
+      "tests": 90,
+      "test_exit": 0,
+      "startup_arguments": [
+        "--gui",
+        "--frames",
+        "3"
+      ],
+      "startup_exit": 0,
+      "seconds": 6.395
+    },
+    {
+      "tag": "v1.0.4",
+      "commit": "f3034086d2770dc58b0f7bed9dec0b3b3d034d50",
+      "tests": 90,
+      "test_exit": 0,
+      "startup_arguments": [
+        "--gui",
+        "--frames",
+        "3"
+      ],
+      "startup_exit": 0,
+      "seconds": 5.139
+    }
+  ]
+}

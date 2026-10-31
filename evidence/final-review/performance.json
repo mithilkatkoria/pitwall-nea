@@ -1,0 +1,22 @@
+{
+  "run_on": "31 October 2026",
+  "python": "3.14.0",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "search_laps": 100,
+  "candidates": 594,
+  "seconds": [
+    0.2454686999990372,
+    0.2628218999998353,
+    0.24249039999995148,
+    0.2631875000006403,
+    0.26889699999810546
+  ],
+  "one_second_target_met": true,
+  "driver_fixture": "12 drivers with 1000 unique laps each, 32-character printable names, read through the actual import API; synthetic",
+  "driver_rows": 12000,
+  "driver_frame_seconds": 0.015545699999893258,
+  "driver_measurement": "mean of 20 dummy-SDL draw frames; not a native FPS or human-usability result",
+  "summary_cache": "Recompute summaries after successful import and filter changes; do not recalculate all driver statistics every draw.",
+  "previous_frame_seconds": 0.04444583999993483,
+  "measurement": "Same maximum-valid synthetic CSV and 20 dummy-SDL draw frames. Comparison is a host-specific rendering measure, not native FPS."
+}

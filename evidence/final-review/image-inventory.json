@@ -1,0 +1,394 @@
+[
+  {
+    "path": "evidence/final-review/before-oversized-input.png",
+    "size": [
+      1440,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/final-review/before-time-carry.png",
+    "size": [
+      1440,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/history-recovery/portfolio-page-october-checkpoint.png",
+    "size": [
+      1440,
+      3211
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/history-recovery/prototype-image-reused.png",
+    "size": [
+      1440,
+      960
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/repository-rebuild/drivers.png",
+    "size": [
+      1440,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/repository-rebuild/notes.png",
+    "size": [
+      1440,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/repository-rebuild/strategy.png",
+    "size": [
+      1440,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-12/first-window.png",
+    "size": [
+      1000,
+      650
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-12/native-corrected-input.png",
+    "size": [
+      1754,
+      1194
+    ],
+    "format": "JPEG (legacy .png filename)"
+  },
+  {
+    "path": "evidence/stage-12/native-first-window.png",
+    "size": [
+      1754,
+      1194
+    ],
+    "format": "JPEG (legacy .png filename)"
+  },
+  {
+    "path": "evidence/stage-12/native-validation.png",
+    "size": [
+      1754,
+      1194
+    ],
+    "format": "JPEG (legacy .png filename)"
+  },
+  {
+    "path": "evidence/stage-13/bahrain.png",
+    "size": [
+      1400,
+      760
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-13/circuit.png",
+    "size": [
+      1400,
+      760
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-13/monza.png",
+    "size": [
+      1400,
+      760
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-14/movement-0.png",
+    "size": [
+      1400,
+      760
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-14/movement-44.png",
+    "size": [
+      1400,
+      760
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-14/movement-89.png",
+    "size": [
+      1400,
+      760
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-14/replay-start.png",
+    "size": [
+      1400,
+      760
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-14/scrub-middle.png",
+    "size": [
+      1400,
+      760
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-15/file-controls.png",
+    "size": [
+      1400,
+      760
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-16/gap-hover.png",
+    "size": [
+      1400,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-16/lap-chart.png",
+    "size": [
+      1400,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-16/tyre-hover.png",
+    "size": [
+      1400,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-17/driver-analysis.png",
+    "size": [
+      1400,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-20/after-long-text.png",
+    "size": [
+      1400,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-20/after-stale-results.png",
+    "size": [
+      1400,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-20/before-long-text.png",
+    "size": [
+      1400,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-20/before-stale-results.png",
+    "size": [
+      1400,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-20/improved-strategy.png",
+    "size": [
+      1400,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-21/conditions.png",
+    "size": [
+      1440,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-21/drivers-aligned.png",
+    "size": [
+      1440,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-21/drivers-final.png",
+    "size": [
+      1440,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-21/strategy-final.png",
+    "size": [
+      1440,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-21/strategy.png",
+    "size": [
+      1440,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-21/window-1000x650.png",
+    "size": [
+      1000,
+      650
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-21/window-1152x720.png",
+    "size": [
+      1152,
+      720
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-21/window-864x540.png",
+    "size": [
+      864,
+      540
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-23/max-driver-data.png",
+    "size": [
+      1440,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-23/native-drivers.png",
+    "size": [
+      2020,
+      1316
+    ],
+    "format": "JPEG (legacy .png filename)"
+  },
+  {
+    "path": "evidence/stage-23/native-import-cancel.png",
+    "size": [
+      2020,
+      1316
+    ],
+    "format": "JPEG (legacy .png filename)"
+  },
+  {
+    "path": "evidence/stage-23/native-paused.png",
+    "size": [
+      2020,
+      1316
+    ],
+    "format": "JPEG (legacy .png filename)"
+  },
+  {
+    "path": "evidence/stage-23/native-playing.png",
+    "size": [
+      2020,
+      1316
+    ],
+    "format": "JPEG (legacy .png filename)"
+  },
+  {
+    "path": "evidence/stage-23/native-restarted.png",
+    "size": [
+      2020,
+      1316
+    ],
+    "format": "JPEG (legacy .png filename)"
+  },
+  {
+    "path": "evidence/stage-23/native-strategy.png",
+    "size": [
+      2020,
+      1316
+    ],
+    "format": "JPEG (legacy .png filename)"
+  },
+  {
+    "path": "evidence/stage-24/clean-startup.png",
+    "size": [
+      1440,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-24/final-after-restoration.png",
+    "size": [
+      1440,
+      900
+    ],
+    "format": "PNG"
+  },
+  {
+    "path": "evidence/stage-24/native-final.png",
+    "size": [
+      2020,
+      1316
+    ],
+    "format": "JPEG (legacy .png filename)"
+  },
+  {
+    "path": "evidence/stage-24/native-v0.5-restored.png",
+    "size": [
+      1754,
+      1194
+    ],
+    "format": "JPEG (legacy .png filename)"
+  },
+  {
+    "path": "evidence/stage-24/v0.5-restored.png",
+    "size": [
+      1000,
+      650
+    ],
+    "format": "PNG"
+  }
+]

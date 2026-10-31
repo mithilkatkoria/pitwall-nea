@@ -43,7 +43,7 @@ def read_laps(path):
                     name=row['driver'].strip()
                     lap=int(row['lap']);seconds=float(row['lap_time'])
                     pit=row.get('pit_lap','0').strip().lower()
-                    if not name or len(name)>32 or any(ord(c)<32 for c in name): raise ValueError('Driver name must contain 1-32 printable characters.')
+                    if not name or len(name)>32 or not name.isprintable(): raise ValueError('Driver name must contain 1-32 printable characters.')
                     if not 1<=lap<=1000: raise ValueError('Lap number must be 1-1000.')
                     if not isfinite(seconds) or not 0<seconds<=600: raise ValueError('Lap time must be above 0 and at most 600 seconds.')
                     if pit not in ('','0','1','true','false','yes','no'): raise ValueError('Invalid pit_lap flag.')
