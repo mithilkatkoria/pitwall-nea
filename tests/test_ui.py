@@ -76,3 +76,10 @@ class InterfaceTests(unittest.TestCase):
             self.app.fields['base']='99'
             self.assertTrue(self.app.load_from(path))
             self.assertEqual(self.app.session(),before)
+
+    def test_chart_selection_and_hover_readout(self):
+        self.click('metric_tyre')
+        self.assertEqual(self.app.metric,'tyre')
+        self.assertIn('0.000 s',self.app.chart_readout(0))
+        self.click('metric_gap')
+        self.assertIn(f'{self.app.result.gap:.3f}',self.app.chart_readout(51))

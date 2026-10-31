@@ -1,0 +1,24 @@
+[
+  {
+    "id": "S16-CLI01",
+    "date": "2026-10-31",
+    "stage": 16,
+    "requirements": [
+      "SC06",
+      "SC10",
+      "SC16"
+    ],
+    "args": [
+      "--gui",
+      "--frames",
+      "3",
+      "--screenshot",
+      "evidence/stage-16/lap-chart.png"
+    ],
+    "expected_exit": 0,
+    "expected_text": "",
+    "actual_exit": 0,
+    "actual_output": "pygame-ce 2.5.7 (SDL 2.32.10, Python 3.14.0)\n",
+    "passed": true
+  }
+]
