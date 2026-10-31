@@ -1,0 +1,16 @@
+command: python main.py --laps 10 --sc-start 1 --sc-duration 10 --compare
+PITWALL / stage 10 / comparison
+A: 1260.540 s; B: 1260.540 s
+B minus A: +0.000 s; faster: Tie
+Positive gap favours A; negative gap favours B. Same race settings.
+LAP     A TIME      B TIME     CUMULATIVE B-A
+  1    126.108     126.108             +0.000
+  2    126.096     126.096             +0.000
+  3    126.084     126.084             +0.000
+  4    126.072     126.072             +0.000
+  5    126.060     126.060             +0.000
+  6    126.048     126.048             +0.000
+  7    126.036     126.036             +0.000
+  8    126.024     126.024             +0.000
+  9    126.012     126.012             +0.000
+ 10    126.000     126.000             +0.000
