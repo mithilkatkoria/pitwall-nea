@@ -1,30 +1,42 @@
 """Stage 10: full illustrative race model and shared-condition comparison."""
 import argparse
 
+from circuits import load_circuits
+
 from model import COMPOUND_PACE, lap_time, tyre_loss, simulate, Strategy, compare, optimise, Conditions
 
 def main():
     parser = argparse.ArgumentParser(description="Pitwall: compound lap calculation")
-    parser.add_argument("--base", type=float, default=90, help="Base lap seconds (30-200)")
+    parser.add_argument("--base", type=float, default=None, help="Base lap seconds (30-200)")
     parser.add_argument("--compound", default="S", choices=COMPOUND_PACE, help="S=Soft, M=Medium, H=Hard")
     parser.add_argument("--age", type=int, default=0, help="Completed laps on these tyres (0-1000)")
     parser.add_argument("--laps", type=int, help="Simulate a full race of 10-100 laps")
     parser.add_argument("--compounds", nargs="+", choices=COMPOUND_PACE, help="One compound per stint")
     parser.add_argument("--stops", nargs="*", type=int, default=[], help="Increasing pit laps, at most two")
-    parser.add_argument("--pit-loss", type=float, default=22.5, help="Pit lane loss in seconds (0-60)")
+    parser.add_argument("--pit-loss", type=float, default=None, help="Pit lane loss in seconds (0-60)")
     parser.add_argument("--compare", action="store_true", help="Compare with plan B under shared settings")
     parser.add_argument("--compounds-b", nargs="+", choices=COMPOUND_PACE)
     parser.add_argument("--stops-b", nargs="*", type=int, default=[])
     parser.add_argument("--optimise", action="store_true", help="Search every different-compound one-stop plan")
-    parser.add_argument("--wear", type=float, default=1)
+    parser.add_argument("--wear", type=float, default=None)
     parser.add_argument("--temperature", type=int, default=30)
     parser.add_argument("--weather", choices=("Dry", "Damp", "Wet"), default="Dry")
     parser.add_argument("--pace", type=float, default=0, help="Driver A offset in seconds per racing lap")
     parser.add_argument("--pace-b", type=float, default=0)
     parser.add_argument("--sc-start", type=int, default=0, help="0 disables safety car")
     parser.add_argument("--sc-duration", type=int, default=3)
+    parser.add_argument("--circuit", help="silverstone, monza or bahrain")
     args = parser.parse_args()
     try:
+        profile = None
+        if args.circuit:
+            profile = next((c for c in load_circuits() if c.key == args.circuit), None)
+            if profile is None:
+                raise ValueError("Unknown circuit. Choose silverstone, monza or bahrain.")
+        args.base = args.base if args.base is not None else (profile.base_time if profile else 90)
+        args.laps = args.laps if args.laps is not None else (profile.laps if profile else None)
+        args.wear = args.wear if args.wear is not None else (profile.wear if profile else 1)
+        args.pit_loss = args.pit_loss if args.pit_loss is not None else (profile.pit_loss if profile else 22.5)
         conditions = Conditions(args.wear, args.temperature, args.weather, args.sc_start, args.sc_duration)
         if args.laps is None and (conditions != Conditions() or args.pace or args.pace_b):
             raise ValueError("Race conditions need --laps.")
